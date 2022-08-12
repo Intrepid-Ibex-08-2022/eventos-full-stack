@@ -1,3 +1,11 @@
+.main {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}
+
 .header{
     display: flex;
     background-color: black;
