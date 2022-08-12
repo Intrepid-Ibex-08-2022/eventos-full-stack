@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__text{
+    color: white;
+}
+
+.LP{
+    margin-top: -20px;
+}
+
+.header__img{
+    padding: 20px;
+    height: 50px;
+    width: 70px;
+}
