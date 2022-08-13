@@ -1,4 +1,6 @@
-.main {
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: 
     "header header"
@@ -35,9 +37,14 @@
 /** Event **/
 .event {
     grid-area: event;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 .event__container{
+    
     display: flex;
     justify-content: center;
     align-items: center;
