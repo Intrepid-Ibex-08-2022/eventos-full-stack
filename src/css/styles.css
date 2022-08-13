@@ -13,7 +13,7 @@
 .header{
     grid-area: header;
     display: flex;
-    background-color: black;
+    background-color: #14213D;
     flex-direction: row;
     align-items: center;
 }
@@ -64,7 +64,7 @@
 .footer {
     grid-area: footer;
     display: flex;
-    margin: 20px;
+    margin-top: 20px;
     height: 111px;
     justify-content: space-between;
     background-color: #14213D;
