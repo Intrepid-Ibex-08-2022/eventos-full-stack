@@ -1,0 +1,11 @@
+:root {
+  --text-color: black;
+  --primary-color: #ff8000;
+  --fondo-color: #ffffff;
+  --min-with: 375px;
+  --min-with-element: 320px;
+}
+/* body {
+  color: var(--text-color, white);
+  /* white es un valor por defecto por si no encontrara la variable 
+} */

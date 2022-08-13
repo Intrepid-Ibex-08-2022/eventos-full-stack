@@ -1,43 +1,400 @@
-.header{
+@import './variables.css';
+
+.header {
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__text {
+  color: white;
+}
+
+.lp {
+  margin-top: -20px;
+}
+
+.header__img {
+  padding: 20px;
+  height: 50px;
+  width: 70px;
+}
+
+/* .event__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid black;
+  padding: 20px;
+  padding-top: 0;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px;
+} */
+
+.event__button {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  border-radius: 45px;
+  border-color: rgb(23, 205, 23);
+  background-color: rgb(42, 154, 42);
+  color: white;
+}
+
+/* ***************** formato mobile responsive ********************* */
+/* ****************************************************************** */
+body {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  background-color: var(--fondo-color, white);
+  min-width: var(--min-with, 375px);
+}
+
+/* ********************************* header ****************************** */
+/* 
+header {
+  background-color: var(--primary-color, rgb(255, 132, 0));
+}
+.nav-header__mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0.1rem 1rem;
+}
+
+.iconos-settings {
+  display: flex;
+}
+.setting {
+  margin-top: 7px;
+  margin-right: 10px;
+} */
+
+/* ************************************* main **************************** */
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  min-width: calc(var(--min-with, 375px)-2rem);
+  align-items: stretch;
+}
+
+/* ********************************* Buscar restaurante ******************** */
+
+.div-buscar-restaurante {
+  position: absolute;
+  background-color: var(--fondo-color, white);
+  min-width: var(--min-with-element);
+  display: flex;
+  height: 4rem;
+  top: -30px;
+  width: 70%;
+  margin-left: 13%;
+  margin-right: 12%;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0px 0px 7px 3px rgb(143, 141, 141);
+  display: none;
+}
+.input-search {
+  border: none;
+  margin-left: 0.5rem;
+  width: inherit;
+  opacity: 0.7;
+  color: #242e30;
+}
+
+/* *************************** Efecto hover y before ******************* */
+
+.div-promo > p::before {
+  content: '';
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.2s ease-in-out, width 0.2s ease,
+    margin-right 0.2s ease-in-out;
+}
+.div-promo:hover > p::before {
+  content: '';
+  background-image: url('../assets/icons/Vector.png');
+  background-size: 100% 100%;
+  display: inline-block;
+  margin-right: 8px;
+  height: 13px;
+  width: 13px;
+  opacity: 1;
+  cursor: pointer;
+}
+.div-promo {
+  cursor: pointer;
+}
+
+/* ************************* Seccion ofertas por restaurante ****************** */
+.restaurante-ofertas {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.targeta-evento-portada {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 200px 50px 50px 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 350px;
+  color: #242e30cc;
+}
+
+.evento-portada1,
+.evento-portada2,
+.evento-portada3,
+.evento-portada4 {
+  margin-top: 1rem;
+  grid-column: 1/3;
+  flex-wrap: wrap;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.evento-portada1 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
+}
+.evento-portada2 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada2.png');
+}
+.evento-portada3 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada3.png');
+}
+.evento-portada4 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
+}
+
+h4 {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+.precios-negrita {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.tiempo-reparto {
+  color: #017a39;
+}
+.p-entrega {
+  position: relative;
+}
+
+/* ****************************** Footer ************************** */
+
+/* .div-footer {
+  background-color: #ff8000;
+  height: 8rem;
+} */
+
+/* ***************** ocultos en formato mobile ******************* */
+
+.nav-header__desktop,
+.titulo-otras-a-z,
+.list-otras-a-z {
+  display: none;
+}
+
+/* ---------------------- 900px ------------------- */
+/*** a esta resolucion desaparece el menu hamburguesa ****/
+/************* y se establece el formato desktop **********/
+
+@media screen and (min-width: 900px) {
+  .nav-header__mobile {
+    display: none;
+  }
+  header,
+  .div-footer {
+    background-color: var(--fondo-color, white);
+  }
+  .nav-header__desktop {
     display: flex;
-    background-color: black;
+    margin: 2rem;
+    justify-content: space-between;
+  }
+  .nav-usuario-ayuda a {
+    text-decoration: none;
+    color: black;
+    margin-right: 1rem;
+  }
+
+  /* ************************************* main **************************** */
+
+  main {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-row: 150px 150px 1.5rem auto;
+    gap: 1rem;
     flex-direction: row;
-    align-items: center;
-}
+  }
 
-.header__text{
-    color: white;
-}
+  /* ********************************* Buscar restaurante ******************** */
 
-.lp{
-    margin-top: -20px;
-}
+  .div-buscar-restaurante {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0px 0px 7px 3px rgb(143, 141, 141);
+    grid-row: 2;
+    grid-column: 2;
+  }
 
-.header__img{
-    padding: 20px;
-    height: 50px;
-    width: 70px;
-}
+  /* ******************************* seccion de promociones ******************* */
 
-.event__container{
+  .div-conteiner-promociones {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 400px;
-    border: 1px solid black;
-    padding: 20px;
-    padding-top: 0;
-    margin: 20px;
-    text-align: center;
-    border-radius: 5px;
-}
+    grid-column: 1/3;
+    margin-top: 0;
+    max-width: 100%;
+  }
 
-.event__button{
-    width: 200px;
-    height: 50px;
-    border-radius: 45px;
-    border-color: rgb(23, 205, 23);
-    background-color: rgb(42, 154, 42);
-    color: white;
+  /* ****************************** contenedor direccion ******************* */
+
+  .contenedor-direccion {
+    width: 90%;
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0.5rem;
+    padding-top: 0px;
+    flex-wrap: wrap;
+    gap: 0;
+    column-gap: 20px;
+  }
+  .p-cambiar-direccion1 {
+    margin-left: 65px;
+    margin-top: -10px;
+    margin-right: 0px;
+  }
+  .p-cambiar-direccion2 {
+    margin-top: -10px;
+    margin-left: -15px;
+  }
+
+  .contenedor-direccion img {
+    margin-top: 28px;
+  }
+
+  /* ************************* Seccion ofertas por restaurante ****************** */
+
+  .nota-cantidad-rest {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .restaurante-ofertas {
+    grid-row: 4;
+    grid-column: 2;
+  }
+  .restaurante-ofertas__oferta {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 40px 40px 40px 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 160px;
+    color: #242e30cc;
+    column-gap: 2rem;
+  }
+  .targeta-evento-portada {
+    background-image: url('../assets/imagen/barra-promociones-y-restaurantes/restaurants/sushi_ichiban/background.webp');
+    flex-wrap: wrap;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    border-radius: 8px;
+  }
+  .oh-que-bueno__oferta {
+    background-image: url('../assets/imagen/barra-promociones-y-restaurantes/restaurants/oh_que_bueno/background.jpg');
+    flex-wrap: wrap;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    border-radius: 8px;
+  }
+  .coki__oferta {
+    background-image: url('../assets/imagen/barra-promociones-y-restaurantes/restaurants/coki/background.webp');
+    flex-wrap: wrap;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    border-radius: 8px;
+  }
+  .subway__oferta {
+    background-image: url('../assets/imagen/barra-promociones-y-restaurantes/restaurants/subway/background.jpg');
+    flex-wrap: wrap;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    border-radius: 8px;
+  }
+  .tiempo-reparto::before {
+    content: '';
+    background-image: url('../assets/icons/clock.png');
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-right: 8px;
+    height: 15px;
+    width: 15px;
+  }
+  .p-entrega {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  /* ************************* Seccion otras de A-Z ****************** */
+
+  .titulo-otras-a-z {
+    display: flex;
+    margin-left: 1.6rem;
+    gap: 1.2rem;
+  }
+  .list-otras-a-z {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-otras-a-z__linea {
+    display: flex;
+
+    margin: 0.5rem 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.2rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0px 0px 7px 3px rgb(238, 236, 236);
+  }
 }

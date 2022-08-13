@@ -1,36 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="header">
-            <img  class="header__img" src="/src/assets/img/icons8-canary-islands-48 1.png" alt="">
-            <div>
-                <h4 class="header__text provincia">
-                    PROVINCIA
-                </h4>
-                <h1 class="header__text lp">
-                    LAS PALMAS
-                </h1>
-            </div>
+      <div class="header">
+        <img
+          class="header__img"
+          src="/src/assets/img/icons8-canary-islands-48 1.png"
+          alt=""
+        />
+        <div>
+          <h4 class="header__text provincia">PROVINCIA</h4>
+          <h1 class="header__text lp">LAS PALMAS</h1>
         </div>
+      </div>
     </header>
     <main>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-            <button class="event__button">Ver más</button>
+      <!-- ******************************** Main Pici ***************************** -->
+      <div class="div-buscar-restaurante">
+        <label for="buscar-restaurante"
+          ><img src="./assets/icons/search-icon.svg" alt=""
+        /></label>
+        <input
+          class="input-search"
+          type="search"
+          name="buscar-restaurante"
+          value="Buscar restaurante o cocina"
+        />
+      </div>
+
+      <!-- ******************************** Targeta evento 1 **************************** -->
+      <section class="targetas-eventos-portada">
+        <div class="targeta-evento-portada">
+          <div class="evento-portada1"></div>
+          <h2>Musicales</h2>
+          <button class="event__button">Ver más</button>
+          <h3>
+            <img
+              class="icons-img__oferta"
+              src="./src/assets/icons/icons-pintadera.png"
+              alt="icons-pintadera"
+            />
+            Todos los estilos de música
+          </h3>
+          <p>
+            <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+            <span class="precios-negrita">Disfruta y a bailar </span>
+          </p>
+          <p class="p-entrega">Distintas salas, festivales y mucho más</p>
         </div>
+
+        <!-- ******************************** Targeta evento 2 **************************** -->
+        <div class="targeta-evento-portada">
+          <div class="evento-portada2"></div>
+          <h2>Artes escénicas</h2>
+          <button class="event__button">Ver más</button>
+          <h3>
+            <img
+              class="icons-img__oferta"
+              src="./src/assets/icons/icons-pintadera.png"
+              alt="icons-pintadera"
+            />
+            Teatro, danza, arte, comedia....
+          </h3>
+          <p>
+            <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+            <span class="precios-negrita">Propuestas variadas </span>
+          </p>
+          <p class="p-entrega">Para reir, llorar y sorprenderse</p>
+        </div>
+
+        <!-- ******************************** Targeta evento 3 **************************** -->
+        <div class="targeta-evento-portada">
+          <div class="evento-portada3"></div>
+          <h2>Fiestas populares</h2>
+          <button class="event__button">Ver más</button>
+          <h3>
+            <img
+              class="icons-img__oferta"
+              src="./src/assets/icons/icons-pintadera.png"
+              alt="icons-pintadera"
+            />
+            Tradiciones, romerías, celebraciones isleñas
+          </h3>
+          <p>
+            <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+            <span class="precios-negrita">Nuestras costumbres</span>
+          </p>
+          <p class="p-entrega">Eventos del año</p>
+        </div>
+
+        <!-- ******************************** Targeta evento 4 **************************** -->
+        <div class="targeta-evento-portada">
+          <div class="evento-portada4"></div>
+          <h2>Senderismo isleño</h2>
+          <button class="event__button">Ver más</button>
+          <h3>
+            <img
+              class="icons-img__oferta"
+              src="./src/assets/icons/icons-pintadera.png"
+              alt="icons-pintadera"
+            />
+            Todo tipo de rutas
+          </h3>
+          <p>
+            <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+            <span class="precios-negrita"
+              >Disfruta de los mejores paisajes</span
+            >
+          </p>
+          <p class="p-entrega">Distintas rutas, montaña, costa y más</p>
+        </div>
+      </section>
+      <!-- ************************************* ******************************************* -->
+
+      <!-- <div class="event__container">
+        <img src="https://fakeimg.pl/440x200/?text=EVENTO" />
+        <h1>Título Evento</h1>
+        <p>
+          Esto será la descripcion de un evento en concreto que colocaremos más
+          adelante. Gracias por leerme
+        </p>
+        <button class="event__button">Ver más</button>
+      </div> -->
     </main>
-</body>
+  </body>
 </html>
