@@ -52,6 +52,21 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
+.evento-principal {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-image: url('../assets/imagen/eventoPortada/evento-principal.png');
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+.titulo-evento-principal {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
 .targeta-evento-portada {
   display: grid;
   width: 100%;
