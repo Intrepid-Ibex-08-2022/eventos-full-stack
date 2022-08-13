@@ -1,0 +1,89 @@
+[33mcommit 042d85257251af91f84d3a58dbac536ac183ea42[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/enlaces[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 19:32:01 2022 +0100
+
+    corregido nombre de clase footer__nav--text-decored, enlaces de inicio, contactos y redes sociales funcionando
+
+[33mcommit 9734de585870f6ad080f40f3a30be0c059f74a23[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 18:11:33 2022 +0100
+
+    creando ventana emergente
+
+[33mcommit ecf086b87ce830e2b20317c89fce16ab099ce926[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 17:48:03 2022 +0100
+
+    modificado ancho de container, colores header, grid de los eventos
+
+[33mcommit f279056d59b1fe4dbb8dd323d1d5b408309f03fd[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 16:28:58 2022 +0100
+
+    arreglo de margin footer y ajusto color nadvar
+
+[33mcommit c0fcfaf22ce474ceaf9860f05fdcdbc652187eaa[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 15:11:07 2022 +0100
+
+    footer inicial construido
+
+[33mcommit aaeb0313c933f4ec4d8514a40849c79586216fd7[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Sat Aug 13 12:52:02 2022 +0100
+
+    terminada estructura grid
+
+[33mcommit 5ce864ba218a10cf16c3dfe0720b0535c806b20c[m
+Author: Juan Carlos <jcvargas273@gmail.com>
+Date:   Fri Aug 12 20:58:51 2022 +0100
+
+    comenzando la prueba de grid
+
+[33mcommit 2eac85ef770c6d4c1cfe3ba49fdfe8dbb3e1bd80[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Fri Aug 12 02:37:23 2022 +0100
+
+    se ha añadido algo al readme
+
+[33mcommit 5b8046c7bdba029e8f55b409a1dd95902e8939e9[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Fri Aug 12 02:35:24 2022 +0100
+
+    se ha colocado en la ubicacion correcta el archivo README
+
+[33mcommit e45140085f8f40616466a65439b2d4c3dfaaaa1b[m[33m ([m[1;31morigin/event__container[m[33m)[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Fri Aug 12 02:31:44 2022 +0100
+
+    se ha creado un  evento de prueba con un contenido random para ir probando
+
+[33mcommit 1250d35142a78b61986c2db56ccaf051e8dc1857[m[33m ([m[1;31morigin/header[m[33m)[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Fri Aug 12 02:13:39 2022 +0100
+
+    se ha corregido la etiqueda head del body por -> header y se ha cambiado el nombre de la case LP por -> lp
+
+[33mcommit 11de2adbc777d87bcef02c5100188ea16ce84d57[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Fri Aug 12 02:04:50 2022 +0100
+
+    se ha añadido un h4 y h1 ademas de una img al header, junto con el estilo en css usando flex
+
+[33mcommit ddd571ec36640ca6e54d644e72773c724b67c028[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Thu Aug 11 19:28:53 2022 +0100
+
+    añadido estructura basica en html, link para css y foto de la bandera de canarias
+
+[33mcommit d7e59df655dc07157a74b29f06f69496ae7bf281[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Thu Aug 11 19:25:52 2022 +0100
+
+    añadido readme
+
+[33mcommit af4d29e0511756aefc0659de06e0d504e352b569[m
+Author: jormais <jonaybrito15@gmail.com>
+Date:   Thu Aug 11 19:17:22 2022 +0100
+
+    commit inicial
