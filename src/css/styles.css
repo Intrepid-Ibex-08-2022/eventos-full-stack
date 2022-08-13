@@ -2,11 +2,16 @@
     display: grid;
     grid-template-areas: 
     "header header"
-    "main main"
+    "event event"
     "footer footer";
+    grid-column: 1fr 4fr;
+    grid-template-rows: repeat(1fr);
+
 }
 
+/** Header **/
 .header{
+    grid-area: header;
     display: flex;
     background-color: black;
     flex-direction: row;
@@ -25,6 +30,11 @@
     padding: 20px;
     height: 50px;
     width: 70px;
+}
+
+/** Event **/
+.event {
+    grid-area: event;
 }
 
 .event__container{
@@ -48,4 +58,9 @@
     border-color: rgb(23, 205, 23);
     background-color: rgb(42, 154, 42);
     color: white;
+}
+
+/** Footer **/
+.footer {
+    grid-area: footer;
 }
