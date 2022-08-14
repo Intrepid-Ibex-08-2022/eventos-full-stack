@@ -7,6 +7,7 @@ body{
     background-color: #14213D;
     flex-direction: row;
     align-items: center;
+    padding-left: 10%;
 }
 
 .header__text{
@@ -31,6 +32,8 @@ main{
 }
 
 .event-details{
+    display: grid;
+    text-align: center;
     margin: 20px;
     width:min-content;
 }
