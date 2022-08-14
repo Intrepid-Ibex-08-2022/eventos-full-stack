@@ -1,5 +1,8 @@
+body{
+    margin: 0;
+}
+
 .header{
-    grid-area: header;
     display: flex;
     background-color: #14213D;
     flex-direction: row;
@@ -20,9 +23,26 @@
     width: 70px;
 }
 
+main{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+}
+
+.event-details{
+    margin: 20px;
+    width:min-content;
+}
+
+.event-details button{
+    width: 80%;
+    height: 50px;
+    border-radius: 45px;
+    background-color: rgb(184, 184, 1);
+}
 
 .footer {
-    grid-area: footer;
     display: flex;
     margin-top: 20px;
     height: 111px;
