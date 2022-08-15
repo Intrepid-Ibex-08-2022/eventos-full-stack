@@ -1,0 +1,58 @@
+.container{
+    background-color: #FFFAF7;
+    max-width: 1600px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside team"
+    "footer footer";
+    grid-column: 1fr 4fr;
+    grid-template-rows: repeat(1fr);
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    padding: 10px 20px 20px 10px;
+}
+
+.aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222177;
+    margin-right: 200px;
+    height: 600px;
+    width: 300px;
+    padding: 20px;
+    align-items:initial;
+    border: 2px solid;
+    border-radius: 25px;
+}
+.texto-mision{
+    color: white;
+}
+
+.team{
+    grid-area: team;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.team__container{
+    grid-area: team;
+    background-color: #65DAD1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    padding-top: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
