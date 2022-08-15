@@ -1,7 +1,8 @@
 :root {
   --text-color: black;
-  --primary-color: #ff8000;
-  --fondo-color: #ffffff;
+  --color-yellow: #fca311;
+  --color-blue: #14213d;
+  --fondo-white: #ffffff;
   --min-with: 375px;
   --min-with-element: 320px;
 }

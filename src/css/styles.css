@@ -34,6 +34,15 @@ body {
   margin-top: -20px;
 }
 
+.logo__img {
+  padding: 10px;
+  margin: 20px;
+  object-fit: cover;
+  object-position: top left;
+  height: 100px;
+  width: 150px;
+}
+
 .header__img {
   padding: 20px;
   height: 50px;
@@ -53,7 +62,7 @@ body {
 .event-principal {
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: 300px;
   width: 100%;
@@ -66,20 +75,29 @@ body {
   position: absolute;
 }
 .title-event-principal {
-  color: white;
+  display: inline-block;
+  background-color: var(--color-blue, blue);
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color-yellow, yellow);
   text-align: center;
   font-size: 80px;
 }
-/* .link-teror__div {
-  margin-bottom: -2.5rem;
-  left: 1.5rem;
+.link-teror__div {
+  display: inline-block;
+  background-color: var(--color-blue, blue);
+  width: 100%;
+  margin-top: 0;
+  color: var(--color-yellow, yellow);
+  text-align: center;
 }
 .link-teror {
   cursor: pointer;
   text-decoration: none;
   font-size: 40px;
   color: white;
-} */
+}
 .target-event-front-page {
   display: grid;
   width: 100%;
@@ -108,7 +126,9 @@ body {
 .event-front-page1,
 .event-front-page2,
 .event-front-page3,
-.event-front-page4 {
+.event-front-page4,
+.event-front-page5,
+.event-front-page6 {
   margin-top: 1rem;
   grid-column: 1/3;
   flex-wrap: wrap;
@@ -126,7 +146,13 @@ body {
   background-image: url('../assets/imagen/eventoPortada/eventoPortada3.png');
 }
 .event-front-page4 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada4.png');
+}
+.event-front-page5 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada5.png');
+}
+.event-front-page6 {
+  background-image: url('../assets/imagen/eventoPortada/eventoPortada6.png');
 }
 .div-h3__target-event-front-page {
   margin-top: 1rem;
@@ -177,7 +203,7 @@ body {
   margin-top: 20px;
   height: 111px;
   justify-content: space-between;
-  background-color: #14213d;
+  background-color: var(--color-blue, blue);
   align-items: center;
   padding: 0px 20px;
 }
@@ -215,15 +241,3 @@ body {
   margin-left: 20px;
   cursor: pointer;
 }
-
-/* ***************** ocultos en formato mobile ******************* */
-
-.nav-header__desktop,
-.titulo-otras-a-z,
-.list-otras-a-z {
-  display: none;
-}
-
-/* ---------------------- 900px ------------------- */
-/*** a esta resolucion desaparece el menu hamburguesa ****/
-/************* y se establece el formato desktop **********/
