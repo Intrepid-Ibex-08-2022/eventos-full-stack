@@ -42,8 +42,6 @@ body {
 
 /* ************************************* main **************************** */
 
-/* ************************* Seccion ofertas por restaurante ****************** */
-
 /** Event **/
 
 .event {
@@ -52,22 +50,37 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.evento-principal {
+.event-principal {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center;
-  background-image: url('../assets/imagen/eventoPortada/evento-principal.png');
-  background-position: center;
-  height: 400px;
+  height: 300px;
   width: 100%;
+  flex-wrap: wrap;
 }
-.titulo-evento-principal {
+.event-principal__img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.title-event-principal {
   color: white;
   text-align: center;
-  font-size: 60px;
+  font-size: 80px;
 }
-
-.targeta-evento-portada {
+/* .link-teror__div {
+  margin-bottom: -2.5rem;
+  left: 1.5rem;
+}
+.link-teror {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+} */
+.target-event-front-page {
   display: grid;
   width: 100%;
   grid-template-columns: 60% 40%;
@@ -86,16 +99,16 @@ body {
   color: #242e30cc;
 }
 
-.titulo-evento {
+.title-event {
   color: white;
   text-align: center;
   font-size: xx-large;
 }
 
-.evento-portada1,
-.evento-portada2,
-.evento-portada3,
-.evento-portada4 {
+.event-front-page1,
+.event-front-page2,
+.event-front-page3,
+.event-front-page4 {
   margin-top: 1rem;
   grid-column: 1/3;
   flex-wrap: wrap;
@@ -103,32 +116,32 @@ body {
   height: 100%;
   width: 100%;
 }
-.evento-portada1 {
+.event-front-page1 {
   background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
 }
-.evento-portada2 {
+.event-front-page2 {
   background-image: url('../assets/imagen/eventoPortada/eventoPortada2.png');
 }
-.evento-portada3 {
+.event-front-page3 {
   background-image: url('../assets/imagen/eventoPortada/eventoPortada3.png');
 }
-.evento-portada4 {
+.event-front-page4 {
   background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
 }
-.div-h3__targeta-evento-portada {
+.div-h3__target-event-front-page {
   margin-top: 1rem;
   grid-row: 2/3;
   grid-column: 1/3;
   display: flex;
   flex-direction: row;
 }
-.div-h3__targeta-evento-portada > img {
+.div-h3__target-event-front-page > img {
   width: 40px;
   height: 40px;
   padding-top: 0.5rem;
   margin-right: 0.5rem;
 }
-.p-descripcion-eventos {
+.p-descripcion-events {
   grid-column: 1/2;
   grid-row: 3/4;
   font-family: Lato;
@@ -150,7 +163,7 @@ body {
   color: white;
 }
 
-.p-formas-eventos {
+.p-way-events {
   grid-column: 1/3;
   position: relative;
 }
