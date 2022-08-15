@@ -1,120 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-</head>
-<body class="container">
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+  <body class="container">
     <header class="header">
-            <img  class="header__img" src="src/assets/img/icons8-canary-islands-48 1.png" alt="">
-            <div>
-                <h4 class="header__text provincia">
-                    PROVINCIA
-                </h4>
-                <h1 class="header__text lp">
-                    LAS PALMAS
-                </h1>
-            </div>
+      <img class="logo__img" src="/src/assets/img/logo.png" alt="" />
+      <!-- <img
+        class="header__img"
+        src="/src/assets/img/icons8-canary-islands-48 1.png"
+        alt=""
+      /> -->
+      <div>
+        <h4 class="header__text provincia">PROVINCIA</h4>
+        <h1 class="header__text lp">LAS PALMAS</h1>
+      </div>
     </header>
     <main class="event">
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-            <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a>            
+      <!-- ********************** Main Pici ***************************** -->
+
+      <!-- ********************** Targeta Principal ********************* -->
+      <div class="event-principal">
+        <img
+          class="event-principal__img"
+          src="./src/assets/imagen/eventoPortada/event-principal.jpg"
+          alt=""
+        />
+        <!-- Este div se conectará en un futuro cuando activemos todos los eventos.
+
+          <div class="link-teror__div">
+          <a
+            class="link-teror"
+            href="https://teror.es/el-fiesta-del-pino-2022-vuelve-con-un-programa-cargado-de-actos-y-una-veintena-de-conciertos/"
+            >Infórmate</a
+          >
+        </div> -->
+      </div>
+      <h1 class="title-event-principal">Fiesta del Pino 2022</h1>
+      <div class="link-teror__div">
+        <h2>
+          Con la caminata tradicional, y un programa de fiestas increible.
+        </h2>
+        <a
+          class="link-teror"
+          href="https://teror.es/el-fiesta-del-pino-2022-vuelve-con-un-programa-cargado-de-actos-y-una-veintena-de-conciertos/"
+          target="_blank"
+          >Infórmate</a
+        >
+      </div>
+      <!-- ********************** Targeta evento 1 ********************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page1">
+          <h2 class="title-event">Musicales</h2>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-            <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a> 
+
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">
+            Todos los estilos de música
+          </h3>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-            <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a> 
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Disfruta y a bailar
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">Distintas salas, festivales y mucho más</p>
+      </div>
+
+      <!-- ******************************** Targeta evento 2 **************************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page2">
+          <h2 class="title-event">Artes escénicas</h2>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-             <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a> 
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">
+            Teatro, danza, arte, comedia....
+          </h3>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-            <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a> 
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Propuestas variadas
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">Para reir, llorar y sorprenderse</p>
+      </div>
+
+      <!-- ******************************** Targeta evento 3 **************************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page3">
+          <h2 class="title-event">Fiestas populares</h2>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-             <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a>  
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">
+            Tradiciones, romerías, celebraciones isleñas
+          </h3>
         </div>
-        <div class="event__container">
-            <img src="https://fakeimg.pl/440x200/?text=EVENTO">
-            <h1>Título Evento</h1>
-            <p>
-                Esto será la descripcion de un evento en concreto que
-                colocaremos más adelante. Gracias por leerme
-            </p>
-             <a href="event-details.html">
-                <button class="event__button">Ver más</button>
-            </a> 
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Nuestras costumbres
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">Eventos del año</p>
+      </div>
+
+      <!-- ******************************** Targeta evento 4 **************************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page4">
+          <h2 class="title-event">Senderismo isleño</h2>
         </div>
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">Todo tipo de rutas</h3>
+        </div>
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Disfruta de los mejores paisajes
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">Distintas rutas, montaña, costa y más</p>
+      </div>
+
+      <!-- ******************************** Targeta evento 5 **************************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page5">
+          <h2 class="title-event">Deportes</h2>
+        </div>
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">
+            Practica tu deporte favorito
+          </h3>
+        </div>
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Bici, carreras de montaña, surf.
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">Siempre con el mejor clima</p>
+      </div>
+
+      <!-- ******************************** Targeta evento 6 **************************** -->
+      <div class="event__container target-event-front-page">
+        <div class="event-front-page6">
+          <h2 class="title-event">Gastronomía</h2>
+        </div>
+        <div class="div-h3__target-event-front-page">
+          <img
+            src="./src/assets/icons/icons-pintadera.png"
+            alt="icons-pintadera"
+          />
+          <h3 class="h3__target-event-front-page">Manjares canarios</h3>
+        </div>
+        <p class="p-descripcion-events">
+          <img src="./src/assets/icons/star.svg" alt="estrella naranja" />
+          Saborea nuestras comida
+        </p>
+        <button class="event__button">Ver más</button>
+        <p class="p-way-events">
+          Restaurantes, degustaciones, cursos de cocina, etc.
+        </p>
+      </div>
+
+      <!-- ************************************* ******************************************* -->
     </main>
     <footer class="footer">
-        <div class="footer__copyright">
-            <span>Copyright </span> 
-            <img src="src/assets/img/derechos-de-autor.png" alt="copyright" class="copyright__img">
-            <span>Intrepid Ibex 2022 </span>
-        </div>
-        <div class="footer__nav">
-            <a href="index.html" class="footer__nav--text-decored">INICIO </a>
-            <span> | </span>
-            <a href="mailto:elcorreoquequieres@correo.com" class="footer__nav--text-decored"> CONTACTO</a>
-        </div>
-        <div class="footer__social-media">
-            <a href="https://www.facebook.com/profile.php?id=100084433724450" target="_blank"><img src="src/assets/img/facebook (1).png" alt="facebookk" class="social-media__icon"></a>
-            <a href="https://www.instagram.com/ibexintrepid3" target="_blank">
-            <img src="src/assets/img/instagram.png" alt="instagram" class="social-media__icon"></a>
-            <a href="https://twitter.com/ibexintrepid3" target="_blank"><img src="src/assets/img/gorjeo.png" alt="twitter" class="social-media__icon"></a>
-        </div>
+      <div class="footer__copyright">
+        <span>Copyright </span>
+        <img
+          src="src/assets/img/derechos-de-autor.png"
+          alt="copyright"
+          class="copyright__img"
+        />
+        <span>Intrepid Ibex 2022 </span>
+      </div>
+      <div class="footer__nav">
+        <a href="index.html" class="footer__nav--text-decored">INICIO </a>
+        <span> | </span>
+        <a
+          href="mailto:elcorreoquequieres@correo.com"
+          class="footer__nav--text-decored"
+        >
+          CONTACTO</a
+        >
+      </div>
+      <div class="footer__social-media">
+        <a
+          href="https://www.facebook.com/profile.php?id=100084433724450"
+          target="_blank"
+          ><img
+            src="src/assets/img/facebook (1).png"
+            alt="facebookk"
+            class="social-media__icon"
+        /></a>
+        <a href="https://www.instagram.com/ibexintrepid3" target="_blank">
+          <img
+            src="src/assets/img/instagram.png"
+            alt="instagram"
+            class="social-media__icon"
+        /></a>
+        <a href="https://twitter.com/ibexintrepid3" target="_blank"
+          ><img
+            src="src/assets/img/gorjeo.png"
+            alt="twitter"
+            class="social-media__icon"
+        /></a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
