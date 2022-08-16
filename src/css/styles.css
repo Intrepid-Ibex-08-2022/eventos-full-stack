@@ -28,6 +28,7 @@ body {
 
 .header__text {
   color: white;
+  margin-left: 10px;
 }
 
 .lp {
@@ -35,12 +36,12 @@ body {
 }
 
 .logo__img {
-  padding: 10px;
+ 
   margin: 20px;
   object-fit: cover;
   object-position: top left;
   height: 100px;
-  width: 150px;
+  width: 160px;
 }
 
 .header__img {

@@ -1,7 +1,7 @@
 .container{
     background-color: #FFFAF7;
-    max-width:max-content;
-    margin: 0%;
+    max-width:1600px;
+    margin: 0px auto;
     height: 900px;
     margin-top: 0px;
     display: grid;
