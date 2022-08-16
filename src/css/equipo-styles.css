@@ -1,0 +1,95 @@
+.container{
+    background-color: #FFFAF7;
+    max-width:1600px;
+    margin: 0px auto;
+    height: 900px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside team"
+    "footer footer";
+    grid-column: 2fr 4fr;
+    grid-template-rows: repeat(1fr);
+}
+
+.header{
+    grid-area: header;
+    background-color: #14213D;
+    max-width: 1850px;
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    align-items: center;
+    margin-top: -20px;
+    
+}
+
+.header__logo{
+    margin-left: 80px;
+    height: 130px;
+
+}
+
+.header__tittle{
+    color: white;
+    margin-left: 300px; 
+}
+
+.aside{
+    grid-area: aside;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    background-color: #fca311;
+    margin-right: 150px;
+    height: 630px;
+    width: 400px;
+    padding: 20px;
+    border: 0.5rem outset navajowhite;
+    margin-left: 25px;
+    border-radius: 25px;
+}
+.sectionaside{
+    padding: 15px;
+}
+.sectionaside__h2{
+    font-size:x-large;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+    
+}
+.sectionaside__p{
+   font-size:medium;
+   margin: 5px;
+   text-align:start;
+}
+
+.team{
+    margin-top: 10px;
+    grid-area: team;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.team__container{
+    grid-area: team;
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content:baseline;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    padding: 15px;
+    padding-top: 15px;
+    margin: 0px 25px 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.imagen-equipo{
+    height: 200px;
+}
