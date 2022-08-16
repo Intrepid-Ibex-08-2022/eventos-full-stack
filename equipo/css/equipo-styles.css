@@ -26,8 +26,8 @@
 }
 
 .header__logo{
-    margin-left: 30px;
-    height: 150px;
+    margin-left: 80px;
+    height: 130px;
 
 }
 
@@ -39,7 +39,6 @@
 .aside{
     grid-area: aside;
     display: flex;
-    border: 1px solid;
     margin-top: 10px;
     flex-direction: column;
     background-color: #fca311;
@@ -47,11 +46,24 @@
     height: 630px;
     width: 400px;
     padding: 20px;
-    margin-left: 20px;
+    border: 0.5rem outset navajowhite;
+    margin-left: 25px;
     border-radius: 25px;
 }
-.texto-mision{
-    color: white;
+.sectionaside{
+    padding: 15px;
+}
+.sectionaside__h2{
+    font-size:x-large;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+    
+}
+.sectionaside__p{
+   font-size:medium;
+   margin: 5px;
+   text-align:start;
 }
 
 .team{
@@ -76,4 +88,8 @@
     margin: 0px 25px 5px 15px;
     border-radius: 20px;
     text-align: center;
+}
+
+.imagen-equipo{
+    height: 200px;
 }
