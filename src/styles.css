@@ -1,4 +1,4 @@
-@import './variables.css';
+@import 'css/variables.css';
 
 .container {
   max-width: 1600px;
@@ -36,7 +36,7 @@ body {
 }
 
 .logo__img {
- 
+  padding: 10px;
   margin: 20px;
   object-fit: cover;
   object-position: top left;
@@ -138,22 +138,22 @@ body {
   width: 100%;
 }
 .event-front-page1 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada1.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada1.png');
 }
 .event-front-page2 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada2.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada2.png');
 }
 .event-front-page3 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada3.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada3.png');
 }
 .event-front-page4 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada4.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada4.png');
 }
 .event-front-page5 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada5.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada5.png');
 }
 .event-front-page6 {
-  background-image: url('../assets/imagen/eventoPortada/eventoPortada6.png');
+  background-image: url('../src/assets/imagen/eventoPortada/eventoPortada6.png');
 }
 .div-h3__target-event-front-page {
   margin-top: 1rem;
