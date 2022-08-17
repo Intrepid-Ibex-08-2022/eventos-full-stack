@@ -10,6 +10,7 @@ import { EventComponent } from './components/event/event.component';
 import { PageEventComponent } from './pages/page-event/page-event.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageTeamComponent } from './pages/page-team/page-team.component';
     EventComponent,
     PageEventComponent,
     PageHomeComponent,
-    PageTeamComponent
+    PageTeamComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
