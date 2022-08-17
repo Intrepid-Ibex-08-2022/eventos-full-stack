@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'event',
     component: PageEventComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 
 ];

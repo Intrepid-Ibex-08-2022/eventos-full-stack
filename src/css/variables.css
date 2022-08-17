@@ -8,5 +8,9 @@
 }
 /* body {
   color: var(--text-color, white);
+<<<<<<< HEAD
   /* white es un valor por defecto por si no encontrara la variable 
+=======
+  /* white es un valor por defecto por si no encontrara la variable
+>>>>>>> 554683a (pagina principal funcionando en angular)
 } */
