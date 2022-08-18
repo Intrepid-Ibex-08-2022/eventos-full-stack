@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetEventsService } from 'src/app/services/get-events.service';
 
 @Component({
   selector: 'app-page-home',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  allEvents :any = []; 
+
+  constructor(private getEventComponent : GetEventsService) {
+    getEventComponent.getAllEvetsFetch()
+  }
 
   ngOnInit(): void {
   }
+
+  
 
 }

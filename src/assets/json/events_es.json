@@ -1,0 +1,1518 @@
+[
+    {
+        "search_metadata": {
+            "id": "62f2bdf9681ebe59085af584",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/8242b4439c1148ea/62f2bdf9681ebe59085af584.json",
+            "created_at": "2022-08-09 20:05:13 UTC",
+            "processed_at": "2022-08-09 20:05:13 UTC",
+            "google_events_url": "https://www.google.com/search?q=las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/8242b4439c1148ea/62f2bdf9681ebe59085af584.html",
+            "total_time_taken": "0.72"
+        },
+        "search_parameters": {
+            "q": "las palmas de gran canaria",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Melendi - Likes y Cicatrices Gran Canaria",
+                "date": {
+                    "start_date": "Oct 28",
+                    "when": "Vie, Oct 28, 7:30 PM GMT+1"
+                },
+                "address": [
+                    "Gran Canaria Arena, C. Fondos de Segura, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://www.seetickets.com/tour/melendi-likes-y-cicatrices-gran-canaria",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=RbBkhwJumzeW7wCbzKSGT0xtpT3g2D-Uhi1JN1VMFUxWBf5fvxfg4rjLxBzjUh81qGUtl6BBmiORZmH-g0bgTBrVqjT1NVixcmXfnNdpis_5v6HDqYM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4095c7faf13115:0xee8943e7c62dfb8a?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4095c7faf13115%3A0xee8943e7c62dfb8a&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Compre entradas Melendi - Likes y Cicatrices Gran Canaria y regístrese para recibir las últimas alertas turísticas. Find Melendi - Likes y Cicatrices Gran Canaria tour fechas, comentarios, horarios y detalles de eventos.",
+                "ticket_info": [
+                    {
+                        "source": "Seetickets.com",
+                        "link": "https://planetrock.seetickets.com/event/melendi-likes-y-cicatrices-gran-canaria/gran-canaria-arena/2303340",
+                        "link_type": "tickets"
+                    }
+                ],
+                "venue": {
+                    "name": "Gran Canaria Arena",
+                    "rating": "4.7",
+                    "reviews": 33,
+                    "link": "https://www.google.com/search?hl=en&q=Gran+Canaria+Arena&ludocid=17188344115577617290&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEvbTyJZDaFWbnSEQ7CwFENyY3LvxICIyNkgjQgW2UGPwykdKr126wBPw&s"
+            },
+            {
+                "title": "Percepción primaria, Prakash, Rafa Valido",
+                "date": {
+                    "start_date": "13 de agosto",
+                    "when": "Sáb, 13 de agosto – Dom, 14 de agosto"
+                },
+                "address": [
+                    "Moma Club, P.º las Canteras, 38",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://ra.co/events/1557354",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=tkq29eHClT3qDF5L-L78jEFxayUJJ6FFGqrE4eHQRt1_4BCrTu_TT0o8pWtINv_l_PSo2pWN-b2KNzBa5ZJgIvPxCO97p0wuqmdEoBgFOUCJnkrA66s",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40953f83d2a783:0xba7d0504f97b2edb?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40953f83d2a783%3A0xba7d0504f97b2edb&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Percepción Primaria, con dos álbumes en Slow Life, debuta en Moma Club.",
+                "ticket_info": [
+                    {
+                        "source": "Resident Advisor",
+                        "link": "https://ra.co/events/1557354",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Moma Club",
+                    "rating": "3.3",
+                    "reviews": 34,
+                    "link": "https://www.google.com/search?hl=en&q=Moma+Club&ludocid=13437902382067035867&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-N5GHn-bliSez6hfAfjg-ZbqHCvqdWfChtie_6vg&s"
+            },
+            {
+                "title": "Dani Miranda, Woodhands",
+                "date": {
+                    "start_date": "12 ago",
+                    "when": "Vie, 12 de agosto – Sáb, 13 de agosto"
+                },
+                "address": [
+                    "Moma Club, P.º las Canteras, 38",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://ra.co/events/1560103",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=tkq29eHClT3qDF5L-L78jEFxayUJJ6FFGqrE4eHQRt1_4BCrTu_TT0o8pWtINv_l_PSo2pWN-b2KNzBa5ZJgIvPxCO97p0wuqmdEoBgFOUCJnkrA66s",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40953f83d2a783:0xba7d0504f97b2edb?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40953f83d2a783%3A0xba7d0504f97b2edb&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "Resident Advisor",
+                        "link": "https://ra.co/events/1560103",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Moma Club",
+                    "rating": "3.3",
+                    "reviews": 34,
+                    "link": "https://www.google.com/search?hl=en&q=Moma+Club&ludocid=13437902382067035867&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-N5GHn-bliSez6hfAfjg-ZbqHCvqdWfChtie_6vg&s"
+            },
+            {
+                "title": "Jorge Drexler",
+                "date": {
+                    "start_date": "7 Dic",
+                    "when": "Mié, 20:30 PM"
+                },
+                "address": [
+                    "Alfredo Kraus Auditorium, Avda, Ctra. del Rincón, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "http://www.songkick.com/concerts/40509141-jorge-drexler-at-auditorio-alfredo-kraus?utm_medium=organic&utm_source=microformat",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=b2kSJBnFZ5bdUhZnukH7Cqmkh4VAGUpDvmt2ZWn29WuzgJAX3CA4tmPKw-J4qAiqviMnI-HMdR5ODmwFk7uDjFunaaC6nhaoJzDrZXd24ONELgLQ1hU",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40951c3f26b075:0xefbac9ff16ede6b1?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40951c3f26b075%3A0xefbac9ff16ede6b1&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Jorge Drexler nació en Montevideo, Uruguay el 21 de septiembre de 1964. En 1992 fue licenciado como doctor en Medicina de la UNIVERSITIDAD DE LA REPÚBLICA en Uruguay en 1992...",
+                "ticket_info": [
+                    {
+                        "source": "Songkick.com",
+                        "link": "http://www.songkick.com/concerts/40509141-jorge-drexler-at-auditorio-alfredo-kraus?utm_medium=organic&utm_source=microformat",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Bandsintown",
+                        "link": "https://www.bandsintown.com/e/103586467-jorge-drexler-at-alfredo-kraus-auditorium",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Alfredo Kraus Auditorium",
+                    "rating": "4.6",
+                    "reviews": 2970,
+                    "link": "https://www.google.com/search?hl=en&q=Alfredo+Kraus+Auditorium&ludocid=17274341418171492017&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVwSStKjKSb4SRO1KfkFoHyAaLmk1VS3WIqJ3qMYs&s"
+            },
+            {
+                "title": "Pranayama: Clases semanales gratis",
+                "date": {
+                    "start_date": "10 de ago",
+                    "when": "Mañana, de 18:00 a 18:30"
+                },
+                "address": [
+                    "LEMON & SOUL LAS PALMAS, C. Alfredo L Jones, 37",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://allevents.in/las%20palmas%20de%20gran%20canaria/pranayama-%E2%80%A2-free-weekly-class-%E2%80%A2-las-palmas-de-gran-canaria/10000237043000997?ref=footer-up-eventlist",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=142PR2p69HC4pqhmtOfliF5A3s9PaidMD8fLrrtCFIpckCRF9yFYDab0dnav1_Y6TJ2oaL59I0-FIN9jQWJ9IWHbnmCBzvwNgcohG37u5c4bn-HcCjE",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40953efc2f012d:0x536de6b9c2ef54b7?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40953efc2f012d%3A0x536de6b9c2ef54b7&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Aprende la técnica de respiración, practica la respiración profunda y la meditación. Relájate, cura y disfruta de los beneficios. No se requiere entrenamiento previo. Sobre este evento se le ha invitado a una sesión de trabajo libre...",
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/las%20palmas%20de%20gran%20canaria/pranayama-%E2%80%A2-free-weekly-class-%E2%80%A2-las-palmas-de-gran-canaria/10000237043000997?ref=footer-up-eventlist",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "LEMON & SOUL LAS PALMAS",
+                    "rating": "4.4",
+                    "reviews": 143,
+                    "link": "https://www.google.com/search?hl=en&q=LEMON+%26+SOUL+LAS+PALMAS&ludocid=6011714763123283127&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvFwbjAHWXjUQHOAdq0Phft3qOikbTiMCdM_O1HyNU9ymqpTkWqQy-nLo&s"
+            },
+            {
+                "title": "Retiro Diosas",
+                "date": {
+                    "start_date": "Aug 12",
+                    "when": "Fri, Aug 12 – Mon, Aug 15"
+                },
+                "address": [
+                    "Municipio de Las Palmas",
+                    "Municipio de Las Palmas"
+                ],
+                "link": "https://allevents.in/las%20palmas/jio",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=6rBjhy5XDXpHILeJfl7aPHvyMGccRhUGx1L0HzWoiuBByN0WqB456O55NXtkWWzxCC1kg9mHdw",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4094518b44a92f:0x40340f3be4d13e0?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4094518b44a92f%3A0x40340f3be4d13e0&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/las%20palmas/jio",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqr5JbbP-TJ31TsQeHizNwKrjR_yyOTSlhktIZJEQ&s"
+            },
+           
+            {
+                "title": "Evento Breathwork: 5 claves a Powerful",
+                "date": {
+                    "start_date": "11 de agosto",
+                    "when": "Jue, 6:00 – 7:15 PM"
+                },
+                "address": [
+                    "LEMON & SOUL LAS PALMAS, C. Alfredo L Jones, 37",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://allevents.in/las%20palmas%20de%20gran%20canaria/breathwork-event-%E2%80%A2-5-keys-to-powerful-manifestation-%E2%80%A2-las-palmas-de-gran-canaria/10000395397744297?ref=footer-up-eventlist",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=142PR2p69HC4pqhmtOfliF5A3s9PaidMD8fLrrtCFIpckCRF9yFYDab0dnav1_Y6TJ2oaL59I0-FIN9jQWJ9IWHbnmCBzvwNgcohG37u5c4bn-HcCjE",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40953efc2f012d:0x536de6b9c2ef54b7?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40953efc2f012d%3A0x536de6b9c2ef54b7&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Listo para experimentar una inmersión en sentirse más conscientemente despierto y conectado con tu cuerpo de energía brillante, tu fuente interior? Las 5 llaves a la Manifestación Potente",
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/las%20palmas%20de%20gran%20canaria/breathwork-event-%E2%80%A2-5-keys-to-powerful-manifestation-%E2%80%A2-las-palmas-de-gran-canaria/10000395397744297?ref=footer-up-eventlist",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "LEMON & SOUL LAS PALMAS",
+                    "rating": "4.4",
+                    "reviews": 143,
+                    "link": "https://www.google.com/search?hl=en&q=LEMON+%26+SOUL+LAS+PALMAS&ludocid=6011714763123283127&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLBdJwCxQR8R1eMn3mOAcirFcMAgObSEAHt2K5yN2ekrxTy2FWf7QffB4&s"
+            },
+            {
+                "title": "Semos Los Mojinos Escozíos - Fiestoron - Arucas...",
+                "date": {
+                    "start_date": "12 ago",
+                    "when": "Vie, 9:30 PM"
+                },
+                "address": [
+                    "FESTIVAL FIESTORON, Ctra. del Lomo, S/N",
+                    "Arucas, Las Palmas, España"
+                ],
+                "link": "https://allevents.in/puerto%20de%20la%20cruz/hard%20rock?ref=eventlist-also-sugg",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=TItx5Lb9aSZlOJ7-lRoXlh1jKevvqsmdcSx5O9cCdBkBpjFYiW5s2jCidHKFn6m78bbZCtUGZkwhGRASnd0Ut7aRhu_wyLdfkurKKuqUoxPEyNa9J5I",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4093a86d48fd5f:0x83d90e5fe32650e6?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4093a86d48fd5f%3A0x83d90e5fe32650e6&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/puerto%20de%20la%20cruz/hard%20rock?ref=eventlist-also-sugg",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "FESTIVAL FIESTORON",
+                    "rating": "4.1",
+                    "reviews": 8,
+                    "link": "https://www.google.com/search?hl=en&q=FESTIVAL+FIESTORON&ludocid=9500640693910393062&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_HqHLFRZTCo-NoP1ZWxQ6bO3Rlb23cacic64jiwSRO-EBTODXU5ODNBY&s"
+            }
+        ]
+    },
+    {
+        "search_metadata": {
+            "id": "62f162b90574f56692572cc2",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/fbcf799aeea5b6a3/62f162b90574f56692572cc2.json",
+            "created_at": "2022-08-08 19:23:37 UTC",
+            "processed_at": "2022-08-08 19:23:37 UTC",
+            "google_events_url": "https://www.google.com/search?q=agaete&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/fbcf799aeea5b6a3/62f162b90574f56692572cc2.html",
+            "total_time_taken": "2.51"
+        },
+        "search_parameters": {
+            "q": "agaete",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Tour gratuito por Santa Maria de Guía",
+                "date": {
+                    "start_date": "Aug 8",
+                    "when": "Aug 4, 3:13 AM – Aug 12, 3:13 AM"
+                },
+                "address": [
+                    "C. Marqués del Muní, 13",
+                    "Guía, España"
+                ],
+                "link": "https://www.guruwalk.com/guia",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=Pu7URPq2DEQY7nN_bfEa3UUIHUTEKOm0ar4vJp0rQuVzyPrq92sEZNBAk0ttMbOzyFUxv4vg0vYryz1kK0wFQ18XrkmYVJcMp0X9TwrXy3yX1_R4xjM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40f2d323c6009f:0x3d1f41191584b5ae?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40f2d323c6009f%3A0x3d1f41191584b5ae&engine=google_maps&google_domain=google.com&hl=en&q=agaete&type=place"
+                },
+                "description": "Vive la experiencia de este tour a través del municipio de Santa María de Guía, donde podrás disfrutar de historia, cultura y gastronomía. Caminaremos por sus calles más históricas y por supuesto ...",
+                "ticket_info": [
+                    {
+                        "source": "GuruWalk",
+                        "link": "https://www.guruwalk.com/guia",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSki9uf79YVSrEw3Zw0vkUF6SSMtTdmqG93Upe8v5yVTeqFBLrvChd1rgw&s"
+            },
+            {
+                "title": "Gran Canaria SUM festival 2020",
+                "date": {
+                    "start_date": "Sep 30",
+                    "when": "Vie, 30 de septiembre– Sáb, 1 de octubre"
+                },
+                "address": [
+                    "Infecar, Av. de la Feria, 1",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://www.entradas.com/en/event/love-of-lesbian-gran-canaria-sum-festival-2022-recinto-ferial-infecar-12415718/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=L40ZH2BYvDoHQLTNwQN-ghf5WDF17dZsROD0c7r8F6Aafvi5HR3ZQKSF3BNewyCNw6jdM-Bs2MqSMoRbZGBsb7yhHiEwoKmLqs3njnZcglvuGtM9SnM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4095ae90927131:0x2031c87a9edac5bb?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4095ae90927131%3A0x2031c87a9edac5bb&engine=google_maps&google_domain=google.com&hl=en&q=agaete&type=place"
+                },
+                "description": "Check out the lineup, dates, and tickets for SUM Festival 2022 in Las Palmas de Gran Canaria. Track your favorite artists on Songkick and never miss another concert.",
+                "ticket_info": [
+                    {
+                        "source": "Entradas.com",
+                        "link": "https://www.entradas.com/en/event/love-of-lesbian-gran-canaria-sum-festival-2022-recinto-ferial-infecar-12415718/",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Songkick.com",
+                        "link": "https://www.songkick.com/festivals/2200599-sum/id/40306252-sum-festival-2022?utm_medium=organic&utm_source=microformat",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Wegow.com",
+                        "link": "https://www.wegow.com/en-nl/festivals/gran-canaria-sum-festival-2022-infecar",
+                        "link_type": "tickets"
+                    }
+                ],
+                "venue": {
+                    "name": "Infecar",
+                    "rating": "4.2",
+                    "reviews": 2298,
+                    "link": "https://www.google.com/search?hl=en&q=Infecar&ludocid=2319855712049219003&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTps7U0-WSZNxNyjv5lAc6twmifm8ZWXPKhacnMHieEZjDm09qqj3gs7Kg&s"
+            },
+            {
+                "title": "AJP TOUR GRAN CANARIA INTERNATIONAL PRO - GI & NO-GI",
+                "date": {
+                    "start_date": "Sep 17",
+                    "when": "Sat, 9 AM – 11 PM"
+                },
+                "address": [
+                    "Polideportivo El Batán, C. Severo Ochoa, 0",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://ajptour.com/ar/event/559",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=TsFD8FgsKhnfHgiv6Xr9cDd716Zknpdxj-tHjK6KF8NTHI3Xz4HIez3ajumAwzvHzd7KupWb6PHrbsWjh4QqO43wZFRyS8vmsa3mkKVcKf2hkjwi-3o",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40959492371d75:0x7aa3fb6eb860de61?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40959492371d75%3A0x7aa3fb6eb860de61&engine=google_maps&google_domain=google.com&hl=en&q=agaete&type=place"
+                },
+                "description": "Normal: U$50 (Niños) / U$65 (Juventud, Amateurs, Profesionales y Maestros) Tarde: U$50 (Niños) / U$85 (Juventud, Amateurs, Professionals & Masters) Hay un paquete de precios descontados para registrarse en NO...",
+                "ticket_info": [
+                    {
+                        "source": "AJP Tour",
+                        "link": "https://ajptour.com/ar/event/559",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Polideportivo El Batán",
+                    "rating": "4.2",
+                    "reviews": 131,
+                    "link": "https://www.google.com/search?hl=en&q=Polideportivo+El+Bat%C3%A1n&ludocid=8837183346789375585&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Fq3M4ygy9RQqlJ1TJcqS_x2aJ2qGo6PCPfrGL78vreqv9cSSw0ja71I&s"
+            },
+            {
+                "title": "Sky Tour Gran Canaria",
+                "date": {
+                    "start_date": "Oct 15",
+                    "when": "Sab, 8 AM"
+                },
+                "address": [
+                    "Agaete",
+                    "Agaete, España"
+                ],
+                "link": "https://mooovetorun.com/en/event/sky-gran-canaria/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=qrq_8VB8uuxsVj9jtkptySzMJLDizUK5SU5vu85KxFg4zpCjMVmgN70zCj-oSlHO60VQ8n0i5A",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc408b65894cde91:0x2a021e37bef00582?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc408b65894cde91%3A0x2a021e37bef00582&engine=google_maps&google_domain=google.com&hl=en&q=agaete&type=place"
+                },
+                "description": "Descripción: El entorno natural que Gran Canaria ofrece hace que su descripción como “continente en miniatura” sea muy ajustada.",
+                "ticket_info": [
+                    {
+                        "source": "Mooovetorun.com",
+                        "link": "https://mooovetorun.com/en/event/sky-gran-canaria/",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Asociación Americana de Trail - Running",
+                        "link": "https://trailrunner.com/event/sky-tour-gran-canaria/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSdw4MZESRlvGqrJugtsacy7Snq8tsXj5dip_V3NBDbzZImkY-pK4SAI7yQA&s=10"
+            }
+           
+        ]
+    },
+    {
+        "search_metadata": {
+            "id": "62f2c0bd10d744f2a3119a1a",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/4667bfa28cd0e2da/62f2c0bd10d744f2a3119a1a.json",
+            "created_at": "2022-08-09 20:17:01 UTC",
+            "processed_at": "2022-08-09 20:17:01 UTC",
+            "google_events_url": "https://www.google.com/search?q=Ag%C3%BCimes&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/4667bfa28cd0e2da/62f2c0bd10d744f2a3119a1a.html",
+            "total_time_taken": "1.07"
+        },
+        "search_parameters": {
+            "q": "Agüimes",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Opplev Gran Canaria med kamera!",
+                "date": {
+                    "start_date": "6 Dic",
+                    "when": "Mar, Dic 6, 3:00 PM – Dom, Dic 11, 10:30 AM GMT"
+                },
+                "address": [
+                    "Hotel Rural Casa de Los Camellos, C. el Progreso, 12",
+                    "Agüimes, España"
+                ],
+                "link": "https://allevents.in/puerto%20de%20la%20cruz/december",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=6vUJyhJbRDJAVqD-rZAObI64MgHX7eUt7U6El98MCctiGUpCn0hJ-pKO9iB-V7HWAxP6VkGStZ4s88y2Nh5k-Ugi-ygNjdvtl43kjo5LeqS6Dn3EMNI",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4098ddccf1117d:0x4cd573b671fcc3cd?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4098ddccf1117d%3A0x4cd573b671fcc3cd&engine=google_maps&google_domain=google.com&hl=en&q=Ag%C3%BCimes&type=place"
+                },
+                "description": "Gran Canaria se asocia a menudo con el turismo de masas y la vida en la playa. Pero la isla tiene mucho y más que ofrecer. La naturaleza es completamente única debido a la historia volcánica de la isla y su ubicación tropical...",
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/puerto%20de%20la%20cruz/december",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Hotel Rural Casa de Los Camellos",
+                    "rating": "4.5",
+                    "reviews": 236,
+                    "link": "https://www.google.com/search?hl=en&q=Hotel+Rural+Casa+de+Los+Camellos&ludocid=5536458544355525581&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRj6IZVIHhc5nT2XFm9dkutShdV-DnE20Qnq0lHF3KmJfBlX8Bc5q37AY&s"
+            },
+            {
+                "title": "Concierto de Bunbury en Las Palmas",
+                "date": {
+                    "start_date": "25 de ago",
+                    "when": "Jueves, 9:00 – 11:50 PM"
+                },
+                "address": [
+                    "Gran Canaria Arena, C. Fondos de Segura, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://www.wegow.com/en-au/concerts/concierto-de-bunbury-en-las-palmas-de-gran-canaria",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=RbBkhwJumzeW7wCbzKSGT0xtpT3g2D-Uhi1JN1VMFUxWBf5fvxfg4rjLxBzjUh81qGUtl6BBmiORZmH-g0bgTBrVqjT1NVixcmXfnNdpis_5v6HDqYM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4095c7faf13115:0xee8943e7c62dfb8a?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4095c7faf13115%3A0xee8943e7c62dfb8a&engine=google_maps&google_domain=google.com&hl=en&q=Ag%C3%BCimes&type=place"
+                },
+                "description": "Concierto de Bunbury en Las Palmas, entradas para Bunbury en Las Palmas, es un concierto que tendrá lugar el 25/08/2022 a las 21:00 en el Gran Canaria, Las Palmas, España.",
+                "ticket_info": [
+                    {
+                        "source": "Wegow.com",
+                        "link": "https://www.wegow.com/en-gb/concerts/concierto-de-bunbury-en-las-palmas-de-gran-canaria",
+                        "link_type": "tickets"
+                    }
+                ],
+                "venue": {
+                    "name": "Gran Canaria Arena",
+                    "rating": "4.7",
+                    "reviews": 33,
+                    "link": "https://www.google.com/search?hl=en&q=Gran+Canaria+Arena&ludocid=17188344115577617290&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNIsgBQyPfadlS2OLcvcNGoUXYM3WUqK3Q5lXRm4&s"
+            }
+        ]
+    },
+     {
+        "search_metadata": {
+            "id": "62f2c15b797ac64e015fb074",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/e5c3001765d013ee/62f2c15b797ac64e015fb074.json",
+            "created_at": "2022-08-09 20:19:39 UTC",
+            "processed_at": "2022-08-09 20:19:39 UTC",
+            "google_events_url": "https://www.google.com/search?q=Firgas&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/e5c3001765d013ee/62f2c15b797ac64e015fb074.html",
+            "total_time_taken": "1.84"
+        },
+        "search_parameters": {
+            "q": "Firgas",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+ 
+	    },
+	  {
+        "search_metadata": {
+            "id": "62f2c18f8b7ed2e9f9e498cf",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/9f14708481a09d5d/62f2c18f8b7ed2e9f9e498cf.json",
+            "created_at": "2022-08-09 20:20:31 UTC",
+            "processed_at": "2022-08-09 20:20:31 UTC",
+            "google_events_url": "https://www.google.com/search?q=G%C3%A1ldar&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/9f14708481a09d5d/62f2c18f8b7ed2e9f9e498cf.html",
+            "total_time_taken": "5.52"
+        },
+        "search_parameters": {
+            "q": "Gáldar",
+            "engine": "google_events"
+        },
+		"search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        },
+	  {
+        "search_metadata": {
+            "id": "62f2c1c19c84ac8aa3b8e3db",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/eb15fcc73e0aaf41/62f2c1c19c84ac8aa3b8e3db.json",
+            "created_at": "2022-08-09 20:21:21 UTC",
+            "processed_at": "2022-08-09 20:21:21 UTC",
+            "google_events_url": "https://www.google.com/search?q=Ingenio&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/eb15fcc73e0aaf41/62f2c1c19c84ac8aa3b8e3db.html",
+            "total_time_taken": "1.48"
+        },
+        "search_parameters": {
+            "q": "Ingenio",
+            "engine": "google_events"
+        },
+       "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        },
+    {
+        "search_metadata": {
+            "id": "62f2c0fa11c881f8c5186c68",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/f847a9e8d65d50fe/62f2c0fa11c881f8c5186c68.json",
+            "created_at": "2022-08-09 20:18:02 UTC",
+            "processed_at": "2022-08-09 20:18:02 UTC",
+            "google_events_url": "https://www.google.com/search?q=Artenara&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/f847a9e8d65d50fe/62f2c0fa11c881f8c5186c68.html",
+            "total_time_taken": "1.36"
+        },
+        "search_parameters": {
+            "q": "Artenara",
+            "engine": "google_events"
+        },
+        "search_information": {
+             "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        },
+    {
+        "search_metadata": {
+            "id": "62f2c12a24e88e82b00e0efd",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/61ba1e19ff005b8f/62f2c12a24e88e82b00e0efd.json",
+            "created_at": "2022-08-09 20:18:50 UTC",
+            "processed_at": "2022-08-09 20:18:50 UTC",
+            "google_events_url": "https://www.google.com/search?q=Arucas&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/61ba1e19ff005b8f/62f2c12a24e88e82b00e0efd.html",
+            "total_time_taken": "0.49"
+        },
+        "search_parameters": {
+            "q": "Arucas",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+		
+        "events_results": [
+            {
+                "title": "Semos Los Mojinos Escozíos - Fiestoron - Arucas...",
+                "date": {
+                    "start_date": "12 de agosto",
+                    "when": "Vie, 12 de agosto, 21:30 PM GMT+1"
+                },
+                "address": [
+                    "FESTIVAL FIESTORON, Ctra. del Lomo, S/N",
+                    "Arucas, Las Palmas, España"
+                ],
+                "link": "https://allevents.in/puerto%20de%20la%20cruz/hard%20rock?ref=eventlist-also-sugg",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=TItx5Lb9aSZlOJ7-lRoXlh1jKevvqsmdcSx5O9cCdBkBpjFYiW5s2jCidHKFn6m78bbZCtUGZkwhGRASnd0Ut7aRhu_wyLdfkurKKuqUoxPEyNa9J5I",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4093a86d48fd5f:0x83d90e5fe32650e6?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4093a86d48fd5f%3A0x83d90e5fe32650e6&engine=google_maps&google_domain=google.com&hl=en&q=Arucas&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/puerto%20de%20la%20cruz/hard%20rock?ref=eventlist-also-sugg",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "FESTIVAL FIESTORON",
+                    "rating": "4.1",
+                    "reviews": 8,
+                    "link": "https://www.google.com/search?hl=en&q=FESTIVAL+FIESTORON&ludocid=9500640693910393062&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_HqHLFRZTCo-NoP1ZWxQ6bO3Rlb23cacic64jiwSRO-EBTODXU5ODNBY&s"
+            },
+            {
+                "title": "Robe",
+                "date": {
+                    "start_date": "Nov 11",
+                    "when": "Vie, 9 – 10 PM"
+                },
+                "address": [
+                    "Gran Canaria Arena, C. Fondos de Segura, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://www.entradas.com/en/event/robe-gran-canaria-arena-15047323/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=RbBkhwJumzeW7wCbzKSGT0xtpT3g2D-Uhi1JN1VMFUxWBf5fvxfg4rjLxBzjUh81qGUtl6BBmiORZmH-g0bgTBrVqjT1NVixcmXfnNdpis_5v6HDqYM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4095c7faf13115:0xee8943e7c62dfb8a?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4095c7faf13115%3A0xee8943e7c62dfb8a&engine=google_maps&google_domain=google.com&hl=en&q=Arucas&type=place"
+                },
+                "description": "Concierto de Robe en Las Palmas, Obtén tus entradas para Robe en Las Palmas, es un concierto que tendrá lugar el 11/11/2022 a las 20:00 en el Gran Canaria Arena, Las Palmas, España. Su estilo musical es principalmente...",
+                "ticket_info": [
+                    {
+                        "source": "Entradas.com",
+                        "link": "https://www.entradas.com/en/event/robe-gran-canaria-arena-15047323/",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Wegow.com",
+                        "link": "https://www.wegow.com/en-ie/concerts/concierto-de-robe-en-las-palmas-de-gran-canaria-gira-ahora-es-cuando-2022",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/las%20palmas/robe/200022263200633",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Gran Canaria Arena",
+                    "rating": "4.7",
+                    "reviews": 33,
+                    "link": "https://www.google.com/search?hl=en&q=Gran+Canaria+Arena&ludocid=17188344115577617290&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTB_0wh7P646svI6KIkHtlDJEBIMfcoIl9_73TSeSoczZiS9MU1Wl7sbI&s"
+            }
+        ]
+    
+    },
+	
+    {
+        "search_metadata": {
+            "id": "62f2c1e52f542ee52a23935f",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/5c4765774d5c3e42/62f2c1e52f542ee52a23935f.json",
+            "created_at": "2022-08-09 20:21:57 UTC",
+            "processed_at": "2022-08-09 20:21:57 UTC",
+            "google_events_url": "https://www.google.com/search?q=La+Aldea+de+San+Nicol%C3%A1s+%28La+Aldea%29&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/5c4765774d5c3e42/62f2c1e52f542ee52a23935f.html",
+            "total_time_taken": "4.67"
+        },
+        "search_parameters": {
+            "q": "La Aldea de San Nicolás (La Aldea)",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Fiestas del Charco",
+                "date": {
+                    "start_date": "Sep 11",
+                    "when": "Dom, Sep 11 – Lun, Sep 12"
+                },
+                "address": [
+                    "Islas Canarias",
+                    "Islas Canarias, España"
+                ],
+                "link": "https://rove.me/to/canary-islands/fiestas-del-charco",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=6I_bOXiIXGU2nN5SkTd6bb5gdri6z5JXbwUQzk2leSb7VFt0bDymTKWYWBUOvwJ44JP3o6ELbA",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc41aa86ef755363:0x10340f3be4bc8c0?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc41aa86ef755363%3A0x10340f3be4bc8c0&engine=google_maps&google_domain=google.com&hl=en&q=La+Aldea+de+San+Nicol%C3%A1s+%28La+Aldea%29&type=place"
+                },
+                "description": "If you plan to visit the Canary Islands in September, don’t lose the chance to take part in an odd, but very fun fiesta. Every year on the 11th of September, El Charco de La Aldea organizes a...",
+                "ticket_info": [
+                    {
+                        "source": "Rove.me",
+                        "link": "https://rove.me/to/canary-islands/fiestas-del-charco",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPcn-ste02thOXLxFHYFg_r67zKaB1GJ1avp_3v8KKKFOY3X3x95oWK9E&s"
+            },
+            {
+                "title": "Corazones de Tejina",
+                "date": {
+                    "start_date": "25 de agosto",
+                    "when": "25 de agosto - 1 de septiembre"
+                },
+                "address": [
+                    "Islas Canarias",
+                    "Islas Canarias, España"
+                ],
+                "link": "https://rove.me/to/canary-islands/corazones-de-tejina",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=6I_bOXiIXGU2nN5SkTd6bb5gdri6z5JXbwUQzk2leSb7VFt0bDymTKWYWBUOvwJ44JP3o6ELbA",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc41aa86ef755363:0x10340f3be4bc8c0?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc41aa86ef755363%3A0x10340f3be4bc8c0&engine=google_maps&google_domain=google.com&hl=en&q=La+Aldea+de+San+Nicol%C3%A1s+%28La+Aldea%29&type=place"
+                },
+                "description": "La Laguna es famosa por su fiesta anual llamada “Corazones de Tejina” o por la víspera de los corazones. Este alojamiento está dedicado a San Bartolomé, tres calles: Abajo, Arriba y Pico en La...",
+                "ticket_info": [
+                    {
+                        "source": "Rove.me",
+                        "link": "https://rove.me/to/canary-islands/corazones-de-tejina",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb0m4bN4NXem2_7G-ZSYOcHTDF0_Tzuyw84LiBw9DiwK1Crd60maf-ko&s"
+            }
+   
+        ]
+    },
+	 {
+        "search_metadata": {
+            "id": "62f2c224dc02f14a44b5f5d5",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/7c3cac2b8889bfdf/62f2c224dc02f14a44b5f5d5.json",
+            "created_at": "2022-08-09 20:23:00 UTC",
+            "processed_at": "2022-08-09 20:23:00 UTC",
+            "google_events_url": "https://www.google.com/search?q=Mogan%2C+las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/7c3cac2b8889bfdf/62f2c224dc02f14a44b5f5d5.html",
+            "total_time_taken": "0.82"
+        },
+        "search_parameters": {
+            "q": "Mogan",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+    },
+	   {
+        "search_metadata": {
+            "id": "62f2c2ff2e7d6bf97e0cf8a2",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/a4510bf70947bec9/62f2c2ff2e7d6bf97e0cf8a2.json",
+            "created_at": "2022-08-09 20:26:39 UTC",
+            "processed_at": "2022-08-09 20:26:39 UTC",
+            "google_events_url": "https://www.google.com/search?q=Moya%2C+las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/a4510bf70947bec9/62f2c2ff2e7d6bf97e0cf8a2.html",
+            "total_time_taken": "0.43"
+        },
+        "search_parameters": {
+            "q": "Moya",
+            "engine": "google_events"
+        },
+ 		"search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        },
+    {
+        "search_metadata": {
+            "id": "62f2c32cb5961e2ae17ff70d",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/3e1f04bc688d8a4a/62f2c32cb5961e2ae17ff70d.json",
+            "created_at": "2022-08-09 20:27:24 UTC",
+            "processed_at": "2022-08-09 20:27:24 UTC",
+            "google_events_url": "https://www.google.com/search?q=San+Bartolom%C3%A9+de+Tirajana&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/3e1f04bc688d8a4a/62f2c32cb5961e2ae17ff70d.html",
+            "total_time_taken": "3.13"
+        },
+        "search_parameters": {
+            "q": "San Bartolomé de Tirajana",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "W60 San Bartolome de Tirajana",
+                "date": {
+                    "start_date": "9 ago",
+                    "when": "Lun, 8 de agosto – Dom, 14 de agosto"
+                },
+                "address": [
+                    "San Bartolomé de Tirajana",
+                    "San Bartolomé de Tirajana, España"
+                ],
+                "link": "https://www.itftennis.com/en/tournament/w60-san-bartolome-de-tirajana/esp/2022/w-itf-esp-15a-2022/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=BmKzPpwpLklXgNr3kQB_YIwBzaVZtfq-2qI_Ef3kWo63tvzPTt64UBlKMhwybzZv_Z-GcBqSMw",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc409adc257b0cc9:0x20c470984be96548?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc409adc257b0cc9%3A0x20c470984be96548&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "ITF",
+                        "link": "https://www.itftennis.com/en/tournament/w60-san-bartolome-de-tirajana/esp/2022/w-itf-esp-15a-2022/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPUHnVK0FEVK2ZAXOI4AfFi8QuYgFhNSZS0BPe6DWDDD-YKlADlN-vHg&s"
+            },
+            {
+                "title": "Circuit Festival en Maspalomas – Gran Canaria 2022",
+                "date": {
+                    "start_date": "9 de ago",
+                    "when": "6– 14 ago"
+                },
+                "address": [
+                    "Maspalomas",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.carnifest.com/circuit-festival-in-maspalomas-gran-canaria-2022/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=S_9FT2nZLJOlwjtiQ39eBURjO-4hSTM9G2gWeQZ7lZAaR6Ujz_Vv9WLJXLu36__P8cJtG3Bjbg",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62bb27da5c45:0x682c6281a96f26a2?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62bb27da5c45%3A0x682c6281a96f26a2&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "El Festival de Circuitos se celebra en Maspalomas en Gran Canaria es conocido como uno de los eventos gays más grandes del mundo. El festival ofrece una gran variedad de eventos como películas, concursos, deportes acuáticos...",
+                "ticket_info": [
+                    {
+                        "source": "CarniFest.com",
+                        "link": "https://www.carnifest.com/circuit-festival-in-maspalomas-gran-canaria-2022/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWjKsWABFIAal2OfenthrQrmt0Mt3xMENLysoTgoZuUS-JQDci34b9iU&s"
+            },
+            {
+                "title": "Tour gratuito por Maspalomas (Gran Canaria)",
+                "date": {
+                    "start_date": "9 de ago",
+                    "when": "4 –12 ago"
+                },
+                "address": [
+                    "Av. de Tirajana",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.guruwalk.com/maspalomas",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=_Kjlt2qmW6PjdzqO3A3usOK7HVaH1Z48OkpMiocvFCoPn34o0KSpuOIzEPX-7RYeh-9UbWfZjQ",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62b8d94dc309:0xafe33b0fd588b38c?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62b8d94dc309%3A0xafe33b0fd588b38c&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "Disfrute de este recorrido único por el sur de Gran Canaria descubriendo la zona de Maspalomas: el destino más visitado de toda la isla. Conozca las famosas dunas por las que podrá pasear...",
+                "ticket_info": [
+                    {
+                        "source": "GuruWalk",
+                        "link": "https://www.guruwalk.com/maspalomas",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdf1pquycjVIoH8r3YQibQGBqd2KEsKcGTidLCwH1h7J9MRQqT4dhMwZk&s"
+            },
+            {
+                "title": "AERIAL YOGA",
+                "date": {
+                    "start_date": "9 de ago",
+                    "when": "9– 16 ago"
+                },
+                "address": [
+                    "Yoga Maspalomas, Av. Touroperador Kuoni, 25",
+                    "Maspalomas, España"
+                ],
+                "link": "https://allevents.in/puerto%20de%20la%20cruz/health-wellness",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=jY0p3aAEJJa5alPcJFcWhp7LN9INpo-IF-8wtHH-tXnNDvDq-LbFEIda4fK0JThSGY7y9xw9bgp450o-7aPPfiuq_X9ytFZvkkHr_YC-v0o5F3j4rcQ",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f639937ecb68f:0xd1739f297052dcba?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f639937ecb68f%3A0xd1739f297052dcba&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "Eventos de Salud y Bienestar en Yoga de Puerto de la Cruz, Meditación, Health & Fitness Events near You If there is something that will stay with you until the end of your life, it is your body. Mañana...",
+                "ticket_info": [
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/puerto%20de%20la%20cruz/health-wellness",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkUOiag2l7jQn8-5yZ1IpbAR6vktKo-vKtZ0qe0PmJmgSOLlrRMRpJF1k&s"
+            },
+            {
+                "title": "VIP Lounge 2022",
+                "date": {
+                    "start_date": "Nov 7",
+                    "when": "Lun, Nov 7 – Dom, Nov 13"
+                },
+                "address": [
+                    "Winter Pride, Av. Estados Unidos",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.tickettailor.com/events/pride/650554/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=cxcmDxl7q-H-B0VaFJxa5a0pRCgqawClLJii2tvFj3OOQIXZPdTfL3IqRhohx4T-ws9X1fHFEQTfgQGhQU7Cmez0ILCyrWCuoNMyBY9tZZT3OON-zW0",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f63bd11b73de3:0x16d83020cdb786af?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f63bd11b73de3%3A0x16d83020cdb786af&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "Acceso al exclusivo área VIP Lounge durante los 7 shows NightsMeet & Greet con artistas (no se puede garantizar con todos los artistas)Pr",
+                "ticket_info": [
+                    {
+                        "source": "Ticket Tailor",
+                        "link": "https://www.tickettailor.com/events/pride/650554/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrMUeGxuhABx2MqWBEpwiHHUCC7oYMpjOiJGD2VkJSVQNJWfvM_B4d_V4&s"
+            },
+            {
+                "title": "N-Trance @ Yumbo Centre",
+                "date": {
+                    "start_date": "10 de Nov",
+                    "when": "Jue, 8 PM"
+                },
+                "address": [
+                    "Yumbo Centre, Av. Estados Unidos, 54",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.bandsintown.com/e/1025619266",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=dWgGeHyxCw1RYGCrhOcI0p0lg_AlK5g2Q673wD_6hDeOWam0oXiOnKzY_IlzEoAZ9mzmijIBwq-vJW0B1xawABlR83XWlgJdG50CefCQd11J-cl-8mM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62b8cf72d387:0x33ff8e01171b88c4?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62b8cf72d387%3A0x33ff8e01171b88c4&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "N-Trance se formó en 1990 por Kevin O' Toole & Dale Longworth quienes luego eran estudiantes estudiando ingeniería de sonido en Oldham, e. Al principio era sólo una excusa para...",
+                "ticket_info": [
+                    {
+                        "source": "Bandsintown.com",
+                        "link": "https://www.bandsintown.com/e/1025619266-n-trance-at-yumbo-centre?came_from=209",
+                        "link_type": "tickets"
+                    }
+                ],
+                "venue": {
+                    "name": "Yumbo Centre",
+                    "rating": "4",
+                    "reviews": 18125,
+                    "link": "https://www.google.com/search?hl=en&q=Yumbo+Centre&ludocid=3746869550329333956&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1ntr0foHihsNizcPOy8y-Of8jTL4Zz89Rtgm1zo&s"
+            },
+            {
+                "title": "T-Dance @ Seven Hotel",
+                "date": {
+                    "start_date": "Nov 13",
+                    "when": "Dom, 12 – 7 PM"
+                },
+                "address": [
+                    "Seven Hotel & Wellness, C. Touroperador Matkatala, 2",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.tickettailor.com/events/pride/713374/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=vOwo_a17XzhFG7p_30DpvaRpS0iCQ-ERpvUvfveGf-VHjIUP-TGulXXm31KO_NJV4WeBDV06lo_FspUgyASI_I7PACQfdlhjkdgHkfO6z0e0-YOqlVo",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62b62a53b5a3:0x3d0397708371e451?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62b62a53b5a3%3A0x3d0397708371e451&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "T-Dance Pool Party en Seven Hotel!, ¡De vuelta por demanda y este año la fiesta de cierre de la piscina con DJs Sharon O ́Love, PK80 y Mikael Angel! Disfrute de T-Dance dentro o fuera de la piscina de refrigerio...",
+                "ticket_info": [
+                    {
+                        "source": "Ticket Tailor",
+                        "link": "https://www.tickettailor.com/events/pride/713374/",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Seven Hotel & Wellness",
+                    "rating": "4.6",
+                    "reviews": 299,
+                    "link": "https://www.google.com/search?hl=en&q=Seven+Hotel+%26+Wellness&ludocid=4396524170741146705&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUZEU260JQupy_3fAOfifLH8WDku2CBVoCEBi9cnPpEGnNosq8mvNzDO0&s"
+            },
+            {
+                "title": "Freedom Gay Festival",
+                "date": {
+                    "start_date": "Sep 7",
+                    "when": "Mié, sep 7 – Dom, sep 11"
+                },
+                "address": [
+                    "Yumbo Centre, Av. Estados Unidos, 54",
+                    "Maspalomas, España"
+                ],
+                "link": "https://eventseeker.com/venue/649749-yumbo-centrum-gran-canaria",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=dWgGeHyxCw1RYGCrhOcI0p0lg_AlK5g2Q673wD_6hDeOWam0oXiOnKzY_IlzEoAZ9mzmijIBwq-vJW0B1xawABlR83XWlgJdG50CefCQd11J-cl-8mM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62b8cf72d387:0x33ff8e01171b88c4?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62b8cf72d387%3A0x33ff8e01171b88c4&engine=google_maps&google_domain=google.com&hl=en&q=San+Bartolom%C3%A9+de+Tirajana&type=place"
+                },
+                "description": "En el corazón de Playa del Ingles en la isla de Gran Canaria se encuentra el Yumbo Centrum, que es un paraíso para los comerciantes. Este centro comercial está abierto las 24 horas del día y alberga alrededor de 204...",
+                "ticket_info": [
+                    {
+                        "source": "Eventseeker",
+                        "link": "https://eventseeker.com/venue/649749-yumbo-centrum-gran-canaria",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Yumbo Centre",
+                    "rating": "4",
+                    "reviews": 18125,
+                    "link": "https://www.google.com/search?hl=en&q=Yumbo+Centre&ludocid=3746869550329333956&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtK5iwfPYKmRnEh8hQqxZT-BbHgnIRnWEPXC0BgUT_f4n919pUgymZc&s"
+            }, 
+			 {
+                "title": "W60 San Bartolome de Tirajana",
+                "date": {
+                    "start_date": "9 ago",
+                    "when": "Lun, Aug 8 – Dom, Aug 14"
+                },
+                "address": [
+                    "San Bartolomé de Tirajana",
+                    "San Bartolomé de Tirajana, España"
+                ],
+                "link": "https://www.itftennis.com/en/tournament/w60-san-bartolome-de-tirajana/esp/2022/w-itf-esp-15a-2022/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=BmKzPpwpLklXgNr3kQB_YIwBzaVZtfq-2qI_Ef3kWo63tvzPTt64UBlKMhwybzZv_Z-GcBqSMw",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc409adc257b0cc9:0x20c470984be96548?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc409adc257b0cc9%3A0x20c470984be96548&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "ticket_info": [
+                    {
+                        "source": "ITF",
+                        "link": "https://www.itftennis.com/en/tournament/w60-san-bartolome-de-tirajana/esp/2022/w-itf-esp-15a-2022/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPUHnVK0FEVK2ZAXOI4AfFi8QuYgFhNSZS0BPe6DWDDD-YKlADlN-vHg&s"
+            },
+            {
+                "title": "Circuit Festival en Maspalomas – Gran Canaria 2022",
+                "date": {
+                    "start_date": "9 ago",
+                    "when": "6 – 14 de agosto"
+                },
+                "address": [
+                    "Maspalomas",
+                    "Maspalomas, España"
+                ],
+                "link": "https://www.carnifest.com/circuit-festival-in-maspalomas-gran-canaria-2022/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=S_9FT2nZLJOlwjtiQ39eBURjO-4hSTM9G2gWeQZ7lZAaR6Ujz_Vv9WLJXLu36__P8cJtG3Bjbg",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc3f62bb27da5c45:0x682c6281a96f26a2?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc3f62bb27da5c45%3A0x682c6281a96f26a2&engine=google_maps&google_domain=google.com&hl=en&q=las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "El Festival de Circuitos se celebra en Maspalomas en Gran Canaria es conocido como uno de los eventos gays más grandes del mundo. El festival ofrece una gran variedad de eventos como películas, concursos, deportes acuáticos...",
+                "ticket_info": [
+                    {
+                        "source": "CarniFest.com",
+                        "link": "https://www.carnifest.com/circuit-festival-in-maspalomas-gran-canaria-2022/",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWjKsWABFIAal2OfenthrQrmt0Mt3xMENLysoTgoZuUS-JQDci34b9iU&s"
+            }
+        ]
+    },
+	{
+        "search_metadata": {
+            "id": "62f2c4303944b0af8f0c2fc7",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/84b8a73dd8e50583/62f2c4303944b0af8f0c2fc7.json",
+            "created_at": "2022-08-09 20:31:44 UTC",
+            "processed_at": "2022-08-09 20:31:44 UTC",
+            "google_events_url": "https://www.google.com/search?q=Teror%2C+las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/84b8a73dd8e50583/62f2c4303944b0af8f0c2fc7.html",
+            "total_time_taken": "1.31"
+        },
+        "search_parameters": {
+            "q": "Teror",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+		},
+	    {
+        "search_metadata": {
+            "id": "62f2c378a3f4ef21a3014c36",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/27f3ac1d2a7264b6/62f2c378a3f4ef21a3014c36.json",
+            "created_at": "2022-08-09 20:28:40 UTC",
+            "processed_at": "2022-08-09 20:28:40 UTC",
+            "google_events_url": "https://www.google.com/search?q=Santa+Luc%C3%ADa+de+Tirajana&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/27f3ac1d2a7264b6/62f2c378a3f4ef21a3014c36.html",
+            "total_time_taken": "4.99"
+        },
+        "search_parameters": {
+            "q": "Santa Lucía de Tirajana",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+    },
+    {
+        "search_metadata": {
+            "id": "62f2c355216a9d09c0d51f45",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/e47c258c1a20c7b2/62f2c355216a9d09c0d51f45.json",
+            "created_at": "2022-08-09 20:28:05 UTC",
+            "processed_at": "2022-08-09 20:28:05 UTC",
+            "google_events_url": "https://www.google.com/search?q=Santa+Br%C3%ADgida&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/e47c258c1a20c7b2/62f2c355216a9d09c0d51f45.html",
+            "total_time_taken": "0.72"
+        },
+        "search_parameters": {
+            "q": "Santa Brígida",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Jorge Drexler",
+                "date": {
+                    "start_date": "7 Dic",
+                    "when": "Mié, 7 de Diciembre, 20:30 PM GMT"
+                },
+                "address": [
+                    "Alfredo Kraus Auditorium, Avda, Ctra. del Rincón, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "http://www.songkick.com/concerts/40509141-jorge-drexler-at-auditorio-alfredo-kraus?utm_medium=organic&utm_source=microformat",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=b2kSJBnFZ5bdUhZnukH7Cqmkh4VAGUpDvmt2ZWn29WuzgJAX3CA4tmPKw-J4qAiqviMnI-HMdR5ODmwFk7uDjFunaaC6nhaoJzDrZXd24ONELgLQ1hU",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40951c3f26b075:0xefbac9ff16ede6b1?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40951c3f26b075%3A0xefbac9ff16ede6b1&engine=google_maps&google_domain=google.com&hl=en&q=Santa+Br%C3%ADgida&type=place"
+                },
+                "description": "Jorge Drexler nació en Montevideo, Uruguay el 21 de septiembre de 1964. En 1992 fue licenciado como doctor en Medicina de la UNIVERSITIDAD DE LA REPÚBLICA en Uruguay en 1992...",
+                "ticket_info": [
+                    {
+                        "source": "Songkick.com",
+                        "link": "http://www.songkick.com/concerts/40509141-jorge-drexler-at-auditorio-alfredo-kraus?utm_medium=organic&utm_source=microformat",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Bandsintown",
+                        "link": "https://www.bandsintown.com/e/103586467-jorge-drexler-at-alfredo-kraus-auditorium",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Alfredo Kraus Auditorium",
+                    "rating": "4.6",
+                    "reviews": 2970,
+                    "link": "https://www.google.com/search?ucbcb=1&hl=en&q=Alfredo+Kraus+Auditorium&ludocid=17274341418171492017&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVwSStKjKSb4SRO1KfkFoHyAaLmk1VS3WIqJ3qMYs&s"
+            },
+            {
+                "title": "Ayahuasca, Bufo Alvarius, Kambo, Retiro de lujo",
+                "date": {
+                    "start_date": "Oct 17",
+                    "when": "Oct 17 – 27"
+                },
+                "address": [
+                    "Madroñal",
+                    "Madroñal, España"
+                ],
+                "link": "https://retreat.guru/events/2054-26/subconscious-retreats-10-nights-plant-medicine-kambo-bufo-ayahuasca",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=Yt3LdV8rDzkfXJa6_n2d-QzIqge5UPD8ZYG6_6m14Ys5K0xu4nP4Pk7PQDx2w-RBkoP5cRKZBA",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc409125cab9e3d3:0x72fc7e88ee665e3c?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc409125cab9e3d3%3A0x72fc7e88ee665e3c&engine=google_maps&google_domain=google.com&hl=en&q=Santa+Br%C3%ADgida&type=place"
+                },
+                "description": "RETIRO DE 10 DÍAS – KAMBO, BUFO, AYAHUASCA 17 de octubre Las Palmas De Gran Canaria Este retiro espiritual combina conocimientos antiguos de todo el mundo con suaves...",
+                "ticket_info": [
+                    {
+                        "source": "Retreat.guru",
+                        "link": "https://retreat.guru/events/2054-26/subconscious-retreats-10-nights-plant-medicine-kambo-bufo-ayahuasca",
+                        "link_type": "tickets"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHKeAcbDH5SM9u7KdtstDwVeM0j_l0UWG7FuGyUybUWU5XnqN0P_B4E8&s"
+            }
+        ]
+    },
+{
+        "search_metadata": {
+            "id": "62f2c378a3f4ef21a3014c36",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/27f3ac1d2a7264b6/62f2c378a3f4ef21a3014c36.json",
+            "created_at": "2022-08-09 20:28:40 UTC",
+            "processed_at": "2022-08-09 20:28:40 UTC",
+            "google_events_url": "https://www.google.com/search?q=Santa+Luc%C3%ADa+de+Tirajana&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/27f3ac1d2a7264b6/62f2c378a3f4ef21a3014c36.html",
+            "total_time_taken": "4.99"
+        },
+        "search_parameters": {
+            "q": "Santa Lucía de Tirajana",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+    },	
+	
+    {
+        "search_metadata": {
+            "id": "62f2c39f29d1772cfa567063",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/47a8e7abd9862d78/62f2c39f29d1772cfa567063.json",
+            "created_at": "2022-08-09 20:29:19 UTC",
+            "processed_at": "2022-08-09 20:29:19 UTC",
+            "google_events_url": "https://www.google.com/search?q=Santa+Mar%C3%ADa+de+Gu%C3%ADa+de+Gran+Canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/47a8e7abd9862d78/62f2c39f29d1772cfa567063.html",
+            "total_time_taken": "0.52"
+        },
+        "search_parameters": {
+            "q": "Santa María de Guía de Gran Canaria",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+            {
+                "title": "Tour gratuito por Santa Maria de Guía",
+                "date": {
+                    "start_date": "Aug 9",
+                    "when": "4 Ago, 3:13 AM – 12 Ago, 3:13 AM"
+                },
+                "address": [
+                    "C. Marqués del Muní, 13",
+                    "Guía, España"
+                ],
+                "link": "https://www.guruwalk.com/guia",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=Pu7URPq2DEQY7nN_bfEa3UUIHUTEKOm0ar4vJp0rQuVzyPrq92sEZNBAk0ttMbOzyFUxv4vg0vYryz1kK0wFQ18XrkmYVJcMp0X9TwrXy3yX1_R4xjM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40f2d323c6009f:0x3d1f41191584b5ae?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40f2d323c6009f%3A0x3d1f41191584b5ae&engine=google_maps&google_domain=google.com&hl=en&q=Santa+Mar%C3%ADa+de+Gu%C3%ADa+de+Gran+Canaria&type=place"
+                },
+                "description": "Vive la experiencia de este tour a través del municipio de Santa María de Guía, donde podrás disfrutar de historia, cultura y gastronomía. Caminaremos por sus calles más históricas y por supuesto ...",
+                "ticket_info": [
+                    {
+                        "source": "GuruWalk",
+                        "link": "https://www.guruwalk.com/guia",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSki9uf79YVSrEw3Zw0vkUF6SSMtTdmqG93Upe8v5yVTeqFBLrvChd1rgw&s"
+            },
+            {
+                "title": "Robe",
+                "date": {
+                    "start_date": "Nov 11",
+                    "when": "Vie, 9 – 10 PM"
+                },
+                "address": [
+                    "Gran Canaria Arena, C. Fondos de Segura, s/n",
+                    "Las Palmas de Gran Canaria, España"
+                ],
+                "link": "https://www.entradas.com/en/event/robe-gran-canaria-arena-15047323/",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=RbBkhwJumzeW7wCbzKSGT0xtpT3g2D-Uhi1JN1VMFUxWBf5fvxfg4rjLxBzjUh81qGUtl6BBmiORZmH-g0bgTBrVqjT1NVixcmXfnNdpis_5v6HDqYM",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4095c7faf13115:0xee8943e7c62dfb8a?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4095c7faf13115%3A0xee8943e7c62dfb8a&engine=google_maps&google_domain=google.com&hl=en&q=Santa+Mar%C3%ADa+de+Gu%C3%ADa+de+Gran+Canaria&type=place"
+                },
+                "description": "Concierto de Robe en Las Palmas, Obtén tus entradas para Robe en Las Palmas, es un concierto que tendrá lugar el 11/11/2022 a las 20:00 en el Gran Canaria Arena, Las Palmas, España. Su estilo musical es principalmente...",
+                "ticket_info": [
+                    {
+                        "source": "Entradas.com",
+                        "link": "https://www.entradas.com/en/event/robe-gran-canaria-arena-15047323/",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "Wegow.com",
+                        "link": "https://www.wegow.com/en-ie/concerts/concierto-de-robe-en-las-palmas-de-gran-canaria-gira-ahora-es-cuando-2022",
+                        "link_type": "tickets"
+                    },
+                    {
+                        "source": "AllEvents.in",
+                        "link": "https://allevents.in/las%20palmas/robe/200022263200633",
+                        "link_type": "más información"
+                    }
+                ],
+                "venue": {
+                    "name": "Gran Canaria Arena",
+                    "rating": "4.7",
+                    "reviews": 33,
+                    "link": "https://www.google.com/search?hl=en&q=Gran+Canaria+Arena&ludocid=17188344115577617290&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTB_0wh7P646svI6KIkHtlDJEBIMfcoIl9_73TSeSoczZiS9MU1Wl7sbI&s"
+            }
+           
+        ]
+    },
+	 {
+        "search_metadata": {
+            "id": "62f2c3c51c450ae4f2b48a48",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/b3b59ba0c201a53e/62f2c3c51c450ae4f2b48a48.json",
+            "created_at": "2022-08-09 20:29:57 UTC",
+            "processed_at": "2022-08-09 20:29:57 UTC",
+            "google_events_url": "https://www.google.com/search?q=Tejeda&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/b3b59ba0c201a53e/62f2c3c51c450ae4f2b48a48.html",
+            "total_time_taken": "1.65"
+        },
+        "search_parameters": {
+            "q": "Tejeda",
+            "engine": "google_events"
+        },
+        "search_information": {
+                       "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+    },
+    {
+        "search_metadata": {
+            "id": "62f2c3e4f716eef8e44bbe88",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/6d5fe4cb2711ff66/62f2c3e4f716eef8e44bbe88.json",
+            "created_at": "2022-08-09 20:30:28 UTC",
+            "processed_at": "2022-08-09 20:30:28 UTC",
+            "google_events_url": "https://www.google.com/search?q=Telde&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/6d5fe4cb2711ff66/62f2c3e4f716eef8e44bbe88.html",
+            "total_time_taken": "1.38"
+        },
+        "search_parameters": {
+            "q": "Telde",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+
+            {
+                "title": "GRAN CANARIA YELLOW BOWL",
+                "date": {
+                    "start_date": "Oct 17",
+                    "when": "Lun, Oct 17 – Dom, Oct 23"
+                },
+                "address": [
+                    "Telde",
+                    "Telde, España"
+                ],
+                "link": "https://www.tenniseurope.org/calendarevent/65389/GRAN-CANARIA-YELLOW-BOWL",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=NmLZK8dadwzf_wO-h3IVpQYKK_wlT3Lr44TAPa77-pNMf19WsSpk8nEp_qn6lNDbZtFqyzTpKQ",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc4097efa65f67f5:0xccca05a89836c80a?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc4097efa65f67f5%3A0xccca05a89836c80a&engine=google_maps&google_domain=google.com&hl=en&q=Telde&type=place"
+                },
+                "description": "TEJT 12&U, Category 1",
+                "ticket_info": [
+                    {
+                        "source": "Tennis Europe",
+                        "link": "https://www.tenniseurope.org/calendarevent/65389/GRAN-CANARIA-YELLOW-BOWL",
+                        "link_type": "más información"
+                    }
+                ],
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_HeVufxCK7Gggv6PHyI_wDVU0XdzIIq6eOZ_LRmDSI6vmT60NRX-yCOXjQ&s=10"
+            }     
+        ]
+    },
+    {
+        "search_metadata": {
+            "id": "62f2c4303944b0af8f0c2fc7",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/84b8a73dd8e50583/62f2c4303944b0af8f0c2fc7.json",
+            "created_at": "2022-08-09 20:31:44 UTC",
+            "processed_at": "2022-08-09 20:31:44 UTC",
+            "google_events_url": "https://www.google.com/search?q=Teror%2C+las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/84b8a73dd8e50583/62f2c4303944b0af8f0c2fc7.html",
+            "total_time_taken": "1.31"
+        },
+        "search_parameters": {
+            "q": "Teror",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Results for exact spelling"
+        },
+        "events_results": [
+
+            {
+                "title": "IRON SKULLS CO @ Auditorio de Teror",
+                "date": {
+                    "start_date": "22 abr",
+                    "when": "Sáb, 20:30 PM"
+                },
+                "address": [
+                    "Teror Auditorium, Plaza de Sintes, s/n",
+                    "Teror, España"
+                ],
+                "link": "https://www.bandsintown.com/e/103491686",
+                "event_location_map": {
+                    "image": "https://www.google.com/maps/vt/data=V7IkB4wIiFOQUjOEDm4nkBETYIj2YUcQAnqucLT1gI_rwzA7CcS1WqtgU4wzUFX8TP1nC6lxWWTDBRADf-XksA1e99dP5mJ8Q38S2JPR8mXyXSeQS6Q",
+                    "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0xc40922aca451333:0xaeaf8948bec57660?sa=X&hl=en",
+                    "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0xc40922aca451333%3A0xaeaf8948bec57660&engine=google_maps&google_domain=google.com&hl=en&q=Teror%2C+las+palmas+de+gran+canaria&type=place"
+                },
+                "description": "Iron Skulls Co, con sede en Barcelona, es una compañía de baile que se remonta a 2012-13, Aunque se originó en el grupo Bboying (Breakdance) llamado Iron Skulls Crew, formado en 2...",
+                "ticket_info": [
+                    {
+                        "source": "Bandsintown.com",
+                        "link": "https://www.bandsintown.com/e/103491686-iron-skulls-co-at-auditorio-de-teror?came_from=209",
+                        "link_type": "tickets"
+                    }
+                ],
+                "venue": {
+                    "name": "Teror Auditorium",
+                    "rating": "4.5",
+                    "reviews": 192,
+                    "link": "https://www.google.com/search?hl=en&q=Teror+Auditorium&ludocid=12587430429055088224&ibp=gwp%3B0,7"
+                },
+                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWLowoMrrVGXcsTRnbB4WpAOx651Jl4AWExie5Z0&s"
+            },  
+	{
+        "search_metadata": {
+            "id": "62f2c463a3f4ef2100ce7cd7",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/d0fe538eb8fa26c7/62f2c463a3f4ef2100ce7cd7.json",
+            "created_at": "2022-08-09 20:32:35 UTC",
+            "processed_at": "2022-08-09 20:32:35 UTC",
+            "google_events_url": "https://www.google.com/search?q=Valleseco&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/d0fe538eb8fa26c7/62f2c463a3f4ef2100ce7cd7.html",
+            "total_time_taken": "0.41"
+        },
+        "search_parameters": {
+            "q": "Valleseco",
+            "engine": "google_events"
+        },
+        "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        },
+			{
+        "search_metadata": {
+            "id": "62f2c47d1071f40b3af19a12",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/b250e267a2b6056f/62f2c47d1071f40b3af19a12.json",
+            "created_at": "2022-08-09 20:33:01 UTC",
+            "processed_at": "2022-08-09 20:33:01 UTC",
+            "google_events_url": "https://www.google.com/search?q=Valsequillo+de+Gran+Canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/b250e267a2b6056f/62f2c47d1071f40b3af19a12.html",
+            "total_time_taken": "0.73"
+        },
+        "search_parameters": {
+            "q": "Valsequillo de Gran Canaria",
+            "engine": "google_events"
+        },
+            "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        }, 
+	{
+        "search_metadata": {
+            "id": "62f2c4b4cace96d0d5dd2fc9",
+            "status": "Success",
+            "json_endpoint": "https://serpapi.com/searches/be1293882fd91d62/62f2c4b4cace96d0d5dd2fc9.json",
+            "created_at": "2022-08-09 20:33:56 UTC",
+            "processed_at": "2022-08-09 20:33:57 UTC",
+            "google_events_url": "https://www.google.com/search?q=Vega+de+San+Mateo%2C+las+palmas+de+gran+canaria&ibp=htl;events&hl=en",
+            "raw_html_file": "https://serpapi.com/searches/be1293882fd91d62/62f2c4b4cace96d0d5dd2fc9.html",
+            "total_time_taken": "0.68"
+        },
+         "search_information": {
+            "events_results_state": "Fully empty"
+        },
+        "error": "Google hasn't returned any results for this query."
+        }
+    
+        ]
+    
+    }
+]
