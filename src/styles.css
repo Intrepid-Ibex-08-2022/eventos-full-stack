@@ -40,8 +40,10 @@ body {
 }
 
 .logo__img {
+
   margin: 10px 20px;
   margin-top: -15px;
+
   object-fit: cover;
   object-position: top left;
   height: 100px;
