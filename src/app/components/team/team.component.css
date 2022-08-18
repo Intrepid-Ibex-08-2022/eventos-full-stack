@@ -1,17 +1,16 @@
-.container{
-  background-color: #FFFAF7;
-  max-width:1600px;
+.container {
+  position: relative;
+  background-color: #fffaf7;
+  max-width: 1600px;
   margin: 0px auto;
-  margin-top: 0px;
+  top: 6rem;
   display: grid;
-  grid-template-areas:
-  "aside team";
+  grid-template-areas: 'aside team';
   grid-column: 2fr 4fr;
   grid-template-rows: repeat(1fr);
 }
 
-
-.aside{
+.aside {
   grid-area: aside;
   display: flex;
   margin-top: 10px;
@@ -25,23 +24,22 @@
   margin-left: 25px;
   border-radius: 25px;
 }
-.sectionaside{
+.sectionaside {
   padding: 15px;
 }
-.sectionaside__h2{
-  font-size:x-large;
+.sectionaside__h2 {
+  font-size: x-large;
   text-align: center;
   margin: 0px;
   margin-bottom: 30px;
-
 }
-.sectionaside__p{
- font-size:medium;
- margin: 5px;
- text-align:start;
+.sectionaside__p {
+  font-size: medium;
+  margin: 5px;
+  text-align: start;
 }
 
-.team{
+.team {
   margin-top: 10px;
   grid-area: team;
   display: flex;
@@ -50,11 +48,11 @@
   flex-direction: row-reverse;
 }
 
-.team__container{
+.team__container {
   grid-area: team;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   display: flex;
-  justify-content:baseline;
+  justify-content: baseline;
   flex-direction: column;
   width: 200px;
   height: 300px;
@@ -65,6 +63,18 @@
   text-align: center;
 }
 
-.imagen-equipo{
+.imagen-equipo {
   height: 200px;
+}
+@media screen and (max-width: 890px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .aside {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
