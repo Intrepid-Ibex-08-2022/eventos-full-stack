@@ -1,7 +1,7 @@
 @import 'css/variables.css';
 
 .container {
-  max-width: 1600px;
+  max-width: 100vw;
   margin: 0 auto;
   display: grid;
   grid-template-areas:
@@ -15,7 +15,7 @@
 /* ***************** formato mobile responsive ********************* */
 /* ****************************************************************** */
 body {
-  min-width: var(--min-with, 375px);
+  min-width: var(--min-with, 325px);
 }
 
 /* ********************************* header ****************************** */
@@ -40,7 +40,8 @@ body {
 }
 
 .logo__img {
-  margin: 20px;
+  margin: 10px 20px;
+  margin-top: -15px;
   object-fit: cover;
   object-position: top left;
   height: 100px;
@@ -59,7 +60,7 @@ body {
 
 .event {
   position: relative;
-  top: 8.7rem;
+  top: 6rem;
   grid-area: event;
   display: flex;
   flex-wrap: wrap;
@@ -205,9 +206,10 @@ body {
 /** Footer **/
 .footer {
   position: relative;
+  width: 100%;
   grid-area: footer;
   display: flex;
-  margin-top: 150px;
+  margin-top: 100px;
   height: 111px;
   justify-content: space-between;
   background-color: var(--color-blue, blue);
