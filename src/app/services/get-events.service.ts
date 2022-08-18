@@ -15,14 +15,13 @@ getAllEvents() {
   return this.httpclient.get("/assets/json/events_es.json")
 }
 
-async getAllEvetsFetch(){
+async getAllEvetsFetch() : Promise<{}[]> {
   await fetch("/assets/json/events_es.json")
   .then( res => res.json())
   .then( events =>  this.allEvents = events)
   .catch(() => "ERROR")
 
-  console.log(this.allEvents);
-  
+  return this.allEvents;
 }
 
 }
