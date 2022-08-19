@@ -5,14 +5,16 @@
     text-align: center;
     border-radius: 10px;
     margin: 20px;
+    cursor: pointer;
 }
 
-.card__link{
-    text-decoration: none;
+.card:hover{
+    width: 210px;
+    
 }
 
 .card__img{
-    width: 200px;
+    width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -21,8 +23,20 @@
     color: black;
 }
 
-.card__date{
+.card__p{
     color:rgb(192, 192, 192);
+}
+
+.card__reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.card__icon--review{
+    width: 16px;
+    height: 16px;
 }
 
 .card__btn{

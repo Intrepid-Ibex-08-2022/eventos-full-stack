@@ -1,6 +1,8 @@
   <app-header></app-header>
   <!--aqui colocar imagen grande principal-->
-  <app-event [events]="event" *ngFor="let event of evetsLP"></app-event>
+  <div class="events">
+    <app-event  [events]="event" *ngFor="let event of evetsLP"></app-event>
+  </div>
   <app-footer></app-footer>
 
 
