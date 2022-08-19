@@ -40,7 +40,6 @@ body {
 }
 
 .logo__img {
-
   margin: 10px 20px;
   margin-top: -15px;
 
@@ -124,6 +123,13 @@ body {
   border-radius: 5px;
   width: 400px;
   color: #242e30cc;
+}
+.target-event-front-page:hover {
+  transform: scale(1.1, 1.1);
+  border: 1px solid rgb(160, 157, 157);
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .title-event {
