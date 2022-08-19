@@ -11,6 +11,8 @@ import { PageEventComponent } from './pages/page-event/page-event.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { TeamComponent } from './components/team/team.component';
+
+import { HttpClientModule } from '@angular/common/http';
 import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrincipal.component';
 
 @NgModule({
@@ -24,9 +26,13 @@ import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrinc
     PageEventComponent,
     PageHomeComponent,
     PageTeamComponent,
-    TeamComponent,
+    TeamComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

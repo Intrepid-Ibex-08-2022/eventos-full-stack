@@ -1,0 +1,50 @@
+.card{
+    width: 200px;
+    border: solid 1px rgb(192, 192, 192);
+    box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.card:hover{
+    width: 210px;
+    
+}
+
+.card__img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card__title{
+    color: black;
+}
+
+.card__p{
+    color:rgb(192, 192, 192);
+}
+
+.card__reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.card__icon--review{
+    width: 16px;
+    height: 16px;
+}
+
+.card__btn{
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 10px;
+    border: solid 1px rgb(192, 192, 192);
+    box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.2);
+    color:rgb(192, 192, 192);
+}

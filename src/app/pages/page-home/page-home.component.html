@@ -1,4 +1,6 @@
-<app-header></app-header>
-<app-fhotoPrincipal></app-fhotoPrincipal>
-<app-event></app-event>
-<app-footer></app-footer>
+  <app-header></app-header>
+  <!--aqui colocar imagen grande principal-->
+  <div class="events">
+    <app-event  [events]="event" *ngFor="let event of evetsLP"></app-event>
+  </div>
+  <app-footer></app-footer>
