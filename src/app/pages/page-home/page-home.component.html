@@ -1,9 +1,6 @@
-<button (click)="getAllEvents()" >qqqqq</button>
-
-
   <app-header></app-header>
   <!--aqui colocar imagen grande principal-->
-  <app-event></app-event>
+  <app-event [events]="event" *ngFor="let event of evetsLP"></app-event>
   <app-footer></app-footer>
 
 

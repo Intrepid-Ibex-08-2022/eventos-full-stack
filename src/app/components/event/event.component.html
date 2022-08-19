@@ -1,8 +1,8 @@
 <div class="card">
   <a class="card__link" href="">
-    <img class="card__img" src="/assets/imagen/jonay.png" alt="event-image">
-    <h4 class="card__title">Jonay</h4>
-    <p class="card__date">Fecha</p>
+    <img class="card__img" [src]="events.thumbnail" alt="event-image">
+    <h4 class="card__title">{{events.title}}</h4>
+    <p class="card__date">{{events.date.when}}</p>
     <button class="card__btn">saber más</button>
   </a>
 </div>

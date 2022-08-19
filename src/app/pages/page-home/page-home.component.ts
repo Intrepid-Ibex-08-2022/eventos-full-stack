@@ -10,14 +10,17 @@ import { GetEventsService } from 'src/app/services/get-events.service';
 export class PageHomeComponent implements OnInit {
 
   allEvents : any = []; 
+  evetsLP : any = [];
 
   constructor(private getEventComponent : GetEventsService) {
     //this.allEvents = getEventComponent.getAllEvetsFetch()
 
-    getEventComponent.getAllEvents().subscribe( events => 
-      this.allEvents = events
+    getEventComponent.getAllEvents().subscribe(async events => {
+      this.allEvents = events;
+      await this.evetsLP ;
+      this.evetsLP = this.allEvents[0].events_results;
+    }
       )
-
   }
 
   ngOnInit(): void {
@@ -28,7 +31,10 @@ export class PageHomeComponent implements OnInit {
   }
 
   getAllEvents(){
-    console.log(this.allEvents);
+    console.log(this.evetsLP);
+    
+    
+    
     
   }
 
