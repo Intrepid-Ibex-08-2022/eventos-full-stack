@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-event',
@@ -9,10 +11,13 @@ export class EventComponent implements OnInit {
 
   @Input() events : any = [];
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
 
+goDetails() {
+  this.router.navigateByUrl("/team");
+}
 }
