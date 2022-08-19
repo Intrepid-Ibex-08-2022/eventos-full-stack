@@ -11,12 +11,15 @@ import { PageEventComponent } from './pages/page-event/page-event.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { TeamComponent } from './components/team/team.component';
+
 import { HttpClientModule } from '@angular/common/http';
+import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrincipal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FhotoPrincipalComponent,
     FooterComponent,
     SidebarComponent,
     EventComponent,
@@ -31,6 +34,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
