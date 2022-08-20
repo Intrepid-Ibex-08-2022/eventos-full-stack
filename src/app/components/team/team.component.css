@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 .container {
   position: relative;
   background-color: #fffaf7;
-  max-width: 1600px;
+  /* max-width: 1600px; */
+  width: 100%;
   margin: 0px auto;
   top: 6rem;
   display: grid;
@@ -17,8 +21,8 @@
   flex-direction: column;
   background-color: #fca311;
   margin-right: 150px;
-  height: 630px;
-  width: 400px;
+  height: 650px;
+  width: 450px;
   padding: 20px;
   border: 0.5rem outset navajowhite;
   margin-left: 25px;

@@ -11,16 +11,16 @@ import { PageEventComponent } from './pages/page-event/page-event.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { TeamComponent } from './components/team/team.component';
-import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrincipal.component';
+import { FhotoPrincipalComponent } from './components/fhotoprincipal/fhotoPrincipal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FhotoPrincipalComponent,
     FooterComponent,
     SidebarComponent,
     EventComponent,
+    FhotoPrincipalComponent,
     PageEventComponent,
     PageHomeComponent,
     PageTeamComponent,
