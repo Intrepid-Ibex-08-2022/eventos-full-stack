@@ -48,7 +48,7 @@
                     "reviews": 33,
                     "link": "https://www.google.com/search?hl=en&q=Gran+Canaria+Arena&ludocid=17188344115577617290&ibp=gwp%3B0,7"
                 },
-                "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEvbTyJZDaFWbnSEQ7CwFENyY3LvxICIyNkgjQgW2UGPwykdKr126wBPw&s"
+                "thumbnail": "https://cd1.taquilla.com/data/images/t/f3/melendi.jpg"
             },
             {
                 "title": "Percepción primaria, Prakash, Rafa Valido",
@@ -207,7 +207,7 @@
                 ],
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqr5JbbP-TJ31TsQeHizNwKrjR_yyOTSlhktIZJEQ&s"
             },
-           
+
             {
                 "title": "Evento Breathwork: 5 claves a Powerful",
                 "date": {
@@ -423,7 +423,7 @@
                 ],
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSdw4MZESRlvGqrJugtsacy7Snq8tsXj5dip_V3NBDbzZImkY-pK4SAI7yQA&s=10"
             }
-           
+
         ]
     },
     {
@@ -530,7 +530,7 @@
             "events_results_state": "Fully empty"
         },
         "error": "Google hasn't returned any results for this query."
- 
+
 	    },
 	  {
         "search_metadata": {
@@ -610,7 +610,7 @@
         "search_information": {
             "events_results_state": "Results for exact spelling"
         },
-		
+
         "events_results": [
             {
                 "title": "Semos Los Mojinos Escozíos - Fiestoron - Arucas...",
@@ -686,9 +686,9 @@
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTB_0wh7P646svI6KIkHtlDJEBIMfcoIl9_73TSeSoczZiS9MU1Wl7sbI&s"
             }
         ]
-    
+
     },
-	
+
     {
         "search_metadata": {
             "id": "62f2c1e52f542ee52a23935f",
@@ -760,7 +760,7 @@
                 ],
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBb0m4bN4NXem2_7G-ZSYOcHTDF0_Tzuyw84LiBw9DiwK1Crd60maf-ko&s"
             }
-   
+
         ]
     },
 	 {
@@ -1046,7 +1046,7 @@
                     "link": "https://www.google.com/search?hl=en&q=Yumbo+Centre&ludocid=3746869550329333956&ibp=gwp%3B0,7"
                 },
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGtK5iwfPYKmRnEh8hQqxZT-BbHgnIRnWEPXC0BgUT_f4n919pUgymZc&s"
-            }, 
+            },
 			 {
                 "title": "W60 San Bartolome de Tirajana",
                 "date": {
@@ -1243,8 +1243,8 @@
             "events_results_state": "Fully empty"
         },
         "error": "Google hasn't returned any results for this query."
-    },	
-	
+    },
+
     {
         "search_metadata": {
             "id": "62f2c39f29d1772cfa567063",
@@ -1332,7 +1332,7 @@
                 },
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTB_0wh7P646svI6KIkHtlDJEBIMfcoIl9_73TSeSoczZiS9MU1Wl7sbI&s"
             }
-           
+
         ]
     },
 	 {
@@ -1400,7 +1400,7 @@
                     }
                 ],
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_HeVufxCK7Gggv6PHyI_wDVU0XdzIIq6eOZ_LRmDSI6vmT60NRX-yCOXjQ&s=10"
-            }     
+            }
         ]
     },
     {
@@ -1454,7 +1454,7 @@
                     "link": "https://www.google.com/search?hl=en&q=Teror+Auditorium&ludocid=12587430429055088224&ibp=gwp%3B0,7"
                 },
                 "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWLowoMrrVGXcsTRnbB4WpAOx651Jl4AWExie5Z0&s"
-            },  
+            },
 	{
         "search_metadata": {
             "id": "62f2c463a3f4ef2100ce7cd7",
@@ -1494,7 +1494,7 @@
             "events_results_state": "Fully empty"
         },
         "error": "Google hasn't returned any results for this query."
-        }, 
+        },
 	{
         "search_metadata": {
             "id": "62f2c4b4cace96d0d5dd2fc9",
@@ -1511,8 +1511,8 @@
         },
         "error": "Google hasn't returned any results for this query."
         }
-    
+
         ]
-    
+
     }
 ]
