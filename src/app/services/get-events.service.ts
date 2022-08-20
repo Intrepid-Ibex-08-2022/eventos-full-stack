@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Event, EventsResult } from '../interface/event';
 
 
 @Injectable({
@@ -7,12 +8,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GetEventsService {
 
+  allEvents: Event[] = [];
+  eventDetails: EventsResult = {};
+
   constructor(public httpclient : HttpClient) { }
 
-allEvents = [];
+  getAllEvents() {
+    return this.httpclient.get<Event[]>("/assets/json/events_es.json")
+  }
 
-getAllEvents() {
-  return this.httpclient.get("/assets/json/events_es.json")
-}
+  setEventDetails(event: EventsResult){
+    this.eventDetails = event
+  }
 
 }

@@ -1,16 +1,16 @@
-<div class="card" (click)="goDetails()">
-    <img class="card__img" [src]="events.thumbnail" alt="event-image">
-    <h4 class="card__title">{{events.title}}</h4>
-    <p class="card__p">{{events.date.start_date}}</p>
-    <p class="card__p">Lugar: {{events.venue?.name}}</p>
+<div class="card" (click)="event_detail(event)">
+    <img class="card__img" [src]="event.thumbnail" alt="event-image">
+    <h4 class="card__title">{{event.title}}</h4>
+    <p class="card__p">{{event.date?.start_date}}</p>
+    <p class="card__p">Lugar: {{event.venue?.name}}</p>
     <div class="card__reviews">
       <p class="card__p">
         <img class="card__icon--review" src="/assets/icons/rating_1.png" alt="">
-        {{events.venue?.reviews}}
+        {{event.venue?.reviews}}
       </p>
       <p class="card__p">
         <img src="/assets/icons/star.svg" alt="">
-        {{events.venue?.rating}}
+        {{event.venue?.rating}}
       </p>
     </div>
 </div>
