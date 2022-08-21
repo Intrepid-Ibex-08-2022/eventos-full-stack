@@ -1,10 +1,15 @@
 <div class="container">
-  <app-header></app-header>
-  <app-fhotoPrincipal></app-fhotoPrincipal>
-  <div class="events">
-    <app-event  [event]="event" *ngFor="let event of evetsLP"></app-event>
+  <div class="item">
+    <app-header></app-header>
   </div>
-  <app-footer></app-footer>
+
+  <app-fhotoPrincipal class="item"></app-fhotoPrincipal>
+  <div class="item">
+    <app-event></app-event>
+  </div>
+  <app-footer class="item"></app-footer>
+
+
 </div>
 
 

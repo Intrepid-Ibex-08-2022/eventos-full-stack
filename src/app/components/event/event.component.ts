@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class EventComponent  {
 
-  @Input() event: EventsResult = {};
 
   constructor(
     private eventServices: GetEventsService,
@@ -18,17 +17,18 @@ export class EventComponent  {
   ) { }
 
   event_detail(event: EventsResult ){
+    console.log(event);
     this.eventServices.setEventDetails(event);
     this.route.navigateByUrl('/event')
+  }
 
-  ngOnInit(): void {}
   eventosCanarios = [
     {
       id: 1,
       tipo_event: 'Música',
       image:
         'https://assets-global.website-files.com/6151bdf804776f918cd21fd3/61a8955dd9c0cb0323eafc98_Dise%C3%B1o%20sin%20t%C3%ADtulo%20(16).jpg',
-      title: 'Concierto sinfónico: &#x27;Encuentros del Atlántico&#x27;',
+      title: 'Concierto sinfónico:Encuentros del Atlántico',
       description:
         'Concierto sinfónico que sintetiza el hermanamiento entre dos formaciones juveniles: una Uruguaya y la otra Canaria. Entradas a 10 euros.',
       date: {
@@ -38,13 +38,18 @@ export class EventComponent  {
       address: ['Teatro Auditorio de Agüimes - Agüimes.', 'Gran Canaria'],
       ticket_info:
         'https://entrees.es/evento/concierto-sinfonico-encuentros-del-atlantico-entradas',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 2,
       tipo_event: 'Artes plásticas y visuales',
       image:
         'https://assets-global.website-files.com/6151bdf804776f918cd21fd3/62fcabc22d3e5daea3e84cb1_van%20gogh.jpg',
-      title: 'Visita a la exposición: &#x27;El Mundo de Van Gogh&#x27;',
+      title: 'Visita a la exposición:El Mundo de Van Gogh',
       description:
         'Visita organizada a esta exposición, con guagua que saldrá desde Ingenio. Entradas a 9 euros.',
       date: {
@@ -54,13 +59,18 @@ export class EventComponent  {
       address: ['Ingenio', 'Gran Canaria'],
       ticket_info:
         'https://ingenio.es/vive-con-artis-la-novedosa-exposicion-inmersiva-el-mundo-de-van-gogh/?fbclid=IwAR3qd0fA3MGvVc4jIDJAigcDXn9HFxDuwotwmizHHGzb_wwQ_7dSWIeMatw',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 3,
       tipo_event: 'Música',
       image:
         'https://assets-global.website-files.com/6151bdf804776f918cd21fd3/62fb555034f16c25d1232099_atlantico.jpg',
-      title: 'Concierto: &#x27;Músicas del Atlántico&#x27;',
+      title: 'Concierto: Músicas del Atlántico',
       description:
         'Gala de conciertos con María Katzarava, Aquiles Machado y Augusto Brito. Entradas a 30 euros.',
       date: {
@@ -73,6 +83,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://entrees.es/evento/musicas-del-atlantico-gala-concierto-entradas',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 4,
@@ -92,6 +107,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/lpa-en-vivo-cristina-james-trio/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 5,
@@ -111,6 +131,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/rap-night-23-de-agosto/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 6,
@@ -130,6 +155,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/duparty-musica-danza/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 7,
@@ -149,6 +179,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/jazz-entre-amigos-louis-moreno-quinteto/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 8,
@@ -168,6 +203,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/carlos-catana-margarita-galvan/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 9,
@@ -186,6 +226,11 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/tributo-a-tequila/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 10,
@@ -205,6 +250,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/sabado-de-tardeo-savia-nueva/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 11,
@@ -223,6 +273,11 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fiesta-brasilena/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 12,
@@ -241,6 +296,11 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/loewis-gonzalez/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 13,
@@ -260,6 +320,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/la-underground-mararia/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 14,
@@ -279,6 +344,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/lpa-en-vivo-anyelia-yorell/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 15,
@@ -298,6 +368,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/velada-de-cantautores-4/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 16,
@@ -316,6 +391,11 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fiesta-funky-disco/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 17,
@@ -334,6 +414,11 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fragil-epifania/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 18,
@@ -353,6 +438,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/especial-impro-en-la-fabrica/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 19,
@@ -372,6 +462,11 @@ export class EventComponent  {
       ],
       ticket_info:
         'https://www.fabricaisleta.com/eventos/especial-impro-en-la-fabrica/',
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
     },
     {
       id: 20,
@@ -390,6 +485,12 @@ export class EventComponent  {
         'Gran Canaria',
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/faraoff/',
-    },
+      venue: {
+        rating : '3,5',
+        reviews: '38',
+      },
+      map_link: 'https://www.google.es/maps/preview'
+    }
   ];
 }
+

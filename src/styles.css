@@ -1,7 +1,7 @@
 @import 'css/variables.css';
 
 * {
-  margin: 0;
+  margin: 0px;
   box-sizing: border-box;
 }
 .container {
@@ -11,7 +11,7 @@
   grid-template-areas:
     'header header'
     'event event'
-    'event event'
+    ''
     'footer footer';
   grid-column: 1fr 1fr;
   grid-template-rows: repeat(1fr);
@@ -23,7 +23,7 @@ body {
 }
 
 /* ********************************* header ****************************** */
-.header {
+/* .header {
   grid-area: header;
   display: flex;
   background-color: #14213d;
@@ -59,13 +59,13 @@ body {
   padding: 20px;
   height: 50px;
   width: 70px;
-}
+} */
 
 /* ************************************* main **************************** */
 
 /** Event **/
 
-.event {
+/* .event {
   position: relative;
   top: 6rem;
   grid-area: event;
@@ -73,31 +73,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.fhoto-principal {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
-  height: 300px;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.fhoto-principal__img {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: absolute;
-}
-.title-fhoto-principal {
-  display: inline-block;
-  background-color: var(--color-blue, blue);
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  color: var(--color-yellow, yellow);
-  text-align: center;
-  font-size: 55px;
-}
+
 .link-teror__div {
   display: inline-block;
   background-color: var(--color-blue, blue);
@@ -111,54 +87,5 @@ body {
   text-decoration: none;
   font-size: 40px;
   color: white;
-}
+} */
 
-/* ****************************** Footer ************************** */
-
-/** Footer **/
-.footer {
-  position: relative;
-  width: 100%;
-  grid-area: footer;
-  display: flex;
-  margin-top: 110px;
-  height: 111px;
-  justify-content: space-between;
-  background-color: var(--color-blue, blue);
-  align-items: center;
-  padding: 0px 20px;
-}
-
-.footer__copyright {
-  display: flex;
-  color: #ffffff;
-  font-size: 16px;
-}
-
-.copyright__img {
-  width: 25px;
-  height: 25px;
-  margin: 0px 5px;
-}
-
-.footer__nav {
-  display: flex;
-  color: #ffffff;
-}
-
-.footer__nav--text-decored {
-  margin: 0px 2px;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.footer__social-media {
-  display: flex;
-}
-
-.social-media__icon {
-  width: 40px;
-  height: 40px;
-  margin-left: 20px;
-  cursor: pointer;
-}

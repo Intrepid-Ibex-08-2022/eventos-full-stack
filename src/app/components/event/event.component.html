@@ -1,6 +1,6 @@
 <!-- ********************** Targeta evento 1 ********************** -->
 <div class="event-container__targets">
-  <div *ngFor="let event of eventosCanarios" class="target-event-front-page">
+  <div *ngFor="let event of eventosCanarios" class="target-event-front-page" (click)="event_detail(event)">
     <img src="{{ event.image }}" alt="" />
     <div class="title-y-date">
       <h1 class="title-event">{{ event.title }}</h1>

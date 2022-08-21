@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
 }
-.events{
+
+.item{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }

@@ -10,17 +10,8 @@ import { Event, EventsResult } from '../../interface/event';
 })
 export class PageHomeComponent implements OnInit {
 
-  allEvents : Event[] = [];
-  evetsLP : EventsResult[] = [];
+  constructor() {
 
-  constructor(private getEventComponent : GetEventsService) {
-
-    getEventComponent.getAllEvents().subscribe( events => {
-      this.allEvents = events;
-      if(this.allEvents[0].events_results)
-      this.evetsLP = this.allEvents[0].events_results;
-    }
-      )
   }
 
   ngOnInit(): void {
