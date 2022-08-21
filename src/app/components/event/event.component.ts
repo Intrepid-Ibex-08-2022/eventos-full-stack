@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EventsResult } from '../../interface/event';
+import { GetEventsService } from '../../services/get-events.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css']
 })
-export class EventComponent implements OnInit {
+export class EventComponent  {
 
-  constructor() { }
+  @Input() event: EventsResult = {};
 
-  ngOnInit(): void {
+  constructor(
+    private eventServices: GetEventsService,
+    private route: Router
+  ) { }
+
+  event_detail(event: EventsResult ){
+    this.eventServices.setEventDetails(event);
+    this.route.navigateByUrl('/event')
+
+
   }
+
 
 }

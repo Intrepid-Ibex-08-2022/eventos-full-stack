@@ -12,23 +12,30 @@ import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { TeamComponent } from './components/team/team.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrincipal.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FhotoPrincipalComponent,
     FooterComponent,
     SidebarComponent,
     EventComponent,
     PageEventComponent,
     PageHomeComponent,
     PageTeamComponent,
-    TeamComponent
+    TeamComponent,
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
