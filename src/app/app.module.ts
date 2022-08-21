@@ -13,17 +13,17 @@ import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { TeamComponent } from './components/team/team.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FhotoPrincipalComponent } from './components/fhoto-principal/fhotoPrincipal.component';
+import { FhotoPrincipalComponent } from './components/fhotoprincipal/fhotoPrincipal.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FhotoPrincipalComponent,
     FooterComponent,
     SidebarComponent,
     EventComponent,
+    FhotoPrincipalComponent,
     PageEventComponent,
     PageHomeComponent,
     PageTeamComponent,

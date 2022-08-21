@@ -1,50 +1,62 @@
-.card{
-    width: 200px;
-    border: solid 1px rgb(192, 192, 192);
-    box-shadow: 3px 3px 9px 3px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px;
-    cursor: pointer;
+.event-container__targets {
+  position: relative;
+  top: 6.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3px;
+}
+.target-event-front-page {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  min-width: 400px;
+  height: 450px;
+  flex: 0 2;
+}
+.target-event-front-page:hover {
+  transform: scale(1.1, 1.1);
+  border: 1px solid rgb(160, 157, 157);
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.card:hover{
-    width: 210px;
-    
+.target-event-front-page img {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  object-fit: 1;
+  z-index: -2;
+}
+.title-y-date {
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 0.7rem;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  background-size: cover;
+  background-color: rgba(108, 58, 225, 0.531);
 }
 
-.card__img{
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.title-event {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }
 
-.card__title{
-    color: black;
+.h3__target-event-front-page {
+  /* margin-top: -5px; */
+  color: white;
+  text-align: center;
 }
-
-.card__p{
-    color:rgb(192, 192, 192);
-}
-
-.card__reviews{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-}
-
-.card__icon--review{
-    width: 16px;
-    height: 16px;
-}
-
-.card__btn{
-    width: 180px;
-    height: 50px;
-    border-radius: 20px;
-    margin: 10px;
-    border: solid 1px rgb(192, 192, 192);
-    box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.2);
-    color:rgb(192, 192, 192);
+.hora-events {
+  /* margin-top: -20px; */
+  color: white;
+  text-align: center;
 }
