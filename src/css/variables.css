@@ -1,12 +1,12 @@
 :root {
   --text-color: black;
-  --color-yellow: #fca311;
-  --color-blue: #14213d;
+  --color-yellow: #FFE143;
+  --color-blue: #0C0434;
   --fondo-white: #ffffff;
-  --min-with: 375px;
+  --min-with: 325px;
   --min-with-element: 320px;
 }
 /* body {
   color: var(--text-color, white);
-  /* white es un valor por defecto por si no encontrara la variable 
+  /* white es un valor por defecto por si no encontrara la variable
 } */

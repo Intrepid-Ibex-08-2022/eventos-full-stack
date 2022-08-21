@@ -1,0 +1,35 @@
+
+.photo__principal {
+  display: flex;
+
+}
+
+.photo__principal--img{
+  height: 800px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.photo__text{
+  /* border: 1px solid white; */
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  position: relative;
+  left: 65%;
+  top: 30%;
+  color: var(--color-yellow);
+}
+
+.photo__text--main {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.photo__text--second {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 100;
+}

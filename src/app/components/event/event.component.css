@@ -1,0 +1,62 @@
+.event-container__targets {
+  position: relative;
+  top: 2rem;
+  margin-bottom: 80px;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3px;
+}
+.target-event-front-page {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  min-width: 400px;
+  height: 450px;
+  flex: 0 2;
+}
+.target-event-front-page:hover {
+  transform: scale(1.1, 1.1);
+  border: 1px solid rgb(160, 157, 157);
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.target-event-front-page img {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  object-fit: 1;
+  z-index: -2;
+}
+.title-y-date {
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 0.7rem;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  background-size: cover;
+  background-color: rgba(108, 58, 225, 0.531);
+}
+
+.title-event {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.h3__target-event-front-page {
+  /* margin-top: -5px; */
+  color: white;
+  text-align: center;
+}
+.hora-events {
+  /* margin-top: -20px; */
+  color: white;
+  text-align: center;
+}

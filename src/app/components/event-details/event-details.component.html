@@ -1,0 +1,46 @@
+
+  <div class="container">
+
+    <!--Fila Uno-->
+    <div class="row-1">
+      <img [src]="event?.image" alt="evento" class="row-1__img">
+      <div class="row-1__inf">
+        <p class="row-1__inf--title">{{event?.title}}</p>
+        <div class="row-1__details">
+          <img src="../../../assets/icons/calendario.png" alt="fecha" class="row-1__icons">
+          <span class="row-1__details--txt">{{event?.date?.start_date}}</span>
+        </div>
+        <div class="row-1__details">
+          <img src="../../../assets/icons/ubicacion.png" alt="fecha" class="row-1__icons">
+          <p class="row-1__details--txt">{{event?.address}}</p>
+        </div>
+        <div class="row-1__details">
+          <img src="../../../assets/icons/star.png" alt="fecha" class="row-1__icons">
+          <p class="row-1__details--txt">{{event?.venue?.rating}}/5</p>
+        </div>
+        <div class="row-1__details">
+          <img src="../../../assets/icons/rating_1.png" alt="fecha" class="row-1__icons">
+          <p class="row-1__details--txt">{{event?.venue?.reviews}}</p>
+        </div>
+        <div class="row-1__ticket">
+          <a [href]="event?.ticket_info"
+          target="_blank">
+            <img src="../../../assets/icons/boleto.png" alt="fecha" class="row-1__ticket--img">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Fila Dos-->
+    <div class="row-2">
+      <div class="row-2__descript">
+        {{event?.description}}
+      </div>
+        <a [href]="event?.map_link"
+            class="row-2__map" target="_blank">
+          <img title="prueba" src="../../../assets/imagen/map.jpg" class="row-2__map--img">
+        </a>
+    </div>
+
+  </div>
+

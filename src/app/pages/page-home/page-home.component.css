@@ -1,0 +1,11 @@
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+}
