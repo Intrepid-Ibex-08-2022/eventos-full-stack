@@ -15,6 +15,7 @@ import { TeamComponent } from './components/team/team.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FhotoPrincipalComponent } from './components/fhotoprincipal/fhotoPrincipal.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EventDetailsComponent } from './components/event-details/event-details.
     PageHomeComponent,
     PageTeamComponent,
     TeamComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
