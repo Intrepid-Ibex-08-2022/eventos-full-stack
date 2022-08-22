@@ -7,6 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  ruta = './team';
-  rutaHome = './home';
+  ruta = '../team';
+  rutaHome = '../home';
 }
