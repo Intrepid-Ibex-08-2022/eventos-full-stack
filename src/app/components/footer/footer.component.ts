@@ -8,5 +8,5 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
   ruta = '../team';
-  rutaHome = '../home';
+  rutaHome = './';
 }
