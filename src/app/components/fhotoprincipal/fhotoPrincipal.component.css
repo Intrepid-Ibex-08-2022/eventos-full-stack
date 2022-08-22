@@ -1,20 +1,19 @@
-
 .photo__principal {
   display: flex;
-
 }
 
-.photo__principal--img{
-  height: 800px;
+.photo__principal--img {
+  height: 780px;
   width: 100vw;
+  background-image: url(../../../assets/imagen/eventoPortada/eventoPortada11-b.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 0;
 }
 
-.photo__text{
+.photo__text {
   /* border: 1px solid white; */
   text-align: center;
-  width: 500px;
+  width: 35%;
   height: 200px;
   border-radius: 5px;
   position: relative;
@@ -32,4 +31,31 @@
   margin-top: 5px;
   font-size: 25px;
   font-weight: 100;
+}
+.photo__text2 {
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  .photo__text {
+    display: none;
+  }
+  .photo__text2 {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 15px 80px 15px 30px;
+    position: relative;
+    background-color: rgb(26, 25, 25);
+    color: var(--color-yellow);
+  }
+  .photo__principal {
+    flex-direction: column;
+  }
+  .photo__principal--img {
+    height: 680px;
+    width: 100vw;
+    background-image: url(../../../assets/imagen/eventoPortada/eventoPortada11.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 }

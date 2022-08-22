@@ -8,18 +8,13 @@ import { Router } from '@angular/router';
   templateUrl: './event.component.html',
   styleUrls: ['./event.component.css'],
 })
-export class EventComponent  {
+export class EventComponent {
+  constructor(private eventServices: GetEventsService, private route: Router) {}
 
-
-  constructor(
-    private eventServices: GetEventsService,
-    private route: Router
-  ) { }
-
-  event_detail(event: EventsResult ){
+  event_detail(event: EventsResult) {
     console.log(event);
     this.eventServices.setEventDetails(event);
-    this.route.navigateByUrl('/event')
+    this.route.navigateByUrl('/event');
   }
 
   eventosCanarios = [
@@ -39,31 +34,31 @@ export class EventComponent  {
       ticket_info:
         'https://entrees.es/evento/concierto-sinfonico-encuentros-del-atlantico-entradas',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 2,
-      tipo_event: 'Artes plásticas y visuales',
+      tipo_event: 'Cultural',
       image:
-        'https://assets-global.website-files.com/6151bdf804776f918cd21fd3/62fcabc22d3e5daea3e84cb1_van%20gogh.jpg',
-      title: 'Visita a la exposición:El Mundo de Van Gogh',
+        'https://teror.es/wp-content/uploads/2022/05/06_cartel-el-pino-2022-375x500.jpg',
+      title: 'Fiesta del Pino 2022 - Teror',
       description:
-        'Visita organizada a esta exposición, con guagua que saldrá desde Ingenio. Entradas a 9 euros.',
+        'El Fiesta del Pino 2022 vuelve con un programa cargado de actos y una veintena de concierto. Entre los artistas que figuran en la programación se encuentran Natalia Lacunza, Marc Seguí, Rosario Flores, El Vega Life, Bertín Osborne, Bombai y Antoñito Molina, entre otros. Cargado de actividades desde el 26 de agosto al 18 de septiembre, el programa festivo incluye, además de los actos tradicionales, una veintena de conciertos con un cartel de lujo. La mayoría de entrada libre.',
       date: {
-        start_date: '22/8/2022',
-        when: '17:30',
+        start_date: '26/8/2022',
+        when: '16:00',
       },
-      address: ['Ingenio', 'Gran Canaria'],
+      address: ['Teror - Las Palmas.', 'Gran Canaria'],
       ticket_info:
-        'https://ingenio.es/vive-con-artis-la-novedosa-exposicion-inmersiva-el-mundo-de-van-gogh/?fbclid=IwAR3qd0fA3MGvVc4jIDJAigcDXn9HFxDuwotwmizHHGzb_wwQ_7dSWIeMatw',
+        'https://teror.es/el-fiesta-del-pino-2022-vuelve-con-un-programa-cargado-de-actos-y-una-veintena-de-conciertos/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 3,
@@ -84,10 +79,10 @@ export class EventComponent  {
       ticket_info:
         'https://entrees.es/evento/musicas-del-atlantico-gala-concierto-entradas',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 4,
@@ -108,10 +103,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/lpa-en-vivo-cristina-james-trio/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 5,
@@ -132,10 +127,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/rap-night-23-de-agosto/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 6,
@@ -156,10 +151,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/duparty-musica-danza/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 7,
@@ -180,10 +175,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/jazz-entre-amigos-louis-moreno-quinteto/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 8,
@@ -204,10 +199,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/carlos-catana-margarita-galvan/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 9,
@@ -227,10 +222,10 @@ export class EventComponent  {
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/tributo-a-tequila/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 10,
@@ -251,10 +246,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/sabado-de-tardeo-savia-nueva/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 11,
@@ -274,10 +269,10 @@ export class EventComponent  {
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fiesta-brasilena/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 12,
@@ -297,10 +292,10 @@ export class EventComponent  {
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/loewis-gonzalez/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 13,
@@ -321,10 +316,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/la-underground-mararia/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 14,
@@ -345,10 +340,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/lpa-en-vivo-anyelia-yorell/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 15,
@@ -369,10 +364,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/velada-de-cantautores-4/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 16,
@@ -392,10 +387,10 @@ export class EventComponent  {
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fiesta-funky-disco/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 17,
@@ -415,10 +410,10 @@ export class EventComponent  {
       ],
       ticket_info: 'https://www.fabricaisleta.com/eventos/fragil-epifania/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 18,
@@ -439,10 +434,10 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/especial-impro-en-la-fabrica/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
     {
       id: 19,
@@ -463,34 +458,54 @@ export class EventComponent  {
       ticket_info:
         'https://www.fabricaisleta.com/eventos/especial-impro-en-la-fabrica/',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
+      map_link: 'https://www.google.es/maps/preview',
     },
+    // {
+    //   id: 20,
+    //   tipo_event: 'Música',
+    //   image:
+    //     'https://www.fabricaisleta.com/wp-content/uploads/2022/08/9-8-CEFERINO-WEB.jpg',
+    //   title: 'FARAOFF',
+    //   description:
+    //     'FARAOFF REPRESENTA el grado más bajo de la pirámide social. Sin ningún poder y sin derecho a expresarse en la sociedad actual, se viran las tornas y aunque sin poder real, si que tendrá voz durante un hora y un minuto. .El resto será historia y aunque parezca amortajado, el público tendrá la posibilidad de ver a una momia viviente, no por mucho tiempo.¡¡¡V’AMON RA-RA-RÁ!!! Entradas anticipadas a 8 euros y a 12 euros en taquilla.',
+    //   date: {
+    //     start_date: '9/9/2022',
+    //     when: '22:00',
+    //   },
+    //   address: [
+    //     'Fábrica La Isleta - Las Palmas de Gran Canaria.',
+    //     'Gran Canaria',
+    //   ],
+    //   ticket_info: 'https://www.fabricaisleta.com/eventos/faraoff/',
+    //   venue: {
+    //     rating: '3,5',
+    //     reviews: '38',
+    //   },
+    //   map_link: 'https://www.google.es/maps/preview',
+    // },
     {
       id: 20,
-      tipo_event: 'Música',
+      tipo_event: 'Artes plásticas y visuales',
       image:
-        'https://www.fabricaisleta.com/wp-content/uploads/2022/08/9-8-CEFERINO-WEB.jpg',
-      title: 'FARAOFF',
+        'https://assets-global.website-files.com/6151bdf804776f918cd21fd3/62fcabc22d3e5daea3e84cb1_van%20gogh.jpg',
+      title: 'Visita a la exposición:El Mundo de Van Gogh',
       description:
-        'FARAOFF REPRESENTA el grado más bajo de la pirámide social. Sin ningún poder y sin derecho a expresarse en la sociedad actual, se viran las tornas y aunque sin poder real, si que tendrá voz durante un hora y un minuto. .El resto será historia y aunque parezca amortajado, el público tendrá la posibilidad de ver a una momia viviente, no por mucho tiempo.¡¡¡V’AMON RA-RA-RÁ!!! Entradas anticipadas a 8 euros y a 12 euros en taquilla.',
+        'Visita organizada a esta exposición, con guagua que saldrá desde Ingenio. Entradas a 9 euros.',
       date: {
-        start_date: '9/9/2022',
-        when: '22:00',
+        start_date: '22/8/2022',
+        when: '17:30',
       },
-      address: [
-        'Fábrica La Isleta - Las Palmas de Gran Canaria.',
-        'Gran Canaria',
-      ],
-      ticket_info: 'https://www.fabricaisleta.com/eventos/faraoff/',
+      address: ['Ingenio', 'Gran Canaria'],
+      ticket_info:
+        'https://ingenio.es/vive-con-artis-la-novedosa-exposicion-inmersiva-el-mundo-de-van-gogh/?fbclid=IwAR3qd0fA3MGvVc4jIDJAigcDXn9HFxDuwotwmizHHGzb_wwQ_7dSWIeMatw',
       venue: {
-        rating : '3,5',
+        rating: '3,5',
         reviews: '38',
       },
-      map_link: 'https://www.google.es/maps/preview'
-    }
+      map_link: 'https://www.google.es/maps/preview',
+    },
   ];
 }
-
