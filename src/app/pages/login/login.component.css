@@ -13,12 +13,14 @@
 .login{
     display: flex;
     justify-content: center;
-    margin: 100px;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 70px;
 }
 
 .login__container{
     display: flex;
-    background-color: rgb(118, 97, 164);
+    background-color: rgb(53, 36, 91);
     width: 400px;
     height: 250px;
     align-items: center;
@@ -28,12 +30,40 @@
     border-radius: 10px;
 }
 
+h1{
+    color: rgb(210, 154, 14);;
+}
+
+small{
+    color: rgb(221, 214, 214);
+    padding-left: 10px;
+}
+
+input{
+    border-radius: 15px;
+    height: 25px;
+}
+
+input::placeholder{
+    color: rgb(181, 180, 180);
+    padding-left: 10px;
+}
+
+input:focus::placeholder{
+    color: white;
+}
+
 .login__container--input{
     display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 80%;
 }
 
 .login__container--btn{
     margin: 20px;
+    width: 50%;
+    border-radius: 15px;
+    background-color: rgb(210, 154, 14);
+    color: rgb(221, 214, 214);
 }
