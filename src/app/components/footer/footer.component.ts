@@ -10,5 +10,5 @@ export class FooterComponent {
 
 
   ruta = './team';
-  rutaHome = './home';
+  rutaHome = './';
 }
