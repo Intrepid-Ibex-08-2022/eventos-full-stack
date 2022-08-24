@@ -1,13 +1,14 @@
 .photo__principal {
   display: flex;
+  width: 100%;
 }
 
 .photo__principal--img {
   height: 780px;
-  width: 100vw;
+  width: 100%;
   background-image: url(../../../assets/imagen/eventoPortada/eventoPortada11-b.jpg);
   background-size: cover;
-  background-position: 0;
+  background-position: center;
 }
 
 .photo__text {
