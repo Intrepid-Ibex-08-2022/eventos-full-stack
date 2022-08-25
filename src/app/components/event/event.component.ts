@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { EventsResult } from '../../interface/event';
-import { GetEventsService } from '../../services/get-events.service';
+import { GetEventsService } from '../../services/events/get-events.service';
 import { Router } from '@angular/router';
 
 @Component({

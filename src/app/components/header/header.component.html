@@ -1,8 +1,9 @@
-<header class="header">
+<header class="header" [style]="position">
   <a [href]="ruta">
     <img class="header__logo" src="../../../assets/img/logo.png" alt="logo" />
   </a>
-  <div class="header__text">
-    <span>Las Palmas</span>
+  <div class="auth__button">
+    <button type="button" mat-raised-button class="auth__button--register">Register</button>
+    <button type="button" mat-raised-button class="auth__button--login">Login</button>
   </div>
 </header>

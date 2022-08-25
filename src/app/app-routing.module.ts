@@ -1,3 +1,4 @@
+import { PageRegisterComponent } from './pages/page-register/page-register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageEventComponent } from './pages/page-event/page-event.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'event',
     component: PageEventComponent
+  },
+  {
+    path: 'register',
+    component: PageRegisterComponent
   },
   {
     path: '**',
