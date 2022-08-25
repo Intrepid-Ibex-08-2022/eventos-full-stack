@@ -15,6 +15,11 @@ import { TeamComponent } from './components/team/team.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FhotoPrincipalComponent } from './components/fhotoprincipal/fhotoPrincipal.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
+import { PageRegisterComponent } from './pages/page-register/page-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +33,17 @@ import { EventDetailsComponent } from './components/event-details/event-details.
     PageHomeComponent,
     PageTeamComponent,
     TeamComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
+    PageRegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,3 @@
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -41,12 +39,11 @@
   border-bottom: 1px solid darkgray;
 }
 
-.row-1__icons{
+.row-1__icons {
   margin: 0px 20px;
   width: 30px;
   height: 30px;
 }
-
 
 .row-1__details {
   margin-bottom: 10px;
@@ -54,30 +51,29 @@
   align-items: center;
 }
 
-.row-1__details--txt{
+.row-1__details--txt {
   margin: 0px;
   color: darkgray;
   font-weight: 900;
 }
 
-.row-1__ticket{
+.row-1__ticket {
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.row-1__ticket--img{
+.row-1__ticket--img {
   display: flex;
   justify-content: center;
   width: 100px;
   height: 100px;
 }
 
-.row-1__ticket--img:hover{
+.row-1__ticket--img:hover {
   justify-content: center;
   width: 110px;
   height: 110px;
-
 }
 
 .row-2 {
@@ -96,14 +92,53 @@
 
 .row-2__map {
   margin: 0px 20px;
-
 }
 
-.row-2__map--img{
+.row-2__map--img {
   border-radius: 8px;
   width: 930px;
   height: 300px;
-
 }
 
+@media screen and (max-width: 950px) {
+  .container {
+    max-width: 460px;
+    justify-content: center;
+  }
+  .row-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+  }
+  .row-1__img {
+    margin: 20px;
+    width: 90%;
+    height: 80%;
+  }
 
+  .row-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .row-2__descript {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 20px 20px;
+    text-align: justify;
+  }
+
+  .row-2__map {
+    margin: 0px 20px;
+  }
+
+  .row-2__map--img {
+    display: flex;
+    border-radius: 8px;
+    width: 100%;
+    height: 250px;
+  }
+}

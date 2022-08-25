@@ -6,7 +6,7 @@
   background-color: #fffaf7;
   /* max-width: 1600px; */
   width: 100%;
-  margin: 0px auto;
+  margin: 0px auto 115px;
   top: 6rem;
   display: grid;
   grid-template-areas: 'aside team';
