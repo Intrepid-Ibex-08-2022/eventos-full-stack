@@ -3,7 +3,7 @@
   grid-area: footer;
   position: relative;
   display: flex;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 100%;
   height: 80px;
   justify-content: space-between;
@@ -30,7 +30,7 @@
 }
 
 .footer__nav--text-decored {
-  margin: 0px 2px;
+  margin: 0px 8px;
   text-decoration: none;
   color: #ffffff;
 }
