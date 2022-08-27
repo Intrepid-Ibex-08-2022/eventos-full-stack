@@ -9,14 +9,13 @@ import { Users } from '../../interface/users';
 })
 export class AuthService implements AsyncValidator {
   url                  : string = 'http://localhost:3000/usuarios';
-  nombrePattern        : string = '([a-zA-Z]+)';
   emailPattern         : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   constructor(private http: HttpClient) { }
 
-  register(name: string,email:string,password:string){
-
-    return this.http.post<Users>(this.url, {name,email,password})
+  register(username: string,email:string, password:string){
+    const favorites = [{}];
+    return this.http.post<Users>(this.url, {username,email,favorites,password})
       .pipe(
         tap(resp => {
           if(resp.ok){

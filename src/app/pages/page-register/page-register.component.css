@@ -35,6 +35,11 @@ body, html {
     font-family: Poppins-Regular, sans-serif;
 }
 
+.text-danger{
+  color: red;
+}
+
+
 
 /*---------------------------------------------*/
 a {

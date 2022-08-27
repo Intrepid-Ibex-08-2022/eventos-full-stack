@@ -1,9 +1,9 @@
 <header class="header" [style]="position">
-  <a [href]="ruta">
+  <a [href]="home">
     <img class="header__logo" src="../../../assets/img/logo.png" alt="logo" />
   </a>
-  <div class="auth__button">
-    <button type="button" mat-raised-button class="auth__button--register">Register</button>
+  <div class="auth__buttons">
+    <button type="button" mat-raised-button class="auth__button--register" [routerLink]="register">Register</button>
     <button type="button" mat-raised-button class="auth__button--login">Login</button>
   </div>
 </header>

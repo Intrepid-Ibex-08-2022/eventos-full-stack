@@ -8,7 +8,6 @@ import { Component, Input} from '@angular/core';
 })
 export class HeaderComponent  {
   @Input() position = 'position: fixed;'
-  ruta = './'
-
-
+  home = '/'
+  register = '/register'
 }
