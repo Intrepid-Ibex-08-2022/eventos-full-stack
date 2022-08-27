@@ -28,6 +28,10 @@ export class AuthService implements AsyncValidator {
       );
   }
 
+  getUser(){
+    return this.http.get("https://jsonplaceholder.typicode.com/users");
+  }
+
   validate(control: AbstractControl):  Observable<ValidationErrors | null> {
     const email = control.value;
     console.log(email)
