@@ -19,6 +19,7 @@ import { PageRegisterComponent } from './pages/page-register/page-register.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatSliderModule } from '@angular/material/slider';
     TeamComponent,
     EventDetailsComponent,
     PageRegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
