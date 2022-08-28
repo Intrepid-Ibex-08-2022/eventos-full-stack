@@ -17,6 +17,7 @@
   object-position: top left;
   width: 135px;
   height: 60px;
+  cursor: pointer;
 
 }
 
@@ -26,12 +27,16 @@
   font-size: 20px;
 }
 
-.auth__buttons{
+.auth__container{
   display: flex;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
-.auth__button--register{
+.auth__button{
+  height: 25px;
   margin-right: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
 

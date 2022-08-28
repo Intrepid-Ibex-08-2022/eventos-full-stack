@@ -23,6 +23,7 @@ const routes: Routes = [
     path: 'register',
     component: PageRegisterComponent
   },
+  {
     path: 'login',
     component: LoginComponent
   },

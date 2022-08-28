@@ -101,7 +101,6 @@ export class PageRegisterComponent {
           // })
         }
       });
-
       this.miFormulario.reset();
       this.router.navigateByUrl('/')
 
