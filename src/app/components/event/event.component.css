@@ -2,6 +2,26 @@
   margin: 0px;
   box-sizing: border-box;
 }
+label {
+  color: white;
+  margin-bottom: 5px;
+}
+.filters {
+  grid-area: event;
+  display: flex;
+  background-color: #0c0434;
+  justify-content: right;
+  align-items: center;
+  padding-right: 20px;
+  width: 100vw;
+  height: 80px;
+}
+.filter__location,
+.filter__tipo-event {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
 
 .event-container__targets {
   position: relative;

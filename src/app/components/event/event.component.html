@@ -1,6 +1,41 @@
+<div class="filters">
+  <div class="filter__location">
+    <label for="location">Localidad</label>
+    <select name="location" (change)="change1($event)">
+      <option>Todos</option>
+      <option>Las Palmas de Gran Canaria</option>
+      <option>Telde</option>
+      <option>Teror</option>
+      <option>Aguimes</option>
+      <option>Arucas</option>
+    </select>
+  </div>
+  <div class="filter__tipo-event">
+    <label for="tipoEvento">Tipo de evento</label>
+    <select name="tipoEvento" (change)="change2($event)">
+      <option>Todos</option>
+      <option>Música</option>
+      <option>Humor</option>
+      <option>Infantil</option>
+      <option>Talleres</option>
+      <option>Teatro</option>
+      <option>Visita/exposición</option>
+      <option>Cultura</option>
+      <option>Conferencia</option>
+      <option>Concierto</option>
+      <option>Espectáculo Artístico</option>
+      <option>Arties plásticas y visuales</option>
+    </select>
+  </div>
+</div>
+
 <!-- ********************** Targeta evento 1 ********************** -->
 <div class="event-container__targets">
-  <div *ngFor="let event of eventosCanarios" class="target-event-front-page" (click)="event_detail(event)">
+  <div
+    *ngFor="let event of eventsToRender"
+    class="target-event-front-page"
+    (click)="event_detail(event)"
+  >
     <img src="{{ event.image }}" alt="" />
     <div class="title-y-date">
       <h1 class="title-event">{{ event.title }}</h1>

@@ -28,13 +28,9 @@ import { EventDetailsComponent } from './components/event-details/event-details.
     PageHomeComponent,
     PageTeamComponent,
     TeamComponent,
-    EventDetailsComponent
+    EventDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

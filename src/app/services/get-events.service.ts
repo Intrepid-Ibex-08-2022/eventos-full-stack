@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Event, EventsResult } from '../interface/event';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GetEventsService {
-
   eventDetails?: EventsResult;
 
+  constructor() {}
 
-  constructor() { }
-
-
-  setEventDetails(event: EventsResult){
-    this.eventDetails = event
+  setEventDetails(event: EventsResult) {
+    this.eventDetails = event;
   }
-
 }
