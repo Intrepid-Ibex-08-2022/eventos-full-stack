@@ -7,6 +7,8 @@ label {
   margin-bottom: 5px;
 }
 .filters {
+  position: sticky;
+  top: 60px;
   grid-area: event;
   display: flex;
   background-color: #0c0434;
@@ -15,6 +17,7 @@ label {
   padding-right: 20px;
   width: 100vw;
   height: 80px;
+  z-index: 3;
 }
 .filter__location,
 .filter__tipo-event {
