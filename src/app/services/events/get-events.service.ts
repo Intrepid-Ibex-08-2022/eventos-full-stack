@@ -11,11 +11,9 @@ export class GetEventsService {
 
 
    async getEventDetails(id: string): Promise<EventsResult | undefined>{
-    let index = parseInt(id)
-    index--;
 
-    const event = await axios.get('http://localhost:3000/events').then( event => {
-      return event.data[index]
+    const event = await axios.get(`http://localhost:3000/events/${id}`).then( resp => {
+      return resp.data
     })
 
     return event
