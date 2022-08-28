@@ -5,23 +5,23 @@
     font-family: Poppins-Regular;
     src: url('../../../assets/fonts/poppins/Poppins-Regular.ttf');
   }
-  
+
   @font-face {
     font-family: Poppins-Medium;
     src: url('../../../assets/fonts/poppins/Poppins-Medium.ttf');
   }
-  
+
   @font-face {
     font-family: Poppins-Bold;
     src: url('../../../assets/fonts/poppins/Poppins-Bold.ttf');
   }
-  
+
   @font-face {
     font-family: Poppins-SemiBold;
     src: url('../../../assets/fonts/poppins/Poppins-SemiBold.ttf');
   } */
-  
-  
+
+
   /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
   * {
@@ -29,13 +29,13 @@
       padding: 0px;
       box-sizing: border-box;
   }
-  
+
   body, html {
       height: 100%;
       font-family: Poppins-Regular, sans-serif;
   }
-  
-  
+
+
   /*---------------------------------------------*/
   a {
       font-family: Poppins-Regular;
@@ -48,21 +48,21 @@
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
   }
-  
+
   a:focus {
       outline: none !important;
   }
-  
+
   a:hover {
       text-decoration: none;
     color: #a64bf4;
   }
-  
+
   /*---------------------------------------------*/
   h1,h2,h3,h4,h5,h6 {
       margin: 0px;
   }
-  
+
   p {
       font-family: Poppins-Regular;
       font-size: 14px;
@@ -70,39 +70,39 @@
       color: #666666;
       margin: 0px;
   }
-  
+
   ul, li {
       margin: 0px;
       list-style-type: none;
   }
-  
-  
+
+
   /*---------------------------------------------*/
   input {
       outline: none;
       border: none;
   }
-  
+
   textarea {
     outline: none;
     border: none;
   }
-  
+
   textarea:focus, input:focus {
     border-color: transparent !important;
   }
-  
+
   /*---------------------------------------------*/
   button {
       outline: none !important;
       border: none;
       background: transparent;
   }
-  
+
   button:hover {
       cursor: pointer;
   }
-  
+
   /*//////////////////////////////////////////////////////////////////
   [ Utility ]*/
   .txt1 {
@@ -111,21 +111,22 @@
     line-height: 1.5;
     color: #666666;
   }
-  
+
   .txt2 {
     font-family: Poppins-Regular;
     font-size: 14px;
     line-height: 1.5;
     color: #333333;
     text-transform: uppercase;
+    cursor: pointer;
   }
-  
+
   .bg1 {background-color: #3b5998}
   .bg2 {background-color: #1da1f2}
   .bg3 {background-color: #ea4335}
-  
-  
-  
+
+
+
   /*//////////////////////////////////////////////////////////////////
   [ login ]*/
   .limiter {
@@ -133,7 +134,7 @@
     margin: 0px auto;
     background-color: #f3f2f2;
   }
-  
+
   .container-login100 {
     width: 100%;
     min-height: 100vh;
@@ -150,22 +151,22 @@
     background-position: center;
     background-size: cover;
   }
-  
+
   .wrap-login100 {
     width: 500px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
   }
-  
-  
+
+
   /*------------------------------------------------------------------
   [ Form ]*/
-  
+
   .login100-form {
     width: 100%;
   }
-  
+
   .login100-form-title {
     display: block;
     font-family: Poppins-Bold;
@@ -174,18 +175,18 @@
     line-height: 1.2;
     text-align: center;
   }
-  
-  
-  
+
+
+
   /*------------------------------------------------------------------
   [ Input ]*/
-  
+
   .wrap-input100 {
     width: 100%;
     position: relative;
     border-bottom: 2px solid #d9d9d9;
   }
-  
+
   .label-input100 {
     font-family: Poppins-Regular;
     font-size: 14px;
@@ -193,21 +194,21 @@
     line-height: 1.5;
     padding-left: 7px;
   }
-  
+
   .input100 {
     font-family: Poppins-Medium;
     font-size: 16px;
     color: #333333;
     line-height: 1.2;
-  
+
     display: block;
     width: 100%;
     height: 55px;
     background: transparent;
     padding: 0 7px 0 43px;
   }
-  
-  
+
+
   /*---------------------------------------------*/
   .focus-input100 {
     position: absolute;
@@ -218,13 +219,13 @@
     left: 0;
     pointer-events: none;
   }
-  
+
   .focus-input100::after {
     content: attr(data-symbol);
     font-family: Material-Design-Iconic-Font;
     color: #adadad;
     font-size: 22px;
-  
+
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -239,7 +240,7 @@
     padding-left: 13px;
     padding-top: 3px;
   }
-  
+
   .focus-input100::before {
     content: "";
     display: block;
@@ -254,25 +255,25 @@
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
-  
-  
+
+
   .input100:focus + .focus-input100::before {
     width: 100%;
   }
-  
+
   .has-val.input100 + .focus-input100::before {
     width: 100%;
   }
-  
+
   .input100:focus + .focus-input100::after {
     color: #a64bf4;
   }
-  
+
   .has-val.input100 + .focus-input100::after {
     color: #a64bf4;
   }
-  
-  
+
+
   /*------------------------------------------------------------------
   [ Button ]*/
   .container-login100-form-btn {
@@ -284,7 +285,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .wrap-login100-form-btn {
     width: 100%;
     display: block;
@@ -293,14 +294,14 @@
     border-radius: 25px;
     overflow: hidden;
     margin: 0 auto;
-  
+
     box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
     -moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
     -webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
     -o-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
     -ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
   }
-  
+
   .login100-form-bgbtn {
     position: absolute;
     z-index: -1;
@@ -310,20 +311,20 @@
     background: linear-gradient(90deg, rgba(96,207,220,1) 0%, rgba(190,52,218,1) 92%);
     top: 0;
     left: -100%;
-  
+
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
-  
+
   .login100-form-btn {
     font-family: Poppins-Medium;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
-  
+
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -335,16 +336,16 @@
     width: 100%;
     height: 50px;
   }
-  
+
   .wrap-login100-form-btn:hover .login100-form-bgbtn {
     left: 0;
   }
-  
+
   .login100-form-btn:disabled {
     background-color: grey;
   }
-  
-  
+
+
   /*[ PADDING ]
   ///////////////////////////////////////////////////////////
   */
@@ -1352,7 +1353,7 @@
   .p-r-248 {padding-right: 248px;}
   .p-r-249 {padding-right: 249px;}
   .p-r-250 {padding-right: 250px;}
-  
+
   /*[ MARGIN ]
   ///////////////////////////////////////////////////////////
   */
@@ -2363,27 +2364,27 @@
   .m-l-r-auto {margin-left: auto;	margin-right: auto;}
   .m-l-auto {margin-left: auto;}
   .m-r-auto {margin-right: auto;}
-  
-  
-  
+
+
+
   /*[ TEXT ]
   ///////////////////////////////////////////////////////////
   */
   /* ------------------------------------ */
   .text-white {color: white;}
   .text-black {color: black;}
-  
+
   .text-hov-white:hover {color: white;}
-  
+
   /* ------------------------------------ */
   .text-up {text-transform: uppercase;}
-  
+
   /* ------------------------------------ */
   .text-center {text-align: center;}
   .text-left {text-align: left;}
   .text-right {text-align: right;}
   .text-middle {vertical-align: middle;}
-  
+
   /* ------------------------------------ */
   .lh-1-0 {line-height: 1.0;}
   .lh-1-1 {line-height: 1.1;}
@@ -2405,15 +2406,15 @@
   .lh-2-7 {line-height: 2.7;}
   .lh-2-8 {line-height: 2.8;}
   .lh-2-9 {line-height: 2.9;}
-  
-  
-  
-  
-  
+
+
+
+
+
   /*[ SHAPE ]
   ///////////////////////////////////////////////////////////
   */
-  
+
   /*[ Display ]
   -----------------------------------------------------------
   */
@@ -2428,21 +2429,21 @@
   display: -ms-flexbox;
   display: flex;
   }
-  
+
   /*[ Position ]
   -----------------------------------------------------------
   */
   .pos-relative {position: relative;}
   .pos-absolute {position: absolute;}
   .pos-fixed {position: fixed;}
-  
+
   /*[ float ]
   -----------------------------------------------------------
   */
   .float-l {float: left;}
   .float-r {float: right;}
-  
-  
+
+
   /*[ Width & Height ]
   -----------------------------------------------------------
   */
@@ -2456,7 +2457,7 @@
   .max-h-full {max-height: 100%;}
   .min-w-full {min-width: 100%;}
   .min-h-full {min-height: 100%;}
-  
+
   /*[ Top Bottom Left Right ]
   -----------------------------------------------------------
   */
@@ -2464,13 +2465,13 @@
   .bottom-0 {bottom: 0;}
   .left-0 {left: 0;}
   .right-0 {right: 0;}
-  
+
   .top-auto {top: auto;}
   .bottom-auto {bottom: auto;}
   .left-auto {left: auto;}
   .right-auto {right: auto;}
-  
-  
+
+
   /*[ Opacity ]
   -----------------------------------------------------------
   */
@@ -2485,25 +2486,25 @@
   .op-0-8 {opacity: 0.8;}
   .op-0-9 {opacity: 0.9;}
   .op-1-0 {opacity: 1;}
-  
+
   /*[ Background ]
   -----------------------------------------------------------
   */
   .bgwhite {background-color: white;}
   .bgblack {background-color: black;}
-  
-  
-  
+
+
+
   /*[ Wrap Picture ]
   -----------------------------------------------------------
   */
   .wrap-pic-w img {width: 100%;}
   .wrap-pic-max-w img {max-width: 100%;}
-  
+
   /* ------------------------------------ */
   .wrap-pic-h img {height: 100%;}
   .wrap-pic-max-h img {max-height: 100%;}
-  
+
   /* ------------------------------------ */
   .wrap-pic-cir {
   border-radius: 50%;
@@ -2512,14 +2513,14 @@
   .wrap-pic-cir img {
   width: 100%;
   }
-  
-  
-  
+
+
+
   /*[ Hover ]
   -----------------------------------------------------------
   */
   .hov-pointer:hover {cursor: pointer;}
-  
+
   /* ------------------------------------ */
   .hov-img-zoom {
   display: block;
@@ -2539,22 +2540,22 @@
     -o-transform: scale(1.1);
   transform: scale(1.1);
   }
-  
-  
-  
+
+
+
   /*[  ]
   -----------------------------------------------------------
   */
   .bo-cir {border-radius: 50%;}
-  
+
   .of-hidden {overflow: hidden;}
-  
+
   .visible-false {visibility: hidden;}
   .visible-true {visibility: visible;}
-  
-  
-  
-  
+
+
+
+
   /*[ Transition ]
   -----------------------------------------------------------
   */
@@ -2606,13 +2607,13 @@
     -moz-transition: all 1s;
     transition: all 1s;
   }
-  
-  
-  
+
+
+
   /*[ Layout ]
   ///////////////////////////////////////////////////////////
   */
-  
+
   /*[ Flex ]
   -----------------------------------------------------------
   */
@@ -2629,7 +2630,7 @@
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
   }
-  
+
   /* ------------------------------------ */
   .flex-l {
   display: -webkit-box;
@@ -2639,7 +2640,7 @@
   display: flex;
   justify-content: flex-start;
   }
-  
+
   .flex-r {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2648,7 +2649,7 @@
   display: flex;
   justify-content: flex-end;
   }
-  
+
   .flex-c {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2657,7 +2658,7 @@
   display: flex;
   justify-content: center;
   }
-  
+
   .flex-sa {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2666,7 +2667,7 @@
   display: flex;
   justify-content: space-around;
   }
-  
+
   .flex-sb {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2675,7 +2676,7 @@
   display: flex;
   justify-content: space-between;
   }
-  
+
   /* ------------------------------------ */
   .flex-t {
   display: -webkit-box;
@@ -2686,7 +2687,7 @@
   -ms-align-items: flex-start;
   align-items: flex-start;
   }
-  
+
   .flex-b {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2696,7 +2697,7 @@
   -ms-align-items: flex-end;
   align-items: flex-end;
   }
-  
+
   .flex-m {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2706,7 +2707,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   .flex-str {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2716,7 +2717,7 @@
   -ms-align-items: stretch;
   align-items: stretch;
   }
-  
+
   /* ------------------------------------ */
   .flex-row {
   display: -webkit-box;
@@ -2730,7 +2731,7 @@
   -o-flex-direction: row;
   flex-direction: row;
   }
-  
+
   .flex-row-rev {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2743,7 +2744,7 @@
   -o-flex-direction: row-reverse;
   flex-direction: row-reverse;
   }
-  
+
   .flex-col {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2756,7 +2757,7 @@
   -o-flex-direction: column;
   flex-direction: column;
   }
-  
+
   .flex-col-rev {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2769,7 +2770,7 @@
   -o-flex-direction: column-reverse;
   flex-direction: column-reverse;
   }
-  
+
   /* ------------------------------------ */
   .flex-c-m {
   display: -webkit-box;
@@ -2781,7 +2782,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   .flex-c-t {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2792,7 +2793,7 @@
   -ms-align-items: flex-start;
   align-items: flex-start;
   }
-  
+
   .flex-c-b {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2803,7 +2804,7 @@
   -ms-align-items: flex-end;
   align-items: flex-end;
   }
-  
+
   .flex-c-str {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2814,7 +2815,7 @@
   -ms-align-items: stretch;
   align-items: stretch;
   }
-  
+
   .flex-l-m {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2825,7 +2826,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   .flex-r-m {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2836,7 +2837,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   .flex-sa-m {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2847,7 +2848,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   .flex-sb-m {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2858,7 +2859,7 @@
   -ms-align-items: center;
   align-items: center;
   }
-  
+
   /* ------------------------------------ */
   .flex-col-l {
   display: -webkit-box;
@@ -2874,7 +2875,7 @@
   -ms-align-items: flex-start;
   align-items: flex-start;
   }
-  
+
   .flex-col-r {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2889,7 +2890,7 @@
   -ms-align-items: flex-end;
   align-items: flex-end;
   }
-  
+
   .flex-col-c {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2904,4 +2905,3 @@
   -ms-align-items: center;
   align-items: center;
   }
-  

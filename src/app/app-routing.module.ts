@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { PageEventComponent } from './pages/page-event/page-event.component';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     component: PageTeamComponent
   },
   {
-    path: 'event',
+    path: 'event/:id',
     component: PageEventComponent
   },
   {
@@ -35,7 +36,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

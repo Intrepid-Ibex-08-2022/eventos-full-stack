@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { EventsResult } from '../../interface/event';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { Router } from '@angular/router';
 
@@ -11,10 +10,9 @@ import { Router } from '@angular/router';
 export class EventComponent {
   constructor(private eventServices: GetEventsService, private route: Router) {}
 
-  event_detail(event: EventsResult) {
-    console.log(event);
-    this.eventServices.setEventDetails(event);
-    this.route.navigateByUrl('/event');
+  event_detail(id: number) {
+
+    this.route.navigateByUrl(`event/${id}`);
   }
 
   eventosCanarios = [
