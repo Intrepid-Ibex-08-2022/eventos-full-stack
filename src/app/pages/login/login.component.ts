@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +11,13 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
   position = 'position: relative;';
+  authError: boolean = false;
 
-  /* miFormulario: FormGroup = this.formBuilder.group({
-      nombre: ['',
-        [
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(6),
-          Validators.pattern( this.authServices.nombrePattern )
-        ]
-      ],
+  miFormulario: FormGroup = this.formBuilder.group({
       correo: ['',
         [
           Validators.required,
           Validators.pattern( this.authServices.emailPattern )
-        ],
-        [
-          this.authServices
         ]
       ],
       password: ['',[
@@ -34,10 +25,11 @@ export class LoginComponent implements OnInit {
           Validators.minLength(6),
         ]
       ]
-    }); */
+    });
 
   constructor(
-    
+    private formBuilder: FormBuilder,
+    private authServices: AuthService,
     private router: Router
   ) { }
 
@@ -45,7 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
 
-  /* get emailErrorMsg (): string {
+  get emailErrorMsg (): string {
     const emailError = this.miFormulario.controls['correo'].errors;
     const emailValue = this.miFormulario.controls['correo'].value;
     console.log(emailError);
@@ -68,23 +60,25 @@ export class LoginComponent implements OnInit {
     return this.miFormulario.controls[campo]?.errors && this.miFormulario.controls[campo]?.touched;
   }
 
-  submitFormulario(){
-    console.log(this.miFormulario.value);
-    const {nombre,correo,password} = this.miFormulario.value;
+  async submitFormulario(){
+    const {correo,password} = this.miFormulario.value;
 
-     this.authServices.register(nombre,correo,password)
-    .subscribe( resp => {
+    await this.authServices.getUser(correo, password)
+    .then( resp => {
+      console.log(resp + 'ts')
       if(resp === true){
-        this.router.navigateByUrl('/');
+        this.authError = false
+        this.router.navigateByUrl('');
       }else{
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: resp,
-        })
+        this.authError = true
+        // Swal.fire({
+        //   icon: 'error',
+        //   title: 'Oops...',
+        //   text: resp,
+        // });
       }
-    }); ∫
+    });
 
     this.miFormulario.markAllAsTouched();
-  } */
+  }
 }

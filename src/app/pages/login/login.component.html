@@ -4,9 +4,10 @@
   <div class="container-login100">
       <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
           <form
-
-            class="login100-form"
-            autocomplete="off">
+          [formGroup]="miFormulario"
+          (submit)="submitFormulario()"
+          class="login100-form"
+          autocomplete="off">
 
               <span class="login100-form-title p-b-49">
                 Iniciar sesión
@@ -42,7 +43,11 @@
                       </button>
                   </div>
               </div>
-
+              <span
+              *ngIf="authError"
+              class="text-danger">
+                Usuario o contraseña invalida
+            </span>
               <div class="flex-col-c p-t-60">
                   <span class="txt1 p-b-17">
                       ¿No tienes cuenta?
