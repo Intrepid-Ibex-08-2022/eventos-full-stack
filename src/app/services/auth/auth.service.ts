@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl, AsyncValidator, ValidationErrors } from '@angular/forms';
+import axios from 'axios';
 import { catchError, map, of, tap, Observable } from 'rxjs';
 import { Users } from '../../interface/users';
 
@@ -8,15 +9,14 @@ import { Users } from '../../interface/users';
   providedIn: 'root'
 })
 export class AuthService implements AsyncValidator {
-  url                  : string = 'http://localhost:3000/usuarios';
-  nombrePattern        : string = '([a-zA-Z]+)';
+  url                  : string = 'https://happy-hats-rush-92-172-244-82.loca.lt/users';
   emailPattern         : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   constructor(private http: HttpClient) { }
 
-  register(name: string,email:string,password:string){
-
-    return this.http.post<Users>(this.url, {name,email,password})
+  register(username: string,email:string, password:string){
+    const favorites = [{}];
+    return this.http.post<Users>(this.url, {username,email,favorites,password})
       .pipe(
         tap(resp => {
           if(resp.ok){
@@ -45,4 +45,20 @@ export class AuthService implements AsyncValidator {
         })
       )
   }
+
+  async getUser(email: string, password: string): Promise<boolean | undefined>{
+    let resp: boolean | undefined;
+
+    resp = await axios.get(`${this.url}?email=${email}`).then( user => {
+      if(user.data[0] && user.data[0].password === password){
+        localStorage.setItem("login", "true");
+        return true;
+      }else{
+        return false
+      }
+    });
+    return resp;
+  }
+
+
 }

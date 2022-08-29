@@ -16,9 +16,10 @@ type User = {
 })
 export class LoginComponent implements OnInit {
   position = 'position: relative;';
+
   user = {
-    email : "fsswed",
-    psswd : "sdfsdf"
+    email : "",
+    psswd : ""
   }
   array : any = [];
   userFiltered : User = {
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
       
       
   }
+
 
  checkUser(){
         this.auth.getUser().subscribe(

@@ -1,4 +1,5 @@
 import { Component, Input} from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,6 @@ import { Component, Input} from '@angular/core';
 })
 export class HeaderComponent  {
   @Input() position = 'position: fixed;'
-  ruta = './'
   isloged = "false";
 
   constructor() {
@@ -20,4 +20,8 @@ export class HeaderComponent  {
     location.reload();
    }
 
+  constructor(private router: Router){}
+  navigate(ruta: string){
+    this.router.navigateByUrl(`/${ruta}`)
+  }
 }

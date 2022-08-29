@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { EventsResult } from '../../interface/event';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event-details',
@@ -9,16 +10,24 @@ import { EventsResult } from '../../interface/event';
 })
 export class EventDetailsComponent implements OnInit {
 
-  event: EventsResult |undefined;
+  event: EventsResult | undefined;
 
-  constructor(private eventServices: GetEventsService) { }
+  constructor(
+    private eventServices: GetEventsService,
+    private activateRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-
-    this.event = this.eventServices.eventDetails;
-
-
-
+    const id = this.activateRoute.snapshot.paramMap.get('id') as string
+    this.getEvent(id);
   }
+
+  async getEvent(id: string){
+    this.event = await this.eventServices.getEventDetails(id).then( resp => resp);
+  }
+
+
+
+
 
 }

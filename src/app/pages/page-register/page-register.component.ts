@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import {  AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth/auth.service';
@@ -9,16 +9,16 @@ import { AuthService } from '../../services/auth/auth.service';
   templateUrl: './page-register.component.html',
   styleUrls: ['./page-register.component.css']
 })
-export class PageRegisterComponent implements OnInit {
+export class PageRegisterComponent {
   position = 'position: relative;';
+  password = '';
 
   miFormulario: FormGroup = this.formBuilder.group({
       nombre: ['',
         [
           Validators.required,
           Validators.minLength(3),
-          Validators.maxLength(6),
-          Validators.pattern( this.authServices.nombrePattern )
+          Validators.maxLength(8),
         ]
       ],
       correo: ['',
@@ -34,18 +34,23 @@ export class PageRegisterComponent implements OnInit {
           Validators.required,
           Validators.minLength(6),
         ]
+      ],
+      password2: ['',[
+          Validators.required,
+          Validators.minLength(6),
+        ]
       ]
-    });
+      },
+      {
+        validator: this.confirmPassword
+      }
+);
 
   constructor(
     private formBuilder: FormBuilder,
     private authServices: AuthService,
     private router: Router
   ) { }
-
-  ngOnInit(): void {
-  }
-
 
   get emailErrorMsg (): string {
     const emailError = this.miFormulario.controls['correo'].errors;
@@ -70,23 +75,36 @@ export class PageRegisterComponent implements OnInit {
     return this.miFormulario.controls[campo]?.errors && this.miFormulario.controls[campo]?.touched;
   }
 
+  confirmPassword(control: AbstractControl) {
+    const password = control.get('password')?.value
+    const password2 = control.get('password2')?.value;
+
+    if(password !== password2){
+      control.get('password2')?.setErrors({confirmError: true})
+    }
+  }
+
   submitFormulario(){
-    console.log(this.miFormulario.value);
+
     const {nombre,correo,password} = this.miFormulario.value;
 
-    this.authServices.register(nombre,correo,password)
-    .subscribe( resp => {
-      if(resp === true){
-        this.router.navigateByUrl('/');
-      }else{
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: resp,
-        })
-      }
-    });
+      console.log(this.miFormulario.value);
+      this.authServices.register(nombre,correo,password)
+      .subscribe( resp => {
+        if(resp === true){
+          this.router.navigateByUrl('/');
+        }else{
+          // Swal.fire({
+          //   icon: 'error',
+          //   title: 'Oops...',
+          //   text: resp,
+          // })
+        }
+      });
+      this.miFormulario.reset();
+      this.router.navigateByUrl('/')
 
-    this.miFormulario.markAllAsTouched();
+
+
   }
 }

@@ -15,22 +15,18 @@
 
               <!--Nombre-->
               <div class="wrap-input100 m-b-23">
-                  <span class="label-input100">Nombre</span>
+                  <span class="label-input100">Username</span>
                   <input class="input100"
                          type="text"
                          formControlName="nombre"
                          placeholder="Ingrese su nombre">
                   <span class="focus-input100"></span>
               </div>
-
               <!--Validacion-->
               <span
                 *ngIf="campoValido('nombre')"
-                class="form-text text-danger">
-                    Debe tener:
-                      min: 3 letras,
-                      max: 6 letras,
-                      sin espacios
+                class="text-danger">
+                    Debe tener: minnimo 3 letras y un maximo de 8
               </span>
 
               <!--Correo-->
@@ -42,15 +38,15 @@
                        placeholder="Ingrese su email">
                 <span class="focus-input100"></span>
               </div>
-
               <!--Validacion-->
               <span
                 *ngIf="campoValido('correo')"
-                class="form-text text-danger">
+                class="text-danger">
                   {{emailErrorMsg}}
               </span>
 
-              <div class="wrap-input100">
+              <!--Password1-->
+              <div class="wrap-input100 m-b-23">
                   <span class="label-input100">Password</span>
                   <input class="input100"
                          type="password"
@@ -58,6 +54,28 @@
                          placeholder="Ingrese su contraseña">
                   <span class="focus-input100"></span>
               </div>
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('password')"
+              class="text-danger">
+                  La contraseña de tener un minimo de 6 caracteres
+              </span>
+
+              <!--Password2-->
+              <div class="wrap-input100 m-b-23">
+                <span class="label-input100">Confirm Password</span>
+                <input class="input100"
+                        type="password"
+                        formControlName="password2"
+                        placeholder="Confirme su contraseña">
+                <span class="focus-input100"></span>
+              </div>
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('password2')"
+              class="text-danger">
+                  Ambas contraseñas deben coincidir
+              </span>
 
               <div class="text-right p-t-8 p-b-31"></div>
 

@@ -1,8 +1,7 @@
-
 .header {
   grid-area: header;
   display: flex;
-  background-color: #0C0434;
+  background-color: #0c0434;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -17,6 +16,7 @@
   object-position: top left;
   width: 135px;
   height: 60px;
+  cursor: pointer;
 
 }
 
@@ -26,13 +26,20 @@
   font-size: 20px;
 }
 
-.auth__button{
+.auth__container{
   display: flex;
-  margin-right: 30px;
-  border: 1px solid white;
+  margin-right: 10px;
 }
 
-.auth__button--register{
+.auth__button{
+  height: 25px;
   margin-right: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+.auth__button--text{
+  padding: 0px 5px;
+}
+
 

@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Event, EventsResult } from '../../interface/event';
-
+import axios from 'axios';
+import {EventsResult } from '../../interface/event';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetEventsService {
-
-  eventDetails?: EventsResult;
-
-
+  url = 'https://happy-hats-rush-92-172-244-82.loca.lt/eventosCanarios';
   constructor() { }
 
 
-  setEventDetails(event: EventsResult){
-    this.eventDetails = event
+   async getEventDetails(id: string): Promise<EventsResult | undefined>{
+
+    const event = await axios.get(`${this.url}/${id}`).then( resp => {
+      return resp.data
+    })
+
+    return event
+
   }
+
+
 
 }
