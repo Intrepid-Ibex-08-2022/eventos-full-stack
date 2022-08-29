@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl, AsyncValidator, ValidationErrors } from '@angular/forms';
+import axios from 'axios';
 import { catchError, map, of, tap, Observable } from 'rxjs';
 import { Users } from '../../interface/users';
 
@@ -40,4 +41,21 @@ export class AuthService implements AsyncValidator {
         })
       )
   }
+
+  async getUser(email: string, password: string): Promise<boolean | undefined>{
+    let resp: boolean | undefined;
+
+    resp = await axios.get(`http://localhost:3000/users?email=${email}`).then( user => {
+      console.log(user.data[0]);
+      if(user.data[0] && user.data[0].password === password){
+        localStorage.setItem("login", "true");
+        return true;
+      }else{
+        return false
+      }
+    });
+    return resp;
+  }
+
+
 }
