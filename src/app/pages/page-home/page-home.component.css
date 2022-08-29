@@ -1,11 +1,14 @@
-
-.container {
-  width: 100%;
+/* .container {
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
 
-.item{
-    display: flex;
-    flex-wrap: wrap;
+.item {
+  display: flex;
+  flex-wrap: wrap;
+} */
+* {
+  margin: 0px;
+  box-sizing: border-box;
 }

@@ -1,8 +1,7 @@
-
 .header {
   grid-area: header;
   display: flex;
-  background-color: #0C0434;
+  background-color: #0c0434;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -26,6 +25,7 @@
   margin: 10px 30px;
   font-size: 20px;
 }
+<<<<<<< HEAD
 
 .auth__container{
   display: flex;
