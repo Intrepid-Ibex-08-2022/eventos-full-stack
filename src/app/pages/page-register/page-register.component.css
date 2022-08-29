@@ -1,29 +1,4 @@
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
 
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../../../assets/fonts/poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../../../assets/fonts/poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../../../assets/fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../../../assets/fonts/poppins/Poppins-SemiBold.ttf');
-}
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
 * {
     margin: 0px;
     padding: 0px;
@@ -380,56 +355,6 @@ button:hover {
 .p-t-24 {padding-top: 24px;}
 .p-t-25 {padding-top: 25px;}
 .p-t-26 {padding-top: 26px;}
-.p-t-27 {padding-top: 27px;}
-.p-t-28 {padding-top: 28px;}
-.p-t-29 {padding-top: 29px;}
-.p-t-30 {padding-top: 30px;}
-.p-t-31 {padding-top: 31px;}
-.p-t-32 {padding-top: 32px;}
-.p-t-33 {padding-top: 33px;}
-.p-t-34 {padding-top: 34px;}
-.p-t-35 {padding-top: 35px;}
-.p-t-36 {padding-top: 36px;}
-.p-t-37 {padding-top: 37px;}
-.p-t-38 {padding-top: 38px;}
-.p-t-39 {padding-top: 39px;}
-.p-t-40 {padding-top: 40px;}
-.p-t-41 {padding-top: 41px;}
-.p-t-42 {padding-top: 42px;}
-.p-t-43 {padding-top: 43px;}
-.p-t-44 {padding-top: 44px;}
-.p-t-45 {padding-top: 45px;}
-.p-t-46 {padding-top: 46px;}
-.p-t-47 {padding-top: 47px;}
-.p-t-48 {padding-top: 48px;}
-.p-t-49 {padding-top: 49px;}
-.p-t-50 {padding-top: 50px;}
-.p-t-51 {padding-top: 51px;}
-.p-t-52 {padding-top: 52px;}
-.p-t-53 {padding-top: 53px;}
-.p-t-54 {padding-top: 54px;}
-.p-t-55 {padding-top: 55px;}
-.p-t-56 {padding-top: 56px;}
-.p-t-57 {padding-top: 57px;}
-.p-t-58 {padding-top: 58px;}
-.p-t-59 {padding-top: 59px;}
-.p-t-60 {padding-top: 60px;}
-.p-t-61 {padding-top: 61px;}
-.p-t-62 {padding-top: 62px;}
-.p-t-63 {padding-top: 63px;}
-.p-t-64 {padding-top: 64px;}
-.p-t-65 {padding-top: 65px;}
-.p-t-66 {padding-top: 66px;}
-.p-t-67 {padding-top: 67px;}
-.p-t-68 {padding-top: 68px;}
-.p-t-69 {padding-top: 69px;}
-.p-t-70 {padding-top: 70px;}
-.p-t-71 {padding-top: 71px;}
-.p-t-72 {padding-top: 72px;}
-.p-t-73 {padding-top: 73px;}
-.p-t-74 {padding-top: 74px;}
-.p-t-75 {padding-top: 75px;}
-.p-t-76 {padding-top: 76px;}
 
 
 /*[ MARGIN ]
