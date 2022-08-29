@@ -29,7 +29,7 @@ export class AuthService implements AsyncValidator {
   }
 
   getUser(){
-    return this.http.get("http://localhost:3000/users");
+      return this.http.get("http://localhost:3000/users");
   }
 
   validate(control: AbstractControl):  Observable<ValidationErrors | null> {

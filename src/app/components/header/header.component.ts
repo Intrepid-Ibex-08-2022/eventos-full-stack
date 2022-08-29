@@ -9,6 +9,15 @@ import { Component, Input} from '@angular/core';
 export class HeaderComponent  {
   @Input() position = 'position: fixed;'
   ruta = './'
+  isloged = "false";
 
+  constructor() {
+    this.isloged = localStorage.getItem("login") || "";
+   }
+
+   exit(){
+    localStorage.setItem("login", "false");
+    location.reload();
+   }
 
 }
