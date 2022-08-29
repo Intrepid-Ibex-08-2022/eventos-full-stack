@@ -9,7 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent  {
   @Input() position = 'position: fixed;'
+  isloged = "false";
 
+  constructor() {
+    this.isloged = localStorage.getItem("login") || "";
+   }
+
+   exit(){
+    localStorage.setItem("login", "false");
+    location.reload();
+   }
 
   constructor(private router: Router){}
   navigate(ruta: string){

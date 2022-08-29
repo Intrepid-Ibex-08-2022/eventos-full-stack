@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
-import { AuthService } from '../../services/auth/auth.service';
+import { Users } from 'src/app/interface/users';
+import { AuthService } from 'src/app/services/auth/auth.service';
+
+type User = {
+  email? : string,
+  pswd? : string,
+  id? :string
+}
 
 @Component({
   selector: 'app-login',
@@ -11,74 +16,42 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
   position = 'position: relative;';
-  authError: boolean = false;
 
-  miFormulario: FormGroup = this.formBuilder.group({
-      correo: ['',
-        [
-          Validators.required,
-          Validators.pattern( this.authServices.emailPattern )
-        ]
-      ],
-      password: ['',[
-          Validators.required,
-          Validators.minLength(6),
-        ]
-      ]
-    });
+  user = {
+    email : "",
+    psswd : ""
+  }
+  array : any = [];
+  userFiltered : User = {
+    email : "",
+    pswd : ""
+  };
 
   constructor(
-    private formBuilder: FormBuilder,
-    private authServices: AuthService,
+    private auth : AuthService,
     private router: Router
-  ) { }
+  ) {
+    
+   }
 
   ngOnInit(): void {
+      
+      
   }
 
 
-  get emailErrorMsg (): string {
-    const emailError = this.miFormulario.controls['correo'].errors;
-    const emailValue = this.miFormulario.controls['correo'].value;
-    console.log(emailError);
-    console.log(emailValue);
-
-    if(emailError?.['required']){
-      return 'El correo es obligatorio'
-    }
-    else if (emailError?.['pattern']){
-      return `${emailValue} No es un formato de correo valido`
-    }
-    else if (emailError?.['emailTomado']){
-      return 'Este email ya se encuentra registrado'
-    }
-    return ''
-  }
-
-  campoValido( campo: string){
-
-    return this.miFormulario.controls[campo]?.errors && this.miFormulario.controls[campo]?.touched;
-  }
-
-  async submitFormulario(){
-    const {correo,password} = this.miFormulario.value;
-
-    await this.authServices.getUser(correo, password)
-    .then( resp => {
-      console.log(resp + 'ts')
-      if(resp === true){
-        this.authError = false
-        this.router.navigateByUrl('');
-      }else{
-        this.authError = true
-        // Swal.fire({
-        //   icon: 'error',
-        //   title: 'Oops...',
-        //   text: resp,
-        // });
-      }
-    });
-
-    this.miFormulario.markAllAsTouched();
-  }
+ checkUser(){
+        this.auth.getUser().subscribe(
+          users => {
+            this.array = users;
+            this.userFiltered = this.array.filter( (u: { email: string; }) => u.email === this.user.email )[0] || this.userFiltered;
+            if(this.userFiltered.email === this.user.email && this.userFiltered.pswd === this.user.psswd){
+              localStorage.setItem("login", "true")
+              this.router.navigateByUrl("")
+            } else {
+              localStorage.setItem("login", "false")
+            } 
+          }
+        )
+ }
 }

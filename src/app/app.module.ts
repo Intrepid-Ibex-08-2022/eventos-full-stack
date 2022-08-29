@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FhotoPrincipalComponent } from './components/fhotoprincipal/fhotoPrincipal.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
 import { PageRegisterComponent } from './pages/page-register/page-register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoginComponent } from './pages/login/login.component';
@@ -36,6 +36,7 @@ import { LoginComponent } from './pages/login/login.component';
     EventDetailsComponent,
     PageRegisterComponent,
     LoginComponent
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ import { LoginComponent } from './pages/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
