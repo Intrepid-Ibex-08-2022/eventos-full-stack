@@ -25,7 +25,6 @@
   margin: 10px 30px;
   font-size: 20px;
 }
-<<<<<<< HEAD
 
 .auth__container{
   display: flex;
@@ -37,6 +36,10 @@
   margin-right: 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.auth__button--text{
+  padding: 0px 5px;
 }
 
 

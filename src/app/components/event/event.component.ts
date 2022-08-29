@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsResult } from '../../interface/event';
-import { FiltersService } from 'src/app/services/filters.service';
-import { GetEventsService } from '../../services/get-events.service';
+import { FiltersService } from 'src/app/services/events/filters.service';
+import { GetEventsService } from '../../services/events/get-events.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,10 +28,9 @@ export class EventComponent implements OnInit {
     });
   }
 
-  event_detail(event: EventsResult) {
-    console.log(event);
-    this.eventServices.setEventDetails(event);
-    this.route.navigateByUrl('/event');
+  event_detail(id: string) {
+    this.eventServices.getEventDetails(id);
+    this.route.navigateByUrl(`/event/${id}`);
   }
   getFilteredEvents = ({
     tipoEvento = this.tipoEvento,

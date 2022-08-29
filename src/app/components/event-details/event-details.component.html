@@ -16,11 +16,11 @@
         </div>
         <div class="row-1__details">
           <img src="../../../assets/icons/star.png" alt="fecha" class="row-1__icons">
-          <p class="row-1__details--txt">{{event.venue.rating}}/5</p>
+          <p class="row-1__details--txt">{{event.venue?.rating}}/5</p>
         </div>
         <div class="row-1__details">
           <img src="../../../assets/icons/rating_1.png" alt="fecha" class="row-1__icons">
-          <p class="row-1__details--txt">{{event.venue.reviews}}</p>
+          <p class="row-1__details--txt">{{event.venue?.reviews}}</p>
         </div>
         <div class="row-1__ticket">
           <a [href]="event.ticket_info"

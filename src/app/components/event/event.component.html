@@ -34,7 +34,7 @@
   <div
     *ngFor="let event of eventsToRender"
     class="target-event-front-page"
-    (click)="event_detail(event)"
+    (click)="event_detail(event.id)"
   >
     <img src="{{ event.image }}" alt="" />
     <div class="title-y-date">

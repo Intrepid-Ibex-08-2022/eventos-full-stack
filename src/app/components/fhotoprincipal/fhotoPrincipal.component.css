@@ -14,8 +14,8 @@
 .photo__text {
   /* border: 1px solid white; */
   text-align: center;
-  width: 35%;
-  height: 200px;
+  width: 30%;
+  height: 30%;
   border-radius: 5px;
   position: relative;
   left: 65%;
@@ -24,13 +24,14 @@
 }
 
 .photo__text--main {
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 35px;
+  line-height: 30px;
+  font-weight: 600;
 }
 
 .photo__text--second {
   margin-top: 5px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 100;
 }
 .photo__text2 {
