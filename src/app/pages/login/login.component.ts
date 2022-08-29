@@ -9,8 +9,10 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class LoginComponent implements OnInit {
   position = 'position: relative;';
-  email = "Sincere@april.biz";
-  psswd = "1-770-736-8031 x6442";
+  user = {
+    email : "",
+    psswd : ""
+  }
   array : any = [];
 
   constructor(
@@ -29,10 +31,15 @@ export class LoginComponent implements OnInit {
 
   checkUser(){
       this.auth.getUser().subscribe( users => {
+        console.log(users);
+        console.log(this.user.psswd, this.user.email);
+        
         this.array = users;
-        this.array.filter( (user: { email: string; phone: any; }) =>  
-        user.email === this.email && user.phone === this.psswd 
-        ?  localStorage.setItem("login", "true") : localStorage.setItem("login", "false"));
+        this.array.filter( (user: { email: string; pswd: any; }) =>  
+        user.email === this.user.email && user.pswd === this.user.psswd ?
+        (localStorage.setItem("login", "true"), 
+        this.router.navigateByUrl("") ) : 
+        localStorage.setItem("login", "false"));
       });
   }
 

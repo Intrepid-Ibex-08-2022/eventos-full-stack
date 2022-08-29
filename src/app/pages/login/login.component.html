@@ -15,7 +15,8 @@
               <!--Correo-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Email</span>
-                <input class="input100"
+                <input [(ngModel)]="user.email" class="input100"
+                name="email"
                        type="email"
                        placeholder="Ingrese su email">
                 <span class="focus-input100"></span>
@@ -23,7 +24,8 @@
 
               <div class="wrap-input100">
                   <span class="label-input100">Password</span>
-                  <input class="input100"
+                  <input [(ngModel)]="user.psswd" class="input100"
+                        name="password"
                          type="password"
                          placeholder="Ingrese su contraseña">
                   <span class="focus-input100"></span>
