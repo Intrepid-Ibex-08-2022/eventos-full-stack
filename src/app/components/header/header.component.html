@@ -1,14 +1,14 @@
 <header class="header" [style]="position">
-  <a (click)="navigate('')">
+  <a routerLink="">
     <img class="header__logo" src="../../../assets/img/logo.png" alt="logo" />
   </a>
 
   <div *ngIf="isloged === 'false'" class="auth__container">
-    <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('register')">Register</button>
-    <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('login')">Login</button>
+    <button style="color: white" type="button" mat-raised-button class="auth__button auth__button--text" routerLink="register">Register</button>
+    <button style="color: white" type="button" mat-raised-button class="auth__button auth__button--text" routerLink="login">Login</button>
   </div>
-  <div  *ngIf="isloged === 'true'">
+  <div  *ngIf="isloged === 'true'" style="padding-right: 10px;">
     <h5 style="color: white;">Bienvenido</h5>
-    <button (click)="exit()">salir</button>
+    <button style="color: gray; background-color: white; padding: 5px; border-radius: 2px;" (click)="exit()">salir</button>
   </div>
 </header>

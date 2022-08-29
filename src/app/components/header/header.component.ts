@@ -19,9 +19,4 @@ export class HeaderComponent  {
     localStorage.setItem("login", "false");
     location.reload();
    }
-
-  constructor(private router: Router){}
-  navigate(ruta: string){
-    this.router.navigateByUrl(`/${ruta}`)
-  }
 }

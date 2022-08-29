@@ -46,19 +46,5 @@ export class AuthService implements AsyncValidator {
       )
   }
 
-  async getUser(email: string, password: string): Promise<boolean | undefined>{
-    let resp: boolean | undefined;
-
-    resp = await axios.get(`${this.url}?email=${email}`).then( user => {
-      if(user.data[0] && user.data[0].password === password){
-        localStorage.setItem("login", "true");
-        return true;
-      }else{
-        return false
-      }
-    });
-    return resp;
-  }
-
 
 }
