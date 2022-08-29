@@ -15,7 +15,6 @@ export class EventDetailsComponent implements OnInit {
   constructor(
     private eventServices: GetEventsService,
     private activateRoute: ActivatedRoute
-
   ) { }
 
   ngOnInit(): void {
@@ -24,9 +23,7 @@ export class EventDetailsComponent implements OnInit {
   }
 
   async getEvent(id: string){
-    await this.eventServices.getEventDetails(id).then( resp => {
-      this.event = resp
-    });
+    this.event = await this.eventServices.getEventDetails(id).then( resp => resp);
   }
 
 
