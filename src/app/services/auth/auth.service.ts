@@ -9,7 +9,7 @@ import { Users } from '../../interface/users';
   providedIn: 'root'
 })
 export class AuthService implements AsyncValidator {
-  url                  : string = 'http://localhost:3000/usuarios';
+  url                  : string = 'https://happy-hats-rush-92-172-244-82.loca.lt/users';
   emailPattern         : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
   constructor(private http: HttpClient) { }
@@ -45,8 +45,7 @@ export class AuthService implements AsyncValidator {
   async getUser(email: string, password: string): Promise<boolean | undefined>{
     let resp: boolean | undefined;
 
-    resp = await axios.get(`http://localhost:3000/users?email=${email}`).then( user => {
-      console.log(user.data[0]);
+    resp = await axios.get(`${this.url}?email=${email}`).then( user => {
       if(user.data[0] && user.data[0].password === password){
         localStorage.setItem("login", "true");
         return true;

@@ -8,7 +8,7 @@ import axios from 'axios';
 export class FiltersService {
   eventosCanarios: EventsResult[] = [];
   // urlEventos = 'https://curly-shirts-hide-2-137-185-36.loca.lt/eventosCanarios'; // Este portal es el mismo que mi local http://localhost:3000/eventosCanarios pero declarado público con el local tunnel. Los demas usuarios de la app ascederán a mi localhost3000 con la dirreccion que les ponga aquí.
-  urlEventos = 'http://localhost:3000/events'
+  urlEventos = 'https://happy-hats-rush-92-172-244-82.loca.lt/eventosCanarios';
   constructor() {}
 
   async getEvents(): Promise<EventsResult[]> {
