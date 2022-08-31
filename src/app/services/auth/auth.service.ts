@@ -1,60 +1,64 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AbstractControl, AsyncValidator, ValidationErrors } from '@angular/forms';
+import {
+  AbstractControl,
+  AsyncValidator,
+  ValidationErrors,
+} from '@angular/forms';
 import axios from 'axios';
 import { catchError, map, of, tap, Observable } from 'rxjs';
 import { Users } from '../../interface/users';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService implements AsyncValidator {
-  url                  : string = 'https://happy-hats-rush-92-172-244-82.loca.lt/users';
-  emailPattern         : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+  url = 'http://localhost:3000' + '/eventosCanarios';
+  // url: string =
+  //   'mongodb+srv://intrepidibex:Stos5BsCqdS7MzIb@cluster0.lxr4zbx.mongodb.net/?retryWrites=true&w=majority' +
+  //   '/users';
+  // url: string = 'https://happy-hats-rush-92-172-244-82.loca.lt'+'/users';
+  emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  register(username: string,email:string, password:string){
+  register(username: string, email: string, password: string) {
     const favorites = [{}];
-    return this.http.post<Users>(this.url, {username,email,favorites,password})
+    return this.http
+      .post<Users>(this.url, { username, email, favorites, password })
       .pipe(
-        tap(resp => {
-          if(resp.ok){
-            localStorage.setItem('token', resp.token!)
+        tap((resp) => {
+          if (resp.ok) {
+            localStorage.setItem('token', resp.token!);
           }
         }),
-        map( valid => valid.ok),
-        catchError( error => of(error.error.msg))
+        map((valid) => valid.ok),
+        catchError((error) => of(error.error.msg)),
       );
   }
 
-  validate(control: AbstractControl):  Observable<ValidationErrors | null> {
+  validate(control: AbstractControl): Observable<ValidationErrors | null> {
     const email = control.value;
-    console.log(email)
-    return this.http.get<any[]>(`${this.url}?q=${email}`)
-      .pipe(
-        //delay(3000),
-        map( resp => {
-          return (resp.length === 0)
-            ? null
-            : {emailTomado: true}
-        })
-      )
+    console.log(email);
+    return this.http.get<any[]>(`${this.url}?q=${email}`).pipe(
+      //delay(3000),
+      map((resp) => {
+        return resp.length === 0 ? null : { emailTomado: true };
+      }),
+    );
   }
 
-  async getUser(email: string, password: string): Promise<boolean | undefined>{
+  async getUser(email: string, password: string): Promise<boolean | undefined> {
     let resp: boolean | undefined;
 
-    resp = await axios.get(`${this.url}?email=${email}`).then( user => {
-      if(user.data[0] && user.data[0].password === password){
-        localStorage.setItem("login", "true");
+    resp = await axios.get(`${this.url}?email=${email}`).then((user) => {
+      if (user.data[0] && user.data[0].password === password) {
+        localStorage.setItem('login', 'true');
         return true;
-      }else{
-        return false
+      } else {
+        return false;
       }
     });
     return resp;
   }
-
-
 }
