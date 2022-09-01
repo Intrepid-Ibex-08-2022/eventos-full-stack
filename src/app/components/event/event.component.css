@@ -18,10 +18,12 @@ label {
 }
 .filters {
   position: sticky;
+  width: max-content;
   top: 15px;
+  margin: auto;
   margin-top: -60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 100;
 }
