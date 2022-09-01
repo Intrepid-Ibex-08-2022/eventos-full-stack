@@ -40,8 +40,11 @@
     <img src="{{ event.image }}" alt="" />
     <div class="title-y-date">
       <h1 class="title-event">{{ event.title }}</h1>
-      <h3 class="h3__target-event-front-page">{{ event.date.start_date }}</h3>
-      <h3 class="hora-events">{{ event.date.when }}</h3>
+      <!-- maximo length: 72 caracteres -->
+      <h3 class="h3__target-event-front-page">
+        {{ event.date.start_date }} - {{ event.date.when }}
+      </h3>
+      <!-- maximo length: 50 caracteres -->
     </div>
   </div>
 </div>
