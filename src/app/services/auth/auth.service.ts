@@ -13,11 +13,8 @@ import { Users } from '../../interface/users';
   providedIn: 'root',
 })
 export class AuthService implements AsyncValidator {
-  url = 'http://localhost:3000' + '/eventosCanarios';
-  // url: string =
-  //   'mongodb+srv://intrepidibex:Stos5BsCqdS7MzIb@cluster0.lxr4zbx.mongodb.net/?retryWrites=true&w=majority' +
-  //   '/users';
-  // url: string = 'https://happy-hats-rush-92-172-244-82.loca.lt'+'/users';
+  url = 'https://intrepit-ibex.herokuapp.com/api/users';
+
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
 
   constructor(private http: HttpClient) {}
@@ -39,11 +36,11 @@ export class AuthService implements AsyncValidator {
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
     const email = control.value;
-    console.log(email);
     return this.http.get<any[]>(`${this.url}?q=${email}`).pipe(
       //delay(3000),
       map((resp) => {
-        return resp.length === 0 ? null : { emailTomado: true };
+        let respDB = resp.find( correo => correo.email == email)
+        return respDB !== undefined ? { emailTomado: true } : null ;
       }),
     );
   }
