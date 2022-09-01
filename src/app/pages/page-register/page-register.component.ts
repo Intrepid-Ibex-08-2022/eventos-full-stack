@@ -87,8 +87,6 @@ export class PageRegisterComponent {
   submitFormulario(){
 
     const {nombre,correo,password} = this.miFormulario.value;
-
-      console.log(this.miFormulario.value);
       this.authServices.register(nombre,correo,password)
       .subscribe( resp => {
         if(resp === true){
