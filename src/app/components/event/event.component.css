@@ -18,10 +18,12 @@ label {
 }
 .filters {
   position: sticky;
+  width: max-content;
   top: 15px;
+  margin: auto;
   margin-top: -60px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   z-index: 100;
 }
@@ -73,6 +75,7 @@ label {
 }
 .title-y-date {
   justify-content: center;
+  align-items: center;
   height: 115px;
   bottom: 0;
   width: -webkit-fill-available;
@@ -90,6 +93,7 @@ label {
   color: white;
   text-align: center;
   font-size: 20px;
+  height: 48px;
 }
 
 .h3__target-event-front-page {
