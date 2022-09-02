@@ -40,8 +40,6 @@ export class LoginComponent implements OnInit {
   get emailErrorMsg (): string {
     const emailError = this.miFormulario.controls['correo'].errors;
     const emailValue = this.miFormulario.controls['correo'].value;
-    console.log(emailError);
-    console.log(emailValue);
 
     if(emailError?.['required']){
       return 'El correo es obligatorio'
@@ -50,7 +48,7 @@ export class LoginComponent implements OnInit {
       return `${emailValue} No es un formato de correo valido`
     }
     else if (emailError?.['emailTomado']){
-      return 'Este email ya se encuentra registrado'
+      return 'Este email no se encuentra registrado'
     }
     return ''
   }
@@ -63,21 +61,40 @@ export class LoginComponent implements OnInit {
   async submitFormulario(){
     const {correo,password} = this.miFormulario.value;
 
-    await this.authServices.getUser(correo, password)
-    .then( resp => {
-      console.log(resp + 'ts')
-      if(resp === true){
-        this.authError = false
+    (await this.authServices.getUser(correo, password)).subscribe(resp =>{
+      if(resp !== undefined){
+        this.authError = false;
         this.router.navigateByUrl('');
-      }else{
-        this.authError = true
-        // Swal.fire({
-        //   icon: 'error',
-        //   title: 'Oops...',
-        //   text: resp,
-        // });
       }
-    });
+      this.authError = true
+
+    })
+
+    //.then( resp => {
+    //   console.log(resp)
+    //   if(resp !== undefined){
+    //     this.authError = false
+    //     // this.router.navigateByUrl('');
+    //   }
+
+    //   this.authError = true
+
+    // })
+
+    // .then( resp => {
+    //   console.log(resp + 'ts')
+    //   if(resp === true){
+    //     this.authError = false
+    //     this.router.navigateByUrl('');
+    //   }else{
+    //     this.authError = true
+    //     // Swal.fire({
+    //     //   icon: 'error',
+    //     //   title: 'Oops...',
+    //     //   text: resp,
+    //     // });
+    //   }
+    // });
 
     this.miFormulario.markAllAsTouched();
   }

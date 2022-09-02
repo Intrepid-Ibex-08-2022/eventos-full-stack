@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
 import {
   AbstractControl,
   AsyncValidator,
   ValidationErrors,
 } from '@angular/forms';
 import axios from 'axios';
-import { catchError, map, of, tap, Observable } from 'rxjs';
+import { catchError, map, of, Observable } from 'rxjs';
 import { Users } from '../../interface/users';
 
 @Injectable({
@@ -19,17 +19,22 @@ export class AuthService implements AsyncValidator {
 
   constructor(private http: HttpClient) {}
 
-  register(username: string, email: string, password: string) {
-    const favorites = [{}];
+  register(username: string, email: string, pswd: string) {
+
     return this.http
-      .post<Users>(this.url, { username, email, favorites, password })
+      .post<Users>(this.url, { username, email, pswd})
       .pipe(
-        tap((resp) => {
-          if (resp.ok) {
-            localStorage.setItem('token', resp.token!);
+        map((resp) => {
+
+          let {_id} = resp
+
+          if(_id){
+            localStorage.setItem('token', _id);
           }
+
+
         }),
-        map((valid) => valid.ok),
+        map((valid) => valid),
         catchError((error) => of(error.error.msg)),
       );
   }
@@ -45,17 +50,27 @@ export class AuthService implements AsyncValidator {
     );
   }
 
-  async getUser(email: string, password: string): Promise<boolean | undefined> {
-    let resp: boolean | undefined;
+  async getUser(email: string, password: string): Promise<Observable<boolean | undefined>> {
+    let resp: Observable< boolean | undefined>;
 
-    resp = await axios.get(`${this.url}?email=${email}`).then((user) => {
-      if (user.data[0] && user.data[0].password === password) {
-        localStorage.setItem('login', 'true');
-        return true;
-      } else {
-        return false;
-      }
-    });
-    return resp;
+    resp = await this.http.get<any[]>(`${this.url}?email=${email}`)
+      .pipe(
+        map((users) => {
+          let user = users.find( (res: { email: string; }) => res.email == email);
+
+          if(user){
+            let {_id, pswd} = user
+            if(pswd === password){
+              localStorage.setItem('token', _id);
+              return true
+            }
+            return;
+          }
+
+          return;
+        })
+      );
+    return resp
+
   }
 }
