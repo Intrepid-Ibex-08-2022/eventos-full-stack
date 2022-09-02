@@ -70,32 +70,6 @@ export class LoginComponent implements OnInit {
 
     })
 
-    //.then( resp => {
-    //   console.log(resp)
-    //   if(resp !== undefined){
-    //     this.authError = false
-    //     // this.router.navigateByUrl('');
-    //   }
-
-    //   this.authError = true
-
-    // })
-
-    // .then( resp => {
-    //   console.log(resp + 'ts')
-    //   if(resp === true){
-    //     this.authError = false
-    //     this.router.navigateByUrl('');
-    //   }else{
-    //     this.authError = true
-    //     // Swal.fire({
-    //     //   icon: 'error',
-    //     //   title: 'Oops...',
-    //     //   text: resp,
-    //     // });
-    //   }
-    // });
-
     this.miFormulario.markAllAsTouched();
   }
 }
