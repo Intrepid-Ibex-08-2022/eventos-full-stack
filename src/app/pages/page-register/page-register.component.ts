@@ -84,10 +84,10 @@ export class PageRegisterComponent {
     }
   }
 
-  submitFormulario(){
+  async submitFormulario(){
 
     const {nombre,correo,password} = this.miFormulario.value;
-      this.authServices.register(nombre,correo,password)
+    await this.authServices.register(nombre,correo,password)
       .subscribe( resp => {
         if(resp === true){
           this.router.navigateByUrl('/');

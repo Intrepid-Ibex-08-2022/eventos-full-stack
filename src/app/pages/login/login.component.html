@@ -22,7 +22,14 @@
                        placeholder="Ingrese su email">
                 <span class="focus-input100"></span>
               </div>
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('correo')"
+                class="text-danger">
+                  {{emailErrorMsg}}
+              </span>
 
+               <!--Password-->
               <div class="wrap-input100">
                   <span class="label-input100">Password</span>
                   <input class="input100"
@@ -31,18 +38,27 @@
                          placeholder="Ingrese su contraseña">
                   <span class="focus-input100"></span>
               </div>
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('password')"
+                class="text-danger">
+                    La contraseña de tener un minimo de 6 caracteres
+              </span>
 
               <div class="text-right p-t-8 p-b-31"></div>
 
+              <!--Boton-->
               <div class="container-login100-form-btn">
                   <div class="wrap-login100-form-btn">
                       <div class="login100-form-bgbtn"></div>
                       <button  type="submit"
+                      [disabled]="miFormulario.invalid"
                       class="login100-form-btn">
                           Iniciar sesión
                       </button>
                   </div>
               </div>
+              <!--Validacion-->
               <span
               *ngIf="authError"
               class="text-danger">
