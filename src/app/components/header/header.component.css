@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 .header {
   grid-area: header;
   display: flex;
@@ -5,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 80px;
   z-index: 99;
 }
@@ -27,8 +32,11 @@
 }
 
 .auth__container{
+
   display: flex;
-  margin-right: 10px;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .auth__button{
@@ -41,6 +49,25 @@
 
 .auth__button--text{
   padding: 0px 5px;
+}
+
+.user__container{
+  box-shadow: none;
+  background-color: none;
+}
+.user__img{
+  margin-right: 10px;
+  height: 35px;
+}
+
+.user__name{
+  margin-right: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.user__log-out{
+  text-align: center;
 }
 
 

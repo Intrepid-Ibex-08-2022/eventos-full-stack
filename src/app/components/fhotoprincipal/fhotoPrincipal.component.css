@@ -1,3 +1,7 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
 .photo__principal {
   display: flex;
   width: 100%;
