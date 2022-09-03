@@ -1,10 +1,14 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
 .footer {
   box-sizing: border-box;
   grid-area: footer;
   position: relative;
   display: flex;
   /* margin-top: 50px; */
-  width: 100%;
+  width: 100vw;
   height: 80px;
   justify-content: space-between;
   background-color: #0c0434;

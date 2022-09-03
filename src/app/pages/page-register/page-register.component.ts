@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import {  AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth/auth.service';
@@ -55,8 +55,6 @@ export class PageRegisterComponent {
   get emailErrorMsg (): string {
     const emailError = this.miFormulario.controls['correo'].errors;
     const emailValue = this.miFormulario.controls['correo'].value;
-    console.log(emailError);
-    console.log(emailValue);
 
     if(emailError?.['required']){
       return 'El correo es obligatorio'
@@ -87,10 +85,10 @@ export class PageRegisterComponent {
   async submitFormulario(){
 
     const {nombre,correo,password} = this.miFormulario.value;
-    await this.authServices.register(nombre,correo,password)
+    (await this.authServices.register(nombre, correo, password))
       .subscribe( resp => {
         if(resp === true){
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('');
         }else{
           // Swal.fire({
           //   icon: 'error',
@@ -99,10 +97,5 @@ export class PageRegisterComponent {
           // })
         }
       });
-      this.miFormulario.reset();
-      this.router.navigateByUrl('/')
-
-
-
   }
 }

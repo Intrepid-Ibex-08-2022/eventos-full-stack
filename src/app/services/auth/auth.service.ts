@@ -5,7 +5,6 @@ import {
   AsyncValidator,
   ValidationErrors,
 } from '@angular/forms';
-import axios from 'axios';
 import { catchError, map, of, Observable } from 'rxjs';
 import { Users } from '../../interface/users';
 
@@ -19,24 +18,28 @@ export class AuthService implements AsyncValidator {
 
   constructor(private http: HttpClient) {}
 
-  register(username: string, email: string, pswd: string) {
+  async register(username: string, email: string, pswd: string):Promise<Observable<boolean | undefined>> {
+    let resp: Observable< boolean | undefined>;
 
-    return this.http
-      .post<Users>(this.url, { username, email, pswd})
+    resp = await this.http
+      .post<Users>(this.url, { username, email, pswd })
       .pipe(
         map((resp) => {
 
-          let {_id} = resp
-
-          if(_id){
+          let { _id } = resp;
+          if (_id) {
             localStorage.setItem('token', _id);
+            return true;
           }
+          return;
 
 
         }),
         map((valid) => valid),
-        catchError((error) => of(error.error.msg)),
+        catchError((error) => of(error.error.msg))
       );
+
+    return resp;
   }
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
@@ -59,7 +62,7 @@ export class AuthService implements AsyncValidator {
           let user = users.find( (res: { email: string; }) => res.email == email);
 
           if(user){
-            let {_id, pswd} = user
+            let {_id, username, pswd} = user
             if(pswd === password){
               localStorage.setItem('token', _id);
               return true
@@ -73,4 +76,27 @@ export class AuthService implements AsyncValidator {
     return resp
 
   }
+
+   async loginId(id: string): Promise<Observable<string | undefined>> {
+     let resp: Observable< string | undefined>;
+
+     resp = await this.http.get<any[]>(`${this.url}?_id=${id}`)
+       .pipe(
+         map((users) => {
+           let user = users.find( (res: { _id: string; }) => res._id == id);
+
+           if(user){
+             let {_id, username} = user
+             if(_id === id){
+               return username
+             }
+             return;
+           }
+
+           return;
+         })
+       );
+     return resp
+
+   }
 }

@@ -2,8 +2,23 @@
   <a (click)="navigate('')">
     <img class="header__logo" src="../../../assets/img/logo.png" alt="logo" />
   </a>
-  <div class="auth__container">
+  <div
+    *ngIf="!loginValido(); else loginIcon"
+    class="auth__container">
     <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('register')">Register</button>
     <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('login')">Login</button>
   </div>
+
+  <ng-template #loginIcon class="dropdown">
+    <div class="auth__container " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+      <img src="../../../assets/icons/user.png" alt="user" class="user__img">
+      <div class="user__name" >{{username}}</div>
+
+      <ul class="dropdown-menu dropdown-menu-dark user__log-out">
+        <li><a class="dropdown-item " type="button" href="#" (click)="logOut()">log out</a></li>
+      </ul>
+    </div>
+  </ng-template>
+
 </header>
