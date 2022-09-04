@@ -1,7 +1,3 @@
-* {
-  margin: 0px;
-  box-sizing: border-box;
-}
 .container {
   display: flex;
   flex-direction: column;
@@ -10,7 +6,7 @@
   box-sizing: border-box;
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.2);
   max-width: 976px;
-  width: 100vw;
+  width: 100%;
   padding-top: 0.875rem;
   padding-bottom: 0.875rem;
   font-size: 1.125rem;
