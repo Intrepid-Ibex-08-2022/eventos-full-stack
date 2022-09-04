@@ -3,7 +3,7 @@ export interface Event {
 }
 
 export interface EventsResult {
-  id: number;
+  _id: string;
   tipo_event: string;
   place: string;
   image?: string;

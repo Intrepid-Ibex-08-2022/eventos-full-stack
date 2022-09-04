@@ -7,7 +7,7 @@ import axios from 'axios';
 })
 export class FiltersService {
   eventosCanarios: EventsResult[] = [];
-  urlEventos = 'http://localhost:3000' + '/eventosCanarios';
+  urlEventos = 'https://intrepit-ibex.herokuapp.com/api/events';
   // urlEventos =
   //   'mongodb+srv://intrepidibex:Stos5BsCqdS7MzIb@cluster0.lxr4zbx.mongodb.net/?retryWrites=true&w=majority' +
   //   '/eventosCanarios';

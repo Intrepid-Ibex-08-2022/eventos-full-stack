@@ -17,7 +17,7 @@ const routes: Routes = [
     component: PageTeamComponent
   },
   {
-    path: 'event/:id',
+    path: 'events/:id',
     component: PageEventComponent
   },
   {

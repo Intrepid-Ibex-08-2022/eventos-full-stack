@@ -20,9 +20,10 @@ export class AuthService implements AsyncValidator {
 
   async register(username: string, email: string, pswd: string):Promise<Observable<boolean | undefined>> {
     let resp: Observable< boolean | undefined>;
+    let favorites: string[] = []
 
     resp = await this.http
-      .post<Users>(this.url, { username, email, pswd })
+      .post<Users>(this.url, { username, email, pswd, favorites })
       .pipe(
         map((resp) => {
 
@@ -62,7 +63,7 @@ export class AuthService implements AsyncValidator {
           let user = users.find( (res: { email: string; }) => res.email == email);
 
           if(user){
-            let {_id, username, pswd} = user
+            let {_id, pswd} = user
             if(pswd === password){
               localStorage.setItem('token', _id);
               return true
