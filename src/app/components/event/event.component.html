@@ -33,7 +33,7 @@
 <!-- ********************** Targeta evento 1 ********************** -->
 <div class="event-container__targets">
   <div
-    *ngFor="let event of events"
+    *ngFor="let event of eventsToRender"
     class="target-event-front-page"
     (click)="event_detail(event._id)"
   >
