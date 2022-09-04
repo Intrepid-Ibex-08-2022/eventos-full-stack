@@ -23,7 +23,10 @@ export class EventDetailsComponent implements OnInit {
   }
 
   async getEvent(id: string){
-    this.event = await this.eventServices.getEventDetails(id).then( resp => resp);
+    (await this.eventServices.getEventDetails(id))
+      .subscribe( resp => {
+        this.event = resp
+      });
   }
 
 

@@ -33,9 +33,9 @@
 <!-- ********************** Targeta evento 1 ********************** -->
 <div class="event-container__targets">
   <div
-    *ngFor="let event of eventsToRender"
+    *ngFor="let event of events"
     class="target-event-front-page"
-    (click)="event_detail(event.id)"
+    (click)="event_detail(event._id)"
   >
     <img src="{{ event.image }}" alt="" />
     <div class="title-y-date">

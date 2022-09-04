@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class EventComponent implements OnInit {
   eventosCanarios: EventsResult[] = [];
-  events: any;
+  events: EventsResult[] | undefined;
   eventsToRender: any;
   place = 'Todos';
   tipoEvento = 'Todos';
@@ -30,7 +30,7 @@ export class EventComponent implements OnInit {
 
   event_detail(id: string) {
     this.eventServices.getEventDetails(id);
-    this.route.navigateByUrl(`/event/${id}`);
+    this.route.navigateByUrl(`/events/${id}`);
   }
   getFilteredEvents = ({
     tipoEvento = this.tipoEvento,
