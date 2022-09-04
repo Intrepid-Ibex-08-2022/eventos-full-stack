@@ -68,3 +68,16 @@
 .user__log-out {
   text-align: center;
 }
+@media screen and (max-width: 420px) {
+  .header__logo {
+    margin: 10px 20px;
+  }
+
+  .auth__container {
+    margin-right: 20px;
+  }
+
+  .auth__button {
+    margin-right: 15px;
+  }
+}

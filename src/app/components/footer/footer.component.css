@@ -73,3 +73,34 @@
     cursor: pointer;
   }
 }
+@media screen and (max-width: 420px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer__copyright {
+    display: flex;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  .copyright__img {
+    width: 15px;
+    height: 15px;
+    margin: 0px 5px;
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+  .social-media__icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
