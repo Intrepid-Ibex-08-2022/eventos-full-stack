@@ -94,12 +94,15 @@ label {
   text-align: center;
   font-size: 20px;
   height: 48px;
+  font-weight: 600;
 }
 
 .h3__target-event-front-page {
   /* margin-top: -5px; */
+  font-size: 20px;
   color: white;
   text-align: center;
+  font-weight: 300;
 }
 .hora-events {
   /* margin-top: -20px; */
