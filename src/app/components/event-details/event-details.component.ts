@@ -6,31 +6,24 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
-  styleUrls: ['./event-details.component.css']
+  styleUrls: ['./event-details.component.css'],
 })
 export class EventDetailsComponent implements OnInit {
-
   event: EventsResult | undefined;
 
   constructor(
     private eventServices: GetEventsService,
-    private activateRoute: ActivatedRoute
-  ) { }
+    private activateRoute: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {
-    const id = this.activateRoute.snapshot.paramMap.get('id') as string
+    const id = this.activateRoute.snapshot.paramMap.get('id') as string;
     this.getEvent(id);
   }
 
-  async getEvent(id: string){
-    (await this.eventServices.getEventDetails(id))
-      .subscribe( resp => {
-        this.event = resp
-      });
+  async getEvent(id: string) {
+    (await this.eventServices.getEventDetails(id)).subscribe((resp) => {
+      this.event = resp;
+    });
   }
-
-
-
-
-
 }

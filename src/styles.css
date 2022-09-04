@@ -1,16 +1,15 @@
 @import 'css/variables.css';
 
-
-
 * {
   margin: 0px;
   padding: 0px;
   /* box-sizing: border-box; */
 }
 
-body, html {
-  width: 100vw;
-  height: 100vh;
+body,
+html {
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
 }
 .container {
   width: 100%;
@@ -29,6 +28,3 @@ body, html {
 body {
   min-width: var(--min-with, 325px);
 }
-
-
-
