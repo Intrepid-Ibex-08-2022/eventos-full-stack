@@ -7,7 +7,7 @@ import axios from 'axios';
 })
 export class FiltersService {
   eventosCanarios: EventsResult[] = [];
-  urlEventos = 'https://intrepit-ibex.herokuapp.com/api/event';
+  urlEventos = 'https://intrepit-ibex.herokuapp.com/api/events';
   // urlEventos =
   //   'mongodb+srv://intrepidibex:Stos5BsCqdS7MzIb@cluster0.lxr4zbx.mongodb.net/?retryWrites=true&w=majority' +
   //   '/eventosCanarios';
@@ -26,15 +26,15 @@ export class FiltersService {
   ): Promise<EventsResult[]> {
     let response;
     if (place !== 'Todos' && tipoEvent === 'Todos') {
-      response = await axios.get(`${this.urlEventos}?place=${place}`);
+      response = await axios.get(`${this.urlEventos}/filter?place=${place}`);
     }
     if (place !== 'Todos' && tipoEvent !== 'Todos') {
       response = await axios.get(
-        `${this.urlEventos}?place=${place}&tipo_event=${tipoEvent}`,
+        `${this.urlEventos}/filter?place=${place}&tipo_event=${tipoEvent}`,
       );
     }
     if (place === 'Todos' && tipoEvent !== 'Todos') {
-      response = await axios.get(`${this.urlEventos}?tipo_event=${tipoEvent}`);
+      response = await axios.get(`${this.urlEventos}/filter?tipo_event=${tipoEvent}`);
     }
     if (place === 'Todos' && tipoEvent === 'Todos') {
       response = await axios.get(`${this.urlEventos}`);
