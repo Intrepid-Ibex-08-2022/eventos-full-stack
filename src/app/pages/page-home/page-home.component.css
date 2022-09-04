@@ -1,15 +1,5 @@
-/* .container {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
 
-.item {
-  display: flex;
-  flex-wrap: wrap;
-} */
 * {
-  width: 100vw;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;

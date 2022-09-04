@@ -41,14 +41,21 @@
 
 .auth__button{
   background-color: white;
-  height: 25px;
+  height: 28px;
   margin-right: 20px;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+
 }
 
 .auth__button--text{
+  align-items: center;
   padding: 0px 5px;
+}
+
+.auth__button--text:hover{
+  background-color: var(--color-yellow);
 }
 
 .user__container{

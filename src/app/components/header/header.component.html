@@ -6,7 +6,7 @@
     *ngIf="!loginValido(); else loginIcon"
     class="auth__container">
     <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('register')">Register</button>
-    <button type="button" mat-raised-button class="auth__button auth__button--text" (click)="navigate('login')">Login</button>
+    <button type="button" mat-raised-button class="auth__button auth__button--text " (click)="navigate('login')">Login</button>
   </div>
 
   <ng-template #loginIcon class="dropdown">
