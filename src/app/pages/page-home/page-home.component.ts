@@ -12,7 +12,7 @@ export class PageHomeComponent {
 
   constructor() {
     fromEvent(document, 'scroll').subscribe( () => {
-      this.opacity = (document.documentElement.scrollTop > 720)
+      this.opacity = (document.documentElement.scrollTop > 580)
           ? 'opacity: 1;'
           : 'opacity: 0.5;'
     });
