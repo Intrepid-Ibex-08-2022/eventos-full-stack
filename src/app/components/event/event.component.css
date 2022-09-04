@@ -25,7 +25,7 @@ label {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 99;
+  z-index: 100;
 }
 .filter__location,
 .filter__tipo-event {

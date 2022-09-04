@@ -1,12 +1,11 @@
 * {
-  margin: 0px;
   box-sizing: border-box;
 }
 .container {
   position: relative;
   background-color: #fffaf7;
   /* max-width: 1600px; */
-  width: 100vw;
+  width: 100%;
   margin: 0px auto 115px;
   top: 6rem;
   display: grid;
