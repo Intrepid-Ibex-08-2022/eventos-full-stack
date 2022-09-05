@@ -39,7 +39,7 @@
   >
     <img src="{{ event.image }}" alt="evneto" />
     <div class="title-y-date">
-      <h1 class="title-event">{{ event.title }}</h1>
+      <h1 class="title-event">{{ event.title | titlecase}} </h1>
       <!-- maximo length: 72 caracteres -->
       <h3 class="h3__target-event-front-page">
         {{ event.date.start_date }} - {{ event.date.when }}
