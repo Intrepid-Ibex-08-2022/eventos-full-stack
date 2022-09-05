@@ -10,36 +10,32 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {
     path: '',
-    component: PageHomeComponent
+    component: PageHomeComponent,
   },
   {
     path: 'team',
-    component: PageTeamComponent
+    component: PageTeamComponent,
   },
   {
     path: 'events/:id',
-    component: PageEventComponent
+    component: PageEventComponent,
   },
   {
     path: 'register',
-    component: PageRegisterComponent
+    component: PageRegisterComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: '**',
-    redirectTo: ''
-  }
-
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: [RouterModule]
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
