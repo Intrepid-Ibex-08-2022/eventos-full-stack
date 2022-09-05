@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-team.component.css']
 })
 export class PageTeamComponent implements OnInit {
-
+  position = 'position: relative;';
   constructor() { }
 
   ngOnInit(): void {
