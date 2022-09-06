@@ -36,14 +36,27 @@
       <div class="row-2__descript">
         {{event.description}}
       </div>
-        <a [href]="event.map_link"
+        <!-- <a [href]="event.map_link"
             class="row-2__map" target="_blank">
           <img title="prueba" src="../../../assets/imagen/map.jpg" class="row-2__map--img">
-        </a>
+        </a> -->
+
+        <google-map [width]="sizeWidth" height="300" [center]="position" [zoom]="zoom">
+          <map-marker
+            [position]="position"
+            [label]="label"
+
+          ></map-marker>
+        </google-map>
+
+
+
+
     </div>
 
   </div>
 
+  <!--Mensaje de Error-->
   <ng-template #msgError>
     <div class="container">
       <p class="error__msg">ERROR 404, EVENTO NO ENCONTRADO</p>
