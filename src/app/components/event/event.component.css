@@ -120,3 +120,27 @@ label {
     top: 70px;
   }
 }
+@media screen and (max-width: 520px) {
+  .bg-filters {
+    height: 145px;
+  }
+  .filters {
+    position: sticky;
+    width: max-content;
+    top: 76px;
+    flex-direction: column;
+    margin: auto;
+    margin-top: -124px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: 100;
+  }
+  .filter__location,
+  .filter__tipo-event {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}

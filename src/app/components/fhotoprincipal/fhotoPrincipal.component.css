@@ -1,8 +1,8 @@
-* {
+/* * {
   padding: 0;
   margin: 0px;
   box-sizing: border-box;
-}
+} */
 .photo__principal {
   grid-area: ftpc;
   display: flex;
@@ -61,7 +61,7 @@
   }
   .photo__principal--img {
     height: 680px;
-    width: 100vw;
+    width: 100%;
     background-image: url(../../../assets/imagen/eventoPortada/eventoPortada11.jpg);
     background-size: cover;
     background-position: center;

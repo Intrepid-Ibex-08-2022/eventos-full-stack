@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoginComponent } from './pages/login/login.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { LoginComponent } from './pages/login/login.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,13 +2,15 @@
   box-sizing: border-box;
 }
 .container {
-  position: relative;
+  /* position: relative; */
   background-color: #fffaf7;
-  /* max-width: 1600px; */
+  max-width: 1600px;
   width: 100%;
-  margin: 0px auto 115px;
+  /* margin: 0px auto 115px; */
   top: 6rem;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   grid-template-areas: 'aside team';
   grid-column: 2fr 4fr;
   grid-template-rows: repeat(1fr);
@@ -17,12 +19,14 @@
 .aside {
   grid-area: aside;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 10px;
   flex-direction: column;
   background-color: #fca311;
-  margin-right: 150px;
-  height: 650px;
-  width: 450px;
+  margin-right: 80px;
+  height: 80%;
+  width: 100%;
   padding: 20px;
   border: 0.5rem outset navajowhite;
   margin-left: 25px;
