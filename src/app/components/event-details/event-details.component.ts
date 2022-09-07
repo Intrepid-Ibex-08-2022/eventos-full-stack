@@ -62,10 +62,21 @@ export class EventDetailsComponent implements OnInit {
 
     if(urlMap){
       let position = urlMap?.substr(urlMap.search('@')+1, 22);
+
       let lat = position?.substr(0, position.search(','));
       let lng = position?.substr(position.search(',')+1, position.length);
 
-      this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+      if(lat && lng){
+        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+      }else{
+        position = urlMap?.substr(urlMap.search('=')+1, 22);
+
+        lat = position?.substr(0, position.search(','));
+        lng = position?.substr(position.search(',')+1, position.length);
+
+        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+      }
+
     }
   };
 
