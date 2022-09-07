@@ -6,25 +6,46 @@
       <img [src]="event.image" alt="evento" class="row-1__img">
       <div class="row-1__inf">
         <p class="row-1__inf--title">{{event.title}}</p>
+
         <div class="row-1__details">
-          <img src="../../../assets/icons/calendario.png" alt="fecha" class="row-1__icons">
-          <span class="row-1__details--txt">{{event.date.start_date}}</span>
+          <div class="row-1__colum--details">
+            <div class="row-1__details">
+              <img src="../../../assets/icons/calendario.png" alt="calendario" class="row-1__icon--details ">
+              <span class="row-1__details--txt">{{event.date.start_date}}</span>
+            </div>
+            <div class="row-1__details" >
+              <a class="row-1__icon" [href]="event.map_link" target="_blank">
+                <img src="../../../assets/icons/ubicacion.png" alt="ubicacion" class="row-1__icon--details">
+                <img src="../../../assets/icons/ubicacion-color.png" alt="ubicacion" class="row-1__icon--details">
+              </a>
+              <p class="row-1__details--txt">{{event.address}}</p>
+            </div>
+            <div class="row-1__details">
+              <img src="../../../assets/icons/star.png" alt="rating" class="row-1__icon--details ">
+              <p class="row-1__details--txt">{{event.venue?.rating}}/5</p>
+            </div>
+          </div>
+
+          <div class="row-1__colum--details">
+            <div class="row-1__details">
+              <img src="../../../assets/icons/reloj-de-pared.png" alt="cuando" class="row-1__icon--details ">
+              <span class="row-1__details--txt">{{event.date.when}}</span>
+            </div>
+            <div class="row-1__details">
+                <img src="../../../assets/icons/focos.png" alt="tipo de evento" class="row-1__icon--details ">
+                <p class="row-1__details--txt">{{event.tipo_event}}</p>
+            </div>
+            <div class="row-1__details">
+              <img src="../../../assets/icons/rating_1.png" alt="reviews" class="row-1__icon--details ">
+              <p class="row-1__details--txt">{{event.venue?.reviews}}</p>
+            </div>
+          </div>
         </div>
-        <div class="row-1__details">
-          <img src="../../../assets/icons/ubicacion.png" alt="fecha" class="row-1__icons">
-          <p class="row-1__details--txt">{{event.address}}</p>
-        </div>
-        <div class="row-1__details">
-          <img src="../../../assets/icons/star.png" alt="fecha" class="row-1__icons">
-          <p class="row-1__details--txt">{{event.venue?.rating}}/5</p>
-        </div>
-        <div class="row-1__details">
-          <img src="../../../assets/icons/rating_1.png" alt="fecha" class="row-1__icons">
-          <p class="row-1__details--txt">{{event.venue?.reviews}}</p>
-        </div>
+
+
         <div class="row-1__ticket">
           <a [href]="event.ticket_info"
-          target="_blank">
+             target="_blank">
             <img src="../../../assets/icons/boleto.png" alt="fecha" class="row-1__ticket--img">
           </a>
         </div>
@@ -33,25 +54,19 @@
 
     <!--Fila Dos-->
     <div class="row-2">
-      <div class="row-2__descript">
-        {{event.description}}
+      <div class="row-2descript--bg">
+        <div class="row-2__descript--txt">
+          {{event.description}}
+        </div>
       </div>
-        <!-- <a [href]="event.map_link"
-            class="row-2__map" target="_blank">
-          <img title="prueba" src="../../../assets/imagen/map.jpg" class="row-2__map--img">
-        </a> -->
 
-        <google-map [width]="sizeWidth" height="300" [center]="position" [zoom]="zoom">
-          <map-marker
-            [position]="position"
-            [label]="label"
+      <google-map [width]="sizeWidth" height="300" [center]="position" [zoom]="zoom" >
+        <map-marker
+          [position]="position"
+          [label]="label"
 
-          ></map-marker>
-        </google-map>
-
-
-
-
+        ></map-marker>
+      </google-map>
     </div>
 
   </div>
