@@ -5,7 +5,7 @@
     <div class="row-1">
       <img [src]="event.image" alt="evento" class="row-1__img">
       <div class="row-1__inf">
-        <p class="row-1__inf--title">{{event.title}}</p>
+        <p class="row-1__inf--title">{{event.title | titlecase}}</p>
 
         <div class="row-1__details">
           <div class="row-1__colum--details">

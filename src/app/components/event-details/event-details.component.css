@@ -33,7 +33,8 @@
 
 .row-1__inf--title {
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 700;
+  line-height: 40px;
   text-align: center;
   margin: 30px;
   border-bottom: 1px solid darkgray;
