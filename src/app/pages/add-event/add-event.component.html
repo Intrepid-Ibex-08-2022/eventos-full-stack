@@ -1,1 +1,166 @@
-<p>add-event works!</p>
+<app-header [position]="position"></app-header>
+<div class="limiter">
+  <div class="container-login100">
+      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+          <form
+          [formGroup]="miFormulario"
+          (submit)="submitFormulario()"
+          class="login100-form"
+          autocomplete="off">
+
+              <span class="login100-form-title p-b-49">
+                Agregar Evento
+              </span>
+
+              <!--Fecha inicio-->
+              <div class="wrap-input100 m-b-23">
+                <span class="label-input100">Fecha de inicio</span>
+                <input class="input100"
+                       type="date"
+                       min="{{min_star_date}}"
+                       formControlName="start_date"
+                       placeholder="fecha de inicio">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Hora inicio-->
+              <div class="wrap-input100 m-b-23">
+                <span class="label-input100">Hora de inicio</span>
+                <input class="input100"
+                        type="time"
+                        formControlName="when"
+                        placeholder="Hora de inicio">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Titulo-->
+              <div class="wrap-input100 m-b-23">
+                <span class="label-input100">Título</span>
+                <input class="input100"
+                        type="text"
+                        max="30"
+                        formControlName="title"
+                        placeholder="Titulo">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Tipo de evento-->
+              <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Tipo de evento</label>
+              </div>
+              <select formControlName="tipo_event" class="custom-select" id="inputGroupSelect01">
+                <option selected>Música</option>
+                <option value="Espectáculo">Espectáculo</option>
+                <option value="Visita">Visita</option>
+                <option value="Humor">Humor</option>
+                <option value="Cultura">Cultura</option>
+                <option value="Teatro">Teatro</option>
+                <option value="Conferencia">Conferencia</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Deportes">Deportes</option>
+              </select>
+            </div>
+
+              <!--Municipio-->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
+                </div>
+                <select formControlName="place" class="custom-select" id="inputGroupSelect01">
+                  <option value="Agaete">Agaete</option>
+                  <option value="Agüimes">Agüimes</option>
+                  <option value="La Aldea de San Nicolás">La Aldea de San Nicolás</option>
+                  <option value="Artenara">Artenara</option>
+                  <option value="Arucas">Arucas</option>
+                  <option value="Firgas">Firgas</option>
+                  <option value="Gáldar">Gáldar</option>
+                  <option value="Ingenio">Ingenio</option>
+                  <option value="Mogán">Mogán</option>
+                  <option value="Moya">Moya</option>
+                  <option value="Las Palmas de Gran Canaria">Las Palmas de Gran Canaria</option>
+                  <option value="San Bartolomé de Tirajana">San Bartolomé de Tirajana</option>
+                  <option value="Santa Brígida">Santa Brígida</option>
+                  <option value="Santa Lucía de Tirajana">Santa Lucía de Tirajana</option>
+                  <option value="Santa María de Guía de Gran Canaria">Santa María de Guía de Gran Canaria</option>
+                  <option value="Tejeda">Tejeda</option>
+                  <option value="Telde">Telde</option>
+                  <option value="Teror">Teror</option>
+                  <option value="Valleseco">Valleseco</option>
+                  <option value=" Valsequillo"> Valsequillo</option>
+                  <option value="San Mateo">San Mateo</option>
+                </select>
+              </div>
+
+              <!--Direccion-->
+              <div class="wrap-input100 m-b-23">
+                <span class="label-input100">Dirección</span>
+                <input class="input100"
+                        type="text"
+                        max="20"
+                        formControlName="adress"
+                        placeholder="Dirección">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Descripcion-->
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Descripción</label>
+                <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <!--Ticket_info-->
+              <label for="basic-url"></label>
+              <div class="wrap-input100 m-b-23 input-group-prepend ">
+                <span class="label-input100">¿Donde se compran las entradas para tu evento?</span>
+                <input class="input100"
+                        type="text"
+                        max="30"
+                        formControlName="ticket_info"
+                        placeholder="https://example.com/users/">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Mapa link-->
+              <label for="basic-url"></label>
+              <div class="wrap-input100 m-b-23 input-group-prepend ">
+                <span class="label-input100">¡Busca la ubicación de tu evento en google maps y copia la url aqui!</span>
+                <input class="input100"
+                        type="text"
+                        max="30"
+                        formControlName="map_link"
+                        placeholder="https://www.google.com/maps/...">
+                <span class="focus-input100"></span>
+              </div>
+
+              <!--Imagen-->
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                <span class="label-input100">¡Sube una foto promocional de tu evento!</span>
+                </div>
+                <div class="custom-file">
+                  <input formControlName="image" type="file" class="custom-file-input" id="inputGroupFile01">
+                </div>
+              </div>
+
+
+
+              <div class="text-right p-t-8 p-b-31"></div>
+
+              <!--Boton-->
+              <div class="container-login100-form-btn">
+                  <div class="wrap-login100-form-btn">
+                      <div class="login100-form-bgbtn"></div>
+                      <button  type="submit"
+                      [disabled]="miFormulario.invalid"
+                      class="login100-form-btn">
+                          Enviar
+                      </button>
+                  </div>
+              </div>
+
+          </form>
+      </div>
+  </div>
+</div>
+<app-footer></app-footer>

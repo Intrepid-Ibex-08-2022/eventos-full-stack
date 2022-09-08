@@ -1,7 +1,7 @@
 
 export interface Users {
-  find(): unknown;
-  forEach(arg0: (element: any) => void): unknown;
+  // find(): unknown;
+  // forEach(arg0: (element: any) => void): unknown;
   ok: boolean;
   _id?: string;
   username?: string;

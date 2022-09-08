@@ -13,16 +13,20 @@ import { Users } from '../../interface/users';
 })
 export class AuthService implements AsyncValidator {
   url = 'https://intrepit-ibex.herokuapp.com/api/users';
-
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
+  private _token: string | undefined;
 
   constructor(private http: HttpClient) {}
 
-  async register(username: string, email: string, pswd: string):Promise<Observable<boolean | undefined>> {
+  get token():string{
+    return this._token!;
+  }
+
+  register(username: string, email: string, pswd: string):Observable<boolean | undefined> {
     let resp: Observable< boolean | undefined>;
     let favorites: string[] = []
 
-    resp = await this.http
+    resp = this.http
       .post<Users>(this.url, { username, email, pswd, favorites })
       .pipe(
         map((resp) => {
@@ -30,6 +34,7 @@ export class AuthService implements AsyncValidator {
           let { _id } = resp;
           if (_id) {
             localStorage.setItem('token', _id);
+            this._token = _id
             return true;
           }
           return;
@@ -54,19 +59,20 @@ export class AuthService implements AsyncValidator {
     );
   }
 
-  async getUser(email: string, password: string): Promise<Observable<boolean | undefined>> {
+  getUser(email: string, password: string): Observable<boolean | undefined> {
     let resp: Observable< boolean | undefined>;
 
-    resp = await this.http.get<any[]>(`${this.url}?email=${email}`)
+    resp = this.http.get<any[]>(`${this.url}?email=${email}`)
       .pipe(
         map((users) => {
-          let user = users.find( (res: { email: string; }) => res.email == email);
+          let user = users.find((res: { email: string; }) => res.email == email);
 
-          if(user){
-            let {_id, pswd} = user
-            if(pswd === password){
+          if (user) {
+            let { _id, pswd } = user;
+            if (pswd === password) {
               localStorage.setItem('token', _id);
-              return true
+              this._token = _id;
+              return true;
             }
             return;
           }
@@ -78,26 +84,50 @@ export class AuthService implements AsyncValidator {
 
   }
 
-   async loginId(id: string): Promise<Observable<string | undefined>> {
-     let resp: Observable< string | undefined>;
+  getUserById(id: string): Observable<Users | undefined> {
+    let resp: Observable< Users | undefined>;
 
-     resp = await this.http.get<any[]>(`${this.url}?_id=${id}`)
-       .pipe(
-         map((users) => {
-           let user = users.find( (res: { _id: string; }) => res._id == id);
+    resp = this.http.get<any[]>(`${this.url}?_id=${id}`)
+      .pipe(
+        map((users) => {
+          let user = users.find((res: { _id: string; }) => res._id == id);
 
-           if(user){
-             let {_id, username} = user
-             if(_id === id){
-               return username
-             }
-             return;
-           }
+          if (user) {
+            let { _id } = user;
+            if (_id === id) {
+              this._token = _id;
+              return user;
+            }
+            return;
+          }
 
-           return;
-         })
-       );
-     return resp
+          return;
+        })
+      );
+    return resp
 
-   }
+  }
+
+  validateLogued(token: string): Observable<boolean> {
+    let resp: Observable< boolean>;
+
+    resp = this.http.get<any[]>(`${this.url}?_id=${token}`)
+      .pipe(
+        map((users) => {
+          let user = users.find((res: { _id: string; }) => res._id == token);
+
+          if (user) {
+            let { _id } = user;
+            if (_id === token) {
+              this._token = _id;
+              return true;
+            }
+            return false;
+          }
+
+          return false;
+        })
+      );
+    return resp
+  }
 }

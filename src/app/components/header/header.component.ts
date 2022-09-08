@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 
 
@@ -14,16 +14,17 @@ export class HeaderComponent implements OnInit {
   username: string | undefined;
 
   constructor(
-    private router: Router,
+    private route: Router,
+    private activetedRoute: ActivatedRoute,
     private authServices: AuthService
   ){}
 
   async ngOnInit(): Promise<void> {
     this.id = localStorage.getItem('token');
      if(this.id){
-       (await this.authServices.loginId(this.id)).subscribe( resp =>{
-         if(resp !== undefined){
-           this.username = resp
+       this.authServices.getUserById(this.id).subscribe( resp =>{
+         if(resp?.username !== undefined){
+           this.username = resp.username
          }
          return;
        })
@@ -41,11 +42,14 @@ export class HeaderComponent implements OnInit {
   }
 
   navigate(ruta: string){
-    this.router.navigateByUrl(`/${ruta}`)
+    this.route.navigateByUrl(`/${ruta}`)
   }
 
   logOut(){
     localStorage.removeItem('token');
+    if(this.activetedRoute.snapshot.url.join('') == 'eventadd'){
+      this.route.navigateByUrl('/');
+    }
     this.username = undefined;
 
   }
