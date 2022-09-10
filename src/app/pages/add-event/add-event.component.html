@@ -12,6 +12,12 @@
                 Agregar Evento
               </span>
 
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('start_date')"
+              class="text-danger">
+                Fecha de inicio requerida
+              </span>
               <!--Fecha inicio-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Fecha de inicio</span>
@@ -23,6 +29,12 @@
                 <span class="focus-input100"></span>
               </div>
 
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('when')"
+              class="text-danger">
+                Hora de inicio requerido
+              </span>
               <!--Hora inicio-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Hora de inicio</span>
@@ -33,6 +45,13 @@
                 <span class="focus-input100"></span>
               </div>
 
+
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('title')"
+              class="text-danger">
+                Título requerido
+              </span>
               <!--Titulo-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Título</span>
@@ -44,6 +63,12 @@
                 <span class="focus-input100"></span>
               </div>
 
+              <!--Validacion-->
+                <span
+                *ngIf="campoValido('tipo_event')"
+                class="text-danger">
+                  Tipo de evento requerido
+                </span>
               <!--Tipo de evento-->
               <div class="input-group mb-3">
               <div class="input-group-prepend">
@@ -62,6 +87,12 @@
               </select>
             </div>
 
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('place')"
+                class="text-danger">
+                  Municipio requerido
+              </span>
               <!--Municipio-->
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -92,6 +123,12 @@
                 </select>
               </div>
 
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('adress')"
+                class="text-danger">
+                  Dirección requerido
+              </span>
               <!--Direccion-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Dirección</span>
@@ -103,12 +140,24 @@
                 <span class="focus-input100"></span>
               </div>
 
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('adress')"
+                class="text-danger">
+                  Descripción requerido
+              </span>
               <!--Descripcion-->
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Descripción</label>
                 <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
 
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('ticket_info')"
+              class="text-danger">
+                  Debes agregar una url
+              </span>
               <!--Ticket_info-->
               <label for="basic-url"></label>
               <div class="wrap-input100 m-b-23 input-group-prepend ">
@@ -117,32 +166,44 @@
                         type="text"
                         max="30"
                         formControlName="ticket_info"
-                        placeholder="https://example.com/users/">
+                        placeholder="https://example.com/evento/">
                 <span class="focus-input100"></span>
               </div>
 
+              <!--Validacion-->
+              <span
+                *ngIf="campoValido('map_link')"
+                class="text-danger">
+                  Debes agregar una url
+              </span>
               <!--Mapa link-->
               <label for="basic-url"></label>
               <div class="wrap-input100 m-b-23 input-group-prepend ">
                 <span class="label-input100">¡Busca la ubicación de tu evento en google maps y copia la url aqui!</span>
                 <input class="input100"
-                        type="text"
+                        type="url"
                         max="30"
                         formControlName="map_link"
                         placeholder="https://www.google.com/maps/...">
                 <span class="focus-input100"></span>
               </div>
 
+              <!--Validacion-->
+              <span
+              *ngIf="campoValido('image')"
+              class="text-danger">
+                  Imagen requerida
+              </span>
               <!--Imagen-->
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 <span class="label-input100">¡Sube una foto promocional de tu evento!</span>
                 </div>
                 <div class="custom-file">
-                  <input formControlName="image" type="file" class="custom-file-input" id="inputGroupFile01">
+                  <input formControlName="image" type="file"
+                  accept=".jpg,.png" (change)="getFile($event)" class="custom-file-input" id="inputGroupFile01">
                 </div>
               </div>
-
 
 
               <div class="text-right p-t-8 p-b-31"></div>
