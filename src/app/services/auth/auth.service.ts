@@ -31,10 +31,10 @@ export class AuthService implements AsyncValidator {
       .pipe(
         map((resp) => {
 
-          let { _id } = resp;
-          if (_id) {
-            localStorage.setItem('token', _id);
-            this._token = _id
+          let { token } = resp;
+          if (token) {
+            localStorage.setItem('token', token);
+            this._token = token
             return true;
           }
           return;
@@ -84,18 +84,18 @@ export class AuthService implements AsyncValidator {
 
   }
 
-  getUserById(id: string): Observable<Users | undefined> {
+  getUserById(_token: string): Observable<Users | undefined> {
     let resp: Observable< Users | undefined>;
 
-    resp = this.http.get<any[]>(`${this.url}?_id=${id}`)
+    resp = this.http.get<any[]>(`${this.url}?_id=${_token}`)
       .pipe(
         map((users) => {
-          let user = users.find((res: { _id: string; }) => res._id == id);
+          let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            let { _id } = user;
-            if (_id === id) {
-              this._token = _id;
+            let { token } = user;
+            if (token === _token) {
+              this._token = token;
               return user;
             }
             return;
@@ -108,18 +108,18 @@ export class AuthService implements AsyncValidator {
 
   }
 
-  validateLogued(token: string): Observable<boolean> {
+  validateLogued(_token: string): Observable<boolean> {
     let resp: Observable< boolean>;
 
-    resp = this.http.get<any[]>(`${this.url}?_id=${token}`)
+    resp = this.http.get<any[]>(`${this.url}?_id=${_token}`)
       .pipe(
         map((users) => {
-          let user = users.find((res: { _id: string; }) => res._id == token);
+          let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            let { _id } = user;
-            if (_id === token) {
-              this._token = _id;
+            let { token } = user;
+            if (token === _token) {
+              this._token = token;
               return true;
             }
             return false;
