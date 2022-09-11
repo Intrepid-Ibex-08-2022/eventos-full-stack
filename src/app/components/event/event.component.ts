@@ -53,6 +53,7 @@ export class EventComponent implements OnInit {
 
     this.eventsToRender = filteredEvents;
   }
+
   async change2(event: Event) {
     const {
       // @ts-ignore
@@ -67,4 +68,5 @@ export class EventComponent implements OnInit {
 
     this.eventsToRender = filteredEvents;
   }
+  seeFavorites() {}
 }

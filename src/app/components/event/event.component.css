@@ -34,7 +34,29 @@ label {
   margin-right: 20px;
   margin-left: 20px;
 }
-
+.img__star-favorite {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  /* margin-left: -35px;
+  margin-right: 15px; */
+}
+.div__star-favorite:hover .text__my-favorites {
+  display: flex;
+}
+.text__my-favorites {
+  position: absolute;
+  background-color: aliceblue;
+  width: max-content;
+  padding: 0 3px;
+  border-radius: 7px;
+  margin-top: -25px;
+  margin-left: 40px;
+  font-size: 15px;
+  color: black;
+  display: none;
+}
 .event-container__targets {
   position: relative;
   top: 2rem;
