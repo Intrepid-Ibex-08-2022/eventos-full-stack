@@ -38,8 +38,6 @@ export class AuthService implements AsyncValidator {
             return true;
           }
           return;
-
-
         }),
         map((valid) => valid),
         catchError((error) => of(error.error.msg))
@@ -62,19 +60,15 @@ export class AuthService implements AsyncValidator {
   getUser(email: string, password: string): Observable<boolean | undefined> {
     let resp: Observable< boolean | undefined>;
 
-    resp = this.http.get<any[]>(`${this.url}?email=${email}`)
+    resp = this.http.get<any>(`${this.url}/auth/?email=${email}&pswd=${password}`)
       .pipe(
-        map((users) => {
-          let user = users.find((res: { email: string; }) => res.email == email);
-
+        map((user) => {
+          // let user = users.find((res: { email: string; }) => res.email == email);
           if (user) {
-            let { _id, pswd } = user;
-            if (pswd === password) {
-              localStorage.setItem('token', _id);
-              this._token = _id;
-              return true;
-            }
-            return;
+            let { token} = user;
+            localStorage.setItem('token', token);
+            this._token = token;
+            return true;
           }
 
           return;
@@ -84,21 +78,19 @@ export class AuthService implements AsyncValidator {
 
   }
 
-  getUserById(_token: string): Observable<Users | undefined> {
-    let resp: Observable< Users | undefined>;
+  getUserById(_token: string): Observable<Boolean | undefined> {
+    let resp: Observable< Boolean | undefined>;
 
-    resp = this.http.get<any[]>(`${this.url}?_id=${_token}`)
+    resp = this.http.get<any>(`${this.url}?_id=${_token}`)
       .pipe(
-        map((users) => {
-          let user = users.find((res: { token: string; }) => res.token == _token);
+        map((user) => {
+          // let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            let { token } = user;
-            if (token === _token) {
-              this._token = token;
-              return user;
-            }
-            return;
+            let { token} = user;
+            localStorage.setItem('token', token);
+            this._token = token;
+            return true;
           }
 
           return;
@@ -111,18 +103,16 @@ export class AuthService implements AsyncValidator {
   validateLogued(_token: string): Observable<boolean> {
     let resp: Observable< boolean>;
 
-    resp = this.http.get<any[]>(`${this.url}?_id=${_token}`)
+    resp = this.http.get<any>(`${this.url}?_id=${_token}`)
       .pipe(
-        map((users) => {
-          let user = users.find((res: { token: string; }) => res.token == _token);
+        map((user) => {
+          // let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            let { token } = user;
-            if (token === _token) {
-              this._token = token;
-              return true;
-            }
-            return false;
+            let { token} = user;
+            localStorage.setItem('token', token);
+            this._token = token;
+            return true;
           }
 
           return false;
