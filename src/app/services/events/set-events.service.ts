@@ -10,10 +10,6 @@ export class SetEventsService {
   constructor(private http: HttpClient) { }
 
   eventAddForUser( event: any, id: string): Observable<any> {
-
-
-    console.log(event);
-
     return this.http.post(`http://localhost:4000/api/events/add/${id}`, event);
   }
 }

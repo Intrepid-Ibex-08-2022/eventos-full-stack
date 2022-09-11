@@ -16,14 +16,13 @@
               <span
               *ngIf="campoValido('start_date')"
               class="text-danger">
-                Fecha de inicio requerida
+                {{fechaErrorMsg}}
               </span>
               <!--Fecha inicio-->
               <div class="wrap-input100 m-b-23">
                 <span class="label-input100">Fecha de inicio</span>
                 <input class="input100"
                        type="date"
-                       min="{{min_star_date}}"
                        formControlName="start_date"
                        placeholder="fecha de inicio">
                 <span class="focus-input100"></span>
@@ -33,7 +32,7 @@
               <span
               *ngIf="campoValido('when')"
               class="text-danger">
-                Hora de inicio requerido
+                Hora de inicio requerida
               </span>
               <!--Hora inicio-->
               <div class="wrap-input100 m-b-23">
@@ -50,7 +49,7 @@
               <span
               *ngIf="campoValido('title')"
               class="text-danger">
-                Título requerido
+                Título requerido, minimo 10 carácteres
               </span>
               <!--Titulo-->
               <div class="wrap-input100 m-b-23">
@@ -127,7 +126,7 @@
               <span
                 *ngIf="campoValido('adress')"
                 class="text-danger">
-                  Dirección requerido
+                  Dirección requerida, minimo 10 carácteres
               </span>
               <!--Direccion-->
               <div class="wrap-input100 m-b-23">
@@ -142,7 +141,7 @@
 
               <!--Validacion-->
               <span
-                *ngIf="campoValido('adress')"
+                *ngIf="campoValido('description')"
                 class="text-danger">
                   Descripción requerido
               </span>
@@ -163,7 +162,7 @@
               <div class="wrap-input100 m-b-23 input-group-prepend ">
                 <span class="label-input100">¿Donde se compran las entradas para tu evento?</span>
                 <input class="input100"
-                        type="text"
+                        type="url"
                         max="30"
                         formControlName="ticket_info"
                         placeholder="https://example.com/evento/">

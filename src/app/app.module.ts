@@ -22,6 +22,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { EventInputComponent } from './pages/event-input/event-input.component';
 import { AddEventComponent } from './pages/add-event/add-event.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { AddEventComponent } from './pages/add-event/add-event.component';
     MatSliderModule,
     GoogleMapsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
