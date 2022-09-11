@@ -16,7 +16,7 @@ export class EventDetailsComponent implements OnInit {
   id: string | null = '';
   username: string | undefined;
   user?: Users;
-  fav: boolean = true;
+  fav: boolean = false;
 
   constructor(
     private eventServices: GetEventsService,
@@ -58,5 +58,14 @@ export class EventDetailsComponent implements OnInit {
       this.getEvent(id);
     });
   }
-  addOrDelFavorite(id: string) {}
+  addFavorite() {
+    this.user!.favorites.push(this.event!._id);
+    this.fav = this.user!.favorites.includes(this.event!._id);
+  }
+  delFavorite() {
+    this.user!.favorites = this.user!.favorites.filter(
+      (ev) => ev !== this.event!._id,
+    );
+    this.fav = this.user!.favorites.includes(this.event!._id);
+  }
 }

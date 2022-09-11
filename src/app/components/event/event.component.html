@@ -1,6 +1,6 @@
 <div class="bg-filters"></div>
 <div class="filters">
-  <div class="filter__location">
+  <div *ngIf="!fav" class="filter__location">
     <label for="location">Localidad</label>
     <select name="location" (change)="change1($event)">
       <option>Todos</option>
@@ -16,7 +16,7 @@
       <option>Vecindario</option>
     </select>
   </div>
-  <div class="filter__tipo-event">
+  <div *ngIf="!fav" class="filter__tipo-event">
     <label for="tipoEvento">Tipo de evento</label>
     <select name="tipoEvento" (change)="change2($event)">
       <option>Todos</option>
@@ -34,14 +34,25 @@
       <option>Arties plásticas y visuales</option>
     </select>
   </div>
-  <div class="div__star-favorite">
+  <div class="div__star-favorite-on">
     <img
-      (click)="(seeFavorites)"
-      class="img__star-favorite"
+      (click)="getFavouritesFromAPI()"
+      class="img__star-favorite-on"
+      [class.ocultar]="fav === true"
       src="../../../assets/icons/Star2.png"
       alt="Star favorite"
     />
-    <p class="text__my-favorites">Ver Favoritos</p>
+    <p class="text__my-favorites-on">Ver Favoritos</p>
+  </div>
+  <div class="div__star-favorite-off">
+    <img
+      (click)="removeSeeFavorites()"
+      class="img__star-favorite-off"
+      [class.ocultar]="fav !== true"
+      src="../../../assets/icons/Star2.png"
+      alt="Star favorite"
+    />
+    <p class="text__my-favorites-off">Salir de Favoritos</p>
   </div>
 </div>
 
