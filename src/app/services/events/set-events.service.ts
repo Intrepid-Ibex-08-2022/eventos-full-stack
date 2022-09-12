@@ -14,7 +14,7 @@ export class SetEventsService {
     let cabecera = new HttpHeaders()
         .append('authorization', `Basic ${token}`);
 
-    return this.http.post(`${this.urlPrueba}`,event,{headers: cabecera})
+    return this.http.post(`${this.urlPrueba}`,event)
 
   }
 }

@@ -86,11 +86,11 @@ export class AuthService implements AsyncValidator {
 
     resp = this.http.post<any>(`${this.urlPrueba}/auth`,null,{headers: cabecera})
       .pipe(
-        map((user) => {
+        map((resp) => {
 
-          if (user) {
-            let { usr} = user;
-            return usr;
+          if (resp) {
+            let { user} = resp;
+            return user;
           }
           return false;
         })
