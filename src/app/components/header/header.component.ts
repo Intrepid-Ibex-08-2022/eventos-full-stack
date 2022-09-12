@@ -10,7 +10,8 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
   @Input() position = 'position: fixed;'
-  id: string | null = '';
+  token: string | null = '';
+  email: any;
   username: string | undefined;
 
   constructor(
@@ -20,16 +21,24 @@ export class HeaderComponent implements OnInit {
   ){}
 
   async ngOnInit(): Promise<void> {
-    this.id = localStorage.getItem('token');
-     if(this.id){
-       this.authServices.getUserById(this.id).subscribe( resp =>{
-         if(resp?.username !== undefined){
-           this.username = resp.username
-         }
-         return;
-       })
+    this.token = localStorage.getItem('token');
+    console.log(this.token)
+    if(this.token){
+      this.authServices.getUserByToken(this.token).subscribe( email =>{
+        if(email !== undefined){
+          this.email = email
+          console.log(email)
+          this.authServices.getUserByEmail(this.email).subscribe( username =>{
+            if(username){
+              this.username = username
+            }
+          })
 
-     }
+        }
+        return;
+      })
+    }
+
 
   }
 

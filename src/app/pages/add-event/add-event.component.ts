@@ -95,7 +95,7 @@ export class AddEventComponent implements OnInit {
   ngOnInit(): void {
     this.token = localStorage.getItem('token')
     if(this.token){
-      this.authService.validateLogued(this.token)
+      this.authService.getUserByToken(this.token)
           .subscribe(resp =>{
             if(!resp){
               this.router.navigateByUrl('/login')
@@ -154,6 +154,7 @@ export class AddEventComponent implements OnInit {
       this.setEventService.eventAddForUser(body, this.token)
         .subscribe(resp => {
           if(resp){
+            console.log(resp)
             Swal.fire({
               position: 'top-end',
               icon: 'success',

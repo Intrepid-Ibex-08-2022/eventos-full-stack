@@ -17,10 +17,11 @@ export class AuthGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean  {
+      let resp:Observable<string | undefined | boolean>;
       this.verificaLocalStorage()
 
       if(this._token){
-        return this.authService.validateLogued(this._token)
+        resp = this.authService.getUserByToken(this._token)
           .pipe(
             tap( userlogued => {
               if(!userlogued){
@@ -28,11 +29,8 @@ export class AuthGuard implements CanActivate {
               }
             })
           );
-
       }
-      console.log('canActive', false);
-      this.router.navigateByUrl('/login')
-      return false
+      return true
   }
 
 

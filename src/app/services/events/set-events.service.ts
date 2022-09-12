@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -7,9 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class SetEventsService {
   url = 'https://intrepit-ibex.herokuapp.com/api/event/add';
+  urlPrueba = 'http://localhost:4000/api/events'
   constructor(private http: HttpClient) { }
 
-  eventAddForUser( event: any, id: string): Observable<any> {
-    return this.http.post(`http://localhost:4000/api/events/add/${id}`, event);
+  eventAddForUser( event: any, token: string) {
+    let cabecera = new HttpHeaders()
+        .append('authorization', `Basic ${token}`);
+
+    return this.http.post(`${this.urlPrueba}`,event,{headers: cabecera})
+
   }
 }

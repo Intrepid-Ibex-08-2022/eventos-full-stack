@@ -1,11 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable} from '@angular/core';
 import {
   AbstractControl,
   AsyncValidator,
   ValidationErrors,
 } from '@angular/forms';
-import { catchError, map, of, Observable } from 'rxjs';
+import { catchError, map, of, Observable, ConnectableObservable } from 'rxjs';
 import { Users } from '../../interface/users';
 
 @Injectable({
@@ -13,6 +13,7 @@ import { Users } from '../../interface/users';
 })
 export class AuthService implements AsyncValidator {
   url = 'https://intrepit-ibex.herokuapp.com/api/users';
+  urlPrueba = 'http://localhost:4000/api/users'
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
   private _token: string | undefined;
 
@@ -57,17 +58,17 @@ export class AuthService implements AsyncValidator {
     );
   }
 
-  getUser(email: string, password: string): Observable<boolean | undefined> {
+  login(email: string, password: string): Observable<boolean | undefined> {
     let resp: Observable< boolean | undefined>;
 
-    resp = this.http.get<any>(`${this.url}/auth/?email=${email}&pswd=${password}`)
+    resp = this.http.post<any>(`${this.urlPrueba}/login?email=${email}&pswd=${password}`,{})
       .pipe(
         map((user) => {
           // let user = users.find((res: { email: string; }) => res.email == email);
-          if (user) {
-            let { token} = user;
-            localStorage.setItem('token', token);
-            this._token = token;
+          this._token = user.token;
+          if (this._token) {
+            console.log(typeof(this._token))
+            localStorage.setItem('token', this._token);
             return true;
           }
 
@@ -78,44 +79,42 @@ export class AuthService implements AsyncValidator {
 
   }
 
-  getUserById(_token: string): Observable<Boolean | undefined> {
-    let resp: Observable< Boolean | undefined>;
+  getUserByToken(_token: string): Observable<string | boolean> {
+    let resp: Observable< string | boolean>;
+    let cabecera = new HttpHeaders()
+        .append('authorization', `Basic ${_token}`);
 
-    resp = this.http.get<any>(`${this.url}?_id=${_token}`)
+    resp = this.http.post<any>(`${this.urlPrueba}/auth`,null,{headers: cabecera})
       .pipe(
         map((user) => {
-          // let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            let { token} = user;
-            localStorage.setItem('token', token);
-            this._token = token;
-            return true;
+            let { usr} = user;
+            return usr;
           }
-
-          return;
-        })
-      );
-    return resp
-
-  }
-
-  validateLogued(_token: string): Observable<boolean> {
-    let resp: Observable< boolean>;
-
-    resp = this.http.get<any>(`${this.url}?_id=${_token}`)
-      .pipe(
-        map((user) => {
-          // let user = users.find((res: { token: string; }) => res.token == _token);
-
-          if (user) {
-            let { token} = user;
-            localStorage.setItem('token', token);
-            this._token = token;
-            return true;
-          }
-
           return false;
+        })
+      );
+    return resp
+
+  }
+
+  getUserByEmail(email: string): Observable<string | undefined> {
+    let resp: Observable< string | undefined>;
+
+    resp = this.http.get<any>(`${this.urlPrueba}/${email}`)
+      .pipe(
+        map((user) => {
+          // let user = users.find((res: { token: string; }) => res.token == _token);
+
+          if (user) {
+            console.log(user)
+            let { username} = user;
+
+            return username;
+          }
+
+          return;
         })
       );
     return resp

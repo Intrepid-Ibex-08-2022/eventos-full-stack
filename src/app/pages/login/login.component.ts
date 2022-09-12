@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
   async submitFormulario(){
     const {correo,password} = this.miFormulario.value;
 
-    (await this.authServices.getUser(correo, password)).subscribe(resp =>{
+    (await this.authServices.login(correo, password)).subscribe(resp =>{
       if(resp !== undefined){
         this.authError = false;
         this.router.navigateByUrl('');
