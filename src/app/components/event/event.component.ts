@@ -44,8 +44,6 @@ export class EventComponent implements OnInit {
             this.email = email;
             (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
               this.user = user;
-              console.log(this.user);
-              console.log(this.fav);
             });
 
           }

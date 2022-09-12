@@ -56,11 +56,8 @@ export class EventDetailsComponent implements OnInit {
             (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
               if(user){
                 this.user = user
-
-                console.log(this.user, 'event');
                 this.fav = this.user.favorites.includes(idEvent);
-                console.log(this.fav);
-                console.log(idEvent);
+
 
               }
             });
