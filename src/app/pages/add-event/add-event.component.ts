@@ -27,49 +27,49 @@ export class AddEventComponent implements OnInit {
       this.validatorService.validarFechaMinima
     ]
     ],
-    when: ['10:34',
+    when: ['',
     [
       Validators.required,
     ]
     ],
-    title: ['vdssadjcvashdajksb',
+    title: ['',
     [
       Validators.required,
       Validators.minLength(10),
       Validators.maxLength(50)
     ]
     ],
-    tipo_event: ['Visita',
+    tipo_event: ['',
     [
       Validators.required,
     ]
     ],
-    place: ['Teror',
+    place: ['',
     [
       Validators.required,
     ]
     ],
-    adress: ['sdsdvsadvsdvsd',
+    adress: ['',
     [
       Validators.required,
       Validators.minLength(10),
       Validators.maxLength(20)
     ]
     ],
-    description: ['kdhvskjdhbsakjdbaskjdbcaskdjbcaskdjbcaklsdbckasjdbksjdbksbjksbsbd',
+    description: ['',
     [
       Validators.required,
       Validators.min(50),
       Validators.maxLength(200)
     ]
     ],
-    ticket_info: ['https://www.google.com/',
+    ticket_info: ['',
     [
       Validators.required,
       Validators.pattern('^(ftp|http|https):\/\/[^ "]+$')
     ]
     ],
-    map_link: ['https://www.google.com/',
+    map_link: ['',
     [
       Validators.required,
       Validators.pattern('^(ftp|http|https):\/\/[^ "]+$')

@@ -20,9 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoginComponent } from './pages/login/login.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { EventInputComponent } from './pages/event-input/event-input.component';
-import { AddEventComponent } from './pages/add-event/add-event.component';
+
 import { DatePipe } from '@angular/common';
+import { AddEventComponent } from './pages/add-event/add-event.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,6 @@ import { DatePipe } from '@angular/common';
     EventDetailsComponent,
     PageRegisterComponent,
     LoginComponent,
-    EventInputComponent,
     AddEventComponent,
   ],
   imports: [
