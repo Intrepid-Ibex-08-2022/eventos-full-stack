@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SetEventsService {
-  url = 'https://intrepit-ibex.herokuapp.com/api/event/add';
+  url = 'https://intrepit-ibex.herokuapp.com/api/events';
   urlPrueba = 'http://localhost:4000/api/events'
   constructor(private http: HttpClient) { }
 
