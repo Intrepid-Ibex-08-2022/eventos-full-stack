@@ -61,7 +61,7 @@ export class AuthService implements AsyncValidator {
   login(email: string, password: string): Observable<boolean | undefined> {
     let resp: Observable< boolean | undefined>;
 
-    resp = this.http.post<any>(`${this.urlPrueba}/login?email=${email}&pswd=${password}`,{})
+    resp = this.http.post<any>(`${this.url}/login?email=${email}&pswd=${password}`,{})
       .pipe(
         map((user) => {
 
@@ -84,7 +84,7 @@ export class AuthService implements AsyncValidator {
     let cabecera = new HttpHeaders()
         .append('authorization', `Basic ${_token}`);
 
-    resp = this.http.post<any>(`${this.urlPrueba}/auth`,null,{headers: cabecera})
+    resp = this.http.post<any>(`${this.url}/auth`,null,{headers: cabecera})
       .pipe(
         map((resp) => {
 
@@ -102,7 +102,7 @@ export class AuthService implements AsyncValidator {
   getUserByEmail(email: string): Observable<string | undefined> {
     let resp: Observable< string | undefined>;
 
-    resp = this.http.get<any>(`${this.urlPrueba}/${email}`)
+    resp = this.http.get<any>(`${this.url}/${email}`)
       .pipe(
         map((user) => {
 
@@ -116,6 +116,7 @@ export class AuthService implements AsyncValidator {
     );
     return resp;
   }
+
   async loginIdAndFavorites(
     id: string,
   ): Promise<Observable<Users | undefined>> {

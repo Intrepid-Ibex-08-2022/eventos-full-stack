@@ -63,46 +63,7 @@ export class EventDetailsComponent implements OnInit {
     }
   }
 
-  sizeMap(): void {
-    this.responsive.observe([
-      Breakpoints.Medium,
-      Breakpoints.Small,
-      Breakpoints.XSmall
-    ])
-    .subscribe(result => {
 
-      let breakpoints = result.breakpoints
-
-      if (breakpoints[Breakpoints.Large] || breakpoints[Breakpoints.Medium] ) {
-        this.sizeWidth = '930'
-      }else if (breakpoints[Breakpoints.Small] || breakpoints[Breakpoints.Small]){
-        this.sizeWidth = '430'
-      }
-    });
-  }
-
-  eventPostion(){
-    let urlMap = this.event?.map_link;
-
-    if(urlMap){
-      let position = urlMap?.substr(urlMap.search('@')+1, 22);
-
-      let lat = position?.substr(0, position.search(','));
-      let lng = position?.substr(position.search(',')+1, position.length);
-
-      if(lat && lng){
-        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
-      }else{
-        position = urlMap?.substr(urlMap.search('=')+1, 22);
-
-        lat = position?.substr(0, position.search(','));
-        lng = position?.substr(position.search(',')+1, position.length);
-
-        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
-      }
-
-    }
-  };
 
   sizeMap(): void {
     this.responsive.observe([
