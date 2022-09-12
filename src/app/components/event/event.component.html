@@ -38,7 +38,7 @@
     <img
       (click)="getFavouritesFromAPI()"
       class="img__star-favorite-on"
-      [class.ocultar]="fav === true"
+      [class.ocultar]="fav === true || !user"
       src="../../../assets/icons/Star2.png"
       alt="Star favorite"
     />
@@ -48,7 +48,7 @@
     <img
       (click)="removeSeeFavorites()"
       class="img__star-favorite-off"
-      [class.ocultar]="fav !== true"
+      [class.ocultar]="fav !== true || !user"
       src="../../../assets/icons/Star2.png"
       alt="Star favorite"
     />
