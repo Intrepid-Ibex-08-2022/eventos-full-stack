@@ -118,22 +118,16 @@ export class AuthService implements AsyncValidator {
   }
 
   async loginIdAndFavorites(
-    id: string,
+    email: string,
   ): Promise<Observable<Users | undefined>> {
     let resp: Observable<Users | undefined>;
 
-    resp = await this.http.get<any[]>(`${this.url}?_id=${id}`).pipe(
-      map((users) => {
-        let user = users.find((res: { _id: string }) => res._id == id);
+    resp = await this.http.get<any>(`${this.url}/${email}`).pipe(
+      map((user) => {
+
 
         if (user) {
-          console.log({ user });
-
-          let { _id, username } = user;
-          if (_id === id) {
-            return user;
-          }
-          return;
+          return user
         }
 
         return;

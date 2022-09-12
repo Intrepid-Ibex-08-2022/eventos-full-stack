@@ -23,6 +23,7 @@ export class EventComponent implements OnInit {
   username: string | undefined;
   user?: Users;
   fav: boolean = false;
+  email: any;
 
   constructor(
     private eventServices: GetEventsService,
@@ -37,12 +38,16 @@ export class EventComponent implements OnInit {
     });
     this.id = localStorage.getItem('token');
     if (this.id) {
-      (await this.authServices.loginIdAndFavorites(this.id)).subscribe(
-        (resp) => {
-          if (resp !== undefined) {
-            this.user = resp;
-            console.log(this.user);
-            console.log(this.fav);
+      (await this.authServices.getUserByToken(this.id)).subscribe(
+        async (email) => {
+          if (email !== undefined) {
+            this.email = email;
+            (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
+              this.user = user;
+              console.log(this.user);
+              console.log(this.fav);
+            });
+
           }
           return;
         },
