@@ -52,8 +52,8 @@ export class AuthService implements AsyncValidator {
     return this.http.get<any[]>(`${this.url}?q=${email}`).pipe(
       //delay(3000),
       map((resp) => {
-        let respDB = resp.find( correo => correo.email == email)
-        return respDB !== undefined ? { emailTomado: true } : null ;
+        let respDB = resp.find((correo) => correo.email == email);
+        return respDB !== undefined ? { emailTomado: true } : null;
       }),
     );
   }
@@ -111,9 +111,33 @@ export class AuthService implements AsyncValidator {
             return username;
           }
 
+        return;
+      }),
+    );
+    return resp;
+  }
+  async loginIdAndFavorites(
+    id: string,
+  ): Promise<Observable<Users | undefined>> {
+    let resp: Observable<Users | undefined>;
+
+    resp = await this.http.get<any[]>(`${this.url}?_id=${id}`).pipe(
+      map((users) => {
+        let user = users.find((res: { _id: string }) => res._id == id);
+
+        if (user) {
+          console.log({ user });
+
+          let { _id, username } = user;
+          if (_id === id) {
+            return user;
+          }
           return;
-        })
-      );
-    return resp
+        }
+
+        return;
+      }),
+    );
+    return resp;
   }
 }

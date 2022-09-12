@@ -1,32 +1,58 @@
 <div class="bg-filters"></div>
 <div class="filters">
-  <div class="filter__location">
+  <div *ngIf="!fav" class="filter__location">
     <label for="location">Localidad</label>
     <select name="location" (change)="change1($event)">
       <option>Todos</option>
       <option>Las Palmas de Gran Canaria</option>
+      <option>Galdar</option>
       <option>Telde</option>
       <option>Teror</option>
       <option>Aguimes</option>
       <option>Arucas</option>
+      <option>Mogán</option>
+      <option>San Bartolomé de Tirajana</option>
+      <option>Valleseco</option>
+      <option>Vecindario</option>
     </select>
   </div>
-  <div class="filter__tipo-event">
+  <div *ngIf="!fav" class="filter__tipo-event">
     <label for="tipoEvento">Tipo de evento</label>
     <select name="tipoEvento" (change)="change2($event)">
       <option>Todos</option>
+      <option>Deportes</option>
       <option>Música</option>
       <option>Humor</option>
       <option>Infantil</option>
       <option>Talleres</option>
       <option>Teatro</option>
-      <option>Visita/exposición</option>
+      <option>Visita/Exposición</option>
       <option>Cultura</option>
       <option>Conferencia</option>
       <option>Concierto</option>
       <option>Espectáculo Artístico</option>
       <option>Arties plásticas y visuales</option>
     </select>
+  </div>
+  <div class="div__star-favorite-on">
+    <img
+      (click)="getFavouritesFromAPI()"
+      class="img__star-favorite-on"
+      [class.ocultar]="fav === true"
+      src="../../../assets/icons/Star2.png"
+      alt="Star favorite"
+    />
+    <p class="text__my-favorites-on">Ver Favoritos</p>
+  </div>
+  <div class="div__star-favorite-off">
+    <img
+      (click)="removeSeeFavorites()"
+      class="img__star-favorite-off"
+      [class.ocultar]="fav !== true"
+      src="../../../assets/icons/Star2.png"
+      alt="Star favorite"
+    />
+    <p class="text__my-favorites-off">Salir de Favoritos</p>
   </div>
 </div>
 

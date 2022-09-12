@@ -5,6 +5,26 @@
     <div class="row-1">
       <img [src]="event.image" alt="evento" class="row-1__img">
       <div class="row-1__inf">
+        <div class="div__star-favorite-on">
+          <img
+            (click)="delFavorite()"
+            class="img__star-favorite-on"
+            [class.ocultar]="fav === true && user"
+            src="../../../assets/icons/Star2.png"
+            alt="Star favorite"
+          />
+          <p class="text__my-favorites-on">Añadir a Favoritos</p>
+        </div>
+        <div class="div__star-favorite-off">
+          <img
+            (click)="addFavorite()"
+            class="img__star-favorite-off"
+            [class.ocultar]="fav !== true && user"
+            src="../../../assets/icons/Star2.png"
+            alt="Star favorite"
+          />
+          <p class="text__my-favorites-off">Quitar de Favoritos</p>
+        </div>
         <p class="row-1__inf--title">{{event.title | titlecase}}</p>
 
         <div class="row-1__details">
@@ -72,13 +92,13 @@
   </div>
 
   <!--Mensaje de Error-->
-  <ng-template #msgError>
-    <div class="container">
-      <p class="error__msg">ERROR 404, EVENTO NO ENCONTRADO</p>
-      <img src="../../../assets/img/no_puede_ser.jpg" alt="no puede ser..." class="error__img">
-    </div>
-  </ng-template>
-
-
-
-
+<ng-template #msgError>
+  <div class="container">
+    <p class="error__msg">ERROR 404, EVENTO NO ENCONTRADO</p>
+    <img
+      src="../../../assets/img/no_puede_ser.jpg"
+      alt="no puede ser..."
+      class="error__img"
+    />
+  </div>
+</ng-template>

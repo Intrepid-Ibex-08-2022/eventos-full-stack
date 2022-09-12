@@ -1,9 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { EventsResult } from '../../interface/event';
+import { Users } from '../../interface/users';
 import { ActivatedRoute } from '@angular/router';
 import { fromEvent } from 'rxjs';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
 
 
 @Component({
@@ -13,6 +16,10 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 })
 export class EventDetailsComponent implements OnInit {
   event: EventsResult | undefined;
+  id: string | null = '';
+  username: string | undefined;
+  user?: Users;
+  fav: boolean = false;
   sizeWidth: string = '930';
   position = {
     lat: 28.12462338053807,
@@ -29,15 +36,73 @@ export class EventDetailsComponent implements OnInit {
   constructor(
     private eventServices: GetEventsService,
     private activateRoute: ActivatedRoute,
-    private responsive: BreakpointObserver
+    private responsive: BreakpointObserver,
+    private router: Router,
+    private authServices: AuthService,
   ) { }
 
-  ngOnInit(): void {
-    const id = this.activateRoute.snapshot.paramMap.get('id') as string;
-    this.getEvent(id);
-
-    this.sizeMap()
+  async ngOnInit(): Promise<void> {
+    const idEvent = this.activateRoute.snapshot.paramMap.get('id') as string;
+    this.getEvent(idEvent);
+    this.sizeMap();
+    //jose luis
+    this.id = localStorage.getItem('token');
+    if (this.id) {
+      (await this.authServices.loginIdAndFavorites(this.id)).subscribe(
+        (resp) => {
+          if (resp !== undefined) {
+            this.user = resp;
+            console.log(this.user);
+            this.fav = this.user.favorites.includes(idEvent);
+            console.log(this.fav);
+            console.log(idEvent);
+          }
+          return;
+        },
+      );
+    }
   }
+
+  sizeMap(): void {
+    this.responsive.observe([
+      Breakpoints.Medium,
+      Breakpoints.Small,
+      Breakpoints.XSmall
+    ])
+    .subscribe(result => {
+
+      let breakpoints = result.breakpoints
+
+      if (breakpoints[Breakpoints.Large] || breakpoints[Breakpoints.Medium] ) {
+        this.sizeWidth = '930'
+      }else if (breakpoints[Breakpoints.Small] || breakpoints[Breakpoints.Small]){
+        this.sizeWidth = '430'
+      }
+    });
+  }
+
+  eventPostion(){
+    let urlMap = this.event?.map_link;
+
+    if(urlMap){
+      let position = urlMap?.substr(urlMap.search('@')+1, 22);
+
+      let lat = position?.substr(0, position.search(','));
+      let lng = position?.substr(position.search(',')+1, position.length);
+
+      if(lat && lng){
+        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+      }else{
+        position = urlMap?.substr(urlMap.search('=')+1, 22);
+
+        lat = position?.substr(0, position.search(','));
+        lng = position?.substr(position.search(',')+1, position.length);
+
+        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+      }
+
+    }
+  };
 
   sizeMap(): void {
     this.responsive.observe([
@@ -85,5 +150,21 @@ export class EventDetailsComponent implements OnInit {
       this.event = resp;
       this.eventPostion()
     });
+  }
+  async getUser(id: string) {
+    (await this.eventServices.getEventDetails(id)).subscribe((resp) => {
+      this.event = resp;
+      this.getEvent(id);
+    });
+  }
+  addFavorite() {
+    this.user!.favorites.push(this.event!._id);
+    this.fav = this.user!.favorites.includes(this.event!._id);
+  }
+  delFavorite() {
+    this.user!.favorites = this.user!.favorites.filter(
+      (ev) => ev !== this.event!._id,
+    );
+    this.fav = this.user!.favorites.includes(this.event!._id);
   }
 }
