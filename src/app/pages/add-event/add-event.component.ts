@@ -15,10 +15,9 @@ import { ValidatorsService } from '../../services/validators/validators.service'
 })
 export class AddEventComponent implements OnInit {
   position = 'position: relative;';
-  date = new Date();
   fileTemp:any;
   token: string | null | undefined;
-  min_star_date: string = `${this.date.getDate().toString()}-${(this.date.getMonth() +1)}-${this.date.getFullYear()}`
+
 
 
   miFormulario: FormGroup = this.formBuilder.group({
