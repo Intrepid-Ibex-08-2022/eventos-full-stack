@@ -57,8 +57,6 @@ export class EventDetailsComponent implements OnInit {
               if(user){
                 this.user = user
                 this.fav = this.user.favorites.includes(idEvent);
-
-
               }
             });
 

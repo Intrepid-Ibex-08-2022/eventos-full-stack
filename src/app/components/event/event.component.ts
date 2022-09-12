@@ -122,7 +122,7 @@ export class EventComponent implements OnInit {
       ).toPromise();
       events.push(event);
       this.fav = true;
-      console.log({ eventsToRender: this.eventsToRender });
+      // console.log({ eventsToRender: this.eventsToRender });
     }
     this.eventsToRender = events as EventsResult[];
   }
