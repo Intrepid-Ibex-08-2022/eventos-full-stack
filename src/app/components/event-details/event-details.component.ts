@@ -19,6 +19,7 @@ export class EventDetailsComponent implements OnInit {
   id: string | null = '';
   username: string | undefined;
   user?: Users;
+  email: any;
   fav: boolean = false;
   sizeWidth: string = '930';
   position = {
@@ -48,14 +49,22 @@ export class EventDetailsComponent implements OnInit {
     //jose luis
     this.id = localStorage.getItem('token');
     if (this.id) {
-      (await this.authServices.loginIdAndFavorites(this.id)).subscribe(
-        (resp) => {
-          if (resp !== undefined) {
-            this.user = resp;
-            console.log(this.user);
-            this.fav = this.user.favorites.includes(idEvent);
-            console.log(this.fav);
-            console.log(idEvent);
+      (await this.authServices.getUserByToken(this.id)).subscribe(
+        async (email) => {
+          if (email !== undefined) {
+            this.email = email;
+            (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
+              if(user){
+                this.user = user
+
+                console.log(this.user, 'event');
+                this.fav = this.user.favorites.includes(idEvent);
+                console.log(this.fav);
+                console.log(idEvent);
+
+              }
+            });
+
           }
           return;
         },
