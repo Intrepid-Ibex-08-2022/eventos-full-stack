@@ -22,12 +22,11 @@ export class HeaderComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.token = localStorage.getItem('token');
-    console.log(this.token)
+
     if(this.token){
       this.authServices.getUserByToken(this.token).subscribe( email =>{
         if(email !== undefined){
           this.email = email
-          console.log(email)
           this.authServices.getUserByEmail(this.email).subscribe( username =>{
             if(username){
               this.username = username

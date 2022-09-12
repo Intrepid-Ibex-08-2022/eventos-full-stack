@@ -64,10 +64,10 @@ export class AuthService implements AsyncValidator {
     resp = this.http.post<any>(`${this.urlPrueba}/login?email=${email}&pswd=${password}`,{})
       .pipe(
         map((user) => {
-          // let user = users.find((res: { email: string; }) => res.email == email);
+
           this._token = user.token;
           if (this._token) {
-            console.log(typeof(this._token))
+
             localStorage.setItem('token', this._token);
             return true;
           }
@@ -105,12 +105,9 @@ export class AuthService implements AsyncValidator {
     resp = this.http.get<any>(`${this.urlPrueba}/${email}`)
       .pipe(
         map((user) => {
-          // let user = users.find((res: { token: string; }) => res.token == _token);
 
           if (user) {
-            console.log(user)
             let { username} = user;
-
             return username;
           }
 

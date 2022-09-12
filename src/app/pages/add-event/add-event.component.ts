@@ -146,6 +146,8 @@ export class AddEventComponent implements OnInit {
     body.append('map_link', this.miFormulario.controls['map_link'].value);
     body.append('image', this.miFormulario.controls['image'].value);
     body.append('start_date', this.miFormulario.controls['start_date'].value);
+    body.append('rating', '0');
+    body.append('views', '0');
 
 
     console.log(body)
@@ -154,13 +156,12 @@ export class AddEventComponent implements OnInit {
       this.setEventService.eventAddForUser(body, this.token)
         .subscribe(resp => {
           if(resp){
-            console.log(resp)
             Swal.fire({
               position: 'top-end',
               icon: 'success',
-              title: 'Tu evento ha sido enviado correctamente',
+              title: 'Tu evento ha sido enviado correctamente, te avisaremos cuando este publicado',
               showConfirmButton: false,
-              timer: 2500
+              timer: 4000
             })
             this.miFormulario.reset();
           }
