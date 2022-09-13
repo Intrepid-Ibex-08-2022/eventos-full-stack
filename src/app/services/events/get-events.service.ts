@@ -10,7 +10,7 @@ import { Users } from '../../interface/users';
 })
 export class GetEventsService {
   // url = 'https://intrepit-ibex.herokuapp.com/api/events/event';
-  url = 'http://localhost:4000/api/users';
+  url = 'http://localhost:4000/api/events/event';
 
   constructor(private http: HttpClient) {}
 
