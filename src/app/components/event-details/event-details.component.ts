@@ -118,15 +118,21 @@ export class EventDetailsComponent implements OnInit {
     });
   }
   async addFavorite() {
-    this.user!.favorites.push(this.event!._id);
-    await this.authServices.updateUser(this.user!);
-    this.fav = this.user!.favorites.includes(this.event!._id);
+    // this.user!.favorites.push(this.event!._id);
+    await this.authServices.updateUserFavorites(
+      this.event!._id,
+      this.id as string,
+    );
+    this.fav = true;
   }
   async delFavorite() {
-    this.user!.favorites = this.user!.favorites.filter(
-      (ev) => ev !== this.event!._id,
+    // this.user!.favorites = this.user!.favorites.filter(
+    // (ev) => ev !== this.event!._id,
+    // );
+    await this.authServices.deleteUserFavorites(
+      this.event!._id,
+      this.id as string,
     );
-    await this.authServices.updateUser(this.user!);
-    this.fav = this.user!.favorites.includes(this.event!._id);
+    this.fav = false;
   }
 }

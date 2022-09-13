@@ -12,8 +12,11 @@ import { Users } from '../../interface/users';
   providedIn: 'root',
 })
 export class AuthService implements AsyncValidator {
-  url = 'https://intrepit-ibex.herokuapp.com/api/users';
-  urlPrueba = 'http://localhost:4000/api/users';
+  // url = 'https://intrepit-ibex.herokuapp.com/api/users';
+  // urlEvents = 'https://intrepit-ibex.herokuapp.com/api/events';
+  url = 'http://localhost:4000/api/users';
+  urlEvents = 'http://localhost:4000/api/users';
+  // urlPrueba = 'http://localhost:4000/api/users';
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
   private _token: string | undefined;
 
@@ -49,9 +52,21 @@ export class AuthService implements AsyncValidator {
 
     return resp;
   }
-  updateUser(user: Users): Promise<Users> {
+
+  updateUserFavorites(idEvent: string, _token: string): any {
+    let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
     return this.http
-      .put<Users>(`${this.url}/${user.email}`, user)
+      .post(`${this.urlEvents}/event/${idEvent}/preferred`, null, {
+        headers: cabecera,
+      })
+      .toPromise() as Promise<Users>;
+  }
+  deleteUserFavorites(idEvent: string, _token: string): any {
+    let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
+    return this.http
+      .delete(`${this.urlEvents}/event/${idEvent}/preferred`, {
+        headers: cabecera,
+      })
       .toPromise() as Promise<Users>;
   }
 

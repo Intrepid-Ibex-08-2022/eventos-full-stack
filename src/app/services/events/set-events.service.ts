@@ -3,18 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SetEventsService {
-  url = 'https://intrepit-ibex.herokuapp.com/api/events';
-  urlPrueba = 'http://localhost:4000/api/events'
-  constructor(private http: HttpClient) { }
+  // url = 'https://intrepit-ibex.herokuapp.com/api/events';
+  url = 'http://localhost:4000/api/users';
+  urlPrueba = 'http://localhost:4000/api/events';
+  constructor(private http: HttpClient) {}
 
-  eventAddForUser( event: any, token: string) {
-    let cabecera = new HttpHeaders()
-        .append('authorization', `Basic ${token}`);
+  eventAddForUser(event: any, token: string) {
+    let cabecera = new HttpHeaders().append('authorization', `Basic ${token}`);
 
-    return this.http.post(`${this.url}`,event)
-
+    return this.http.post(`${this.url}`, event);
   }
 }
