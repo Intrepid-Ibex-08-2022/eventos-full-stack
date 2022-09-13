@@ -9,8 +9,8 @@ import { Users } from '../../interface/users';
   providedIn: 'root',
 })
 export class GetEventsService {
-  // url = 'https://intrepit-ibex.herokuapp.com/api/events/event';
-  url = 'http://localhost:4000/api/events/event';
+  url = 'https://intrepit-ibex.herokuapp.com/api/events/event';
+  // url = 'http://localhost:4000/api/events/event';
 
   constructor(private http: HttpClient) {}
 
