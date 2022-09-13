@@ -7,7 +7,8 @@ import axios from 'axios';
 })
 export class FiltersService {
   eventosCanarios: EventsResult[] = [];
-  urlEventos = 'https://intrepit-ibex.herokuapp.com/api/events';
+  // urlEventos = 'https://intrepit-ibex.herokuapp.com/api/events';
+  urlEventos = 'http://localhost:4000/api/users';
   // urlEventos =
   //   'mongodb+srv://intrepidibex:Stos5BsCqdS7MzIb@cluster0.lxr4zbx.mongodb.net/?retryWrites=true&w=majority' +
   //   '/eventosCanarios';
@@ -20,6 +21,7 @@ export class FiltersService {
     const response = await axios.get(this.urlEventos);
     return response.data;
   }
+
   async getFilteredEvents(
     place: string,
     tipoEvent: string,
@@ -34,7 +36,9 @@ export class FiltersService {
       );
     }
     if (place === 'Todos' && tipoEvent !== 'Todos') {
-      response = await axios.get(`${this.urlEventos}/filter?tipo_event=${tipoEvent}`);
+      response = await axios.get(
+        `${this.urlEventos}/filter?tipo_event=${tipoEvent}`,
+      );
     }
     if (place === 'Todos' && tipoEvent === 'Todos') {
       response = await axios.get(`${this.urlEventos}`);
