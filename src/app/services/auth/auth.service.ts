@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import {
   AbstractControl,
   AsyncValidator,
@@ -13,39 +13,53 @@ import { Users } from '../../interface/users';
 })
 export class AuthService implements AsyncValidator {
   url = 'https://intrepit-ibex.herokuapp.com/api/users';
-  urlPrueba = 'http://localhost:4000/api/users'
+  urlPrueba = 'http://localhost:4000/api/users';
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
   private _token: string | undefined;
 
   constructor(private http: HttpClient) {}
 
-  get token():string{
+  get token(): string {
     return this._token!;
   }
 
-  register(username: string, email: string, pswd: string):Observable<boolean | undefined> {
-    let resp: Observable< boolean | undefined>;
-    let favorites: string[] = []
+  register(
+    username: string,
+    email: string,
+    pswd: string,
+  ): Observable<boolean | undefined> {
+    let resp: Observable<boolean | undefined>;
+    let favorites: string[] = [];
 
     resp = this.http
       .post<Users>(this.url, { username, email, pswd, favorites })
       .pipe(
         map((resp) => {
-
           let { token } = resp;
           if (token) {
             localStorage.setItem('token', token);
-            this._token = token
+            this._token = token;
             return true;
           }
           return;
         }),
         map((valid) => valid),
-        catchError((error) => of(error.error.msg))
+        catchError((error) => of(error.error.msg)),
       );
 
     return resp;
   }
+  updateUser(user: Users): Promise<Users> {
+    return this.http
+      .put<Users>(`${this.url}/${user.email}`, user)
+      .toPromise() as Promise<Users>;
+  }
+
+  // updateUser(user: Users): Observable<boolean | undefined> {
+  //   let resp: Observable<boolean | undefined>;
+  //   resp = this.http.put<Users>(this.url, { username, email, pswd, favorites });
+  //   return resp;
+  // }
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
     const email = control.value;
@@ -59,57 +73,51 @@ export class AuthService implements AsyncValidator {
   }
 
   login(email: string, password: string): Observable<boolean | undefined> {
-    let resp: Observable< boolean | undefined>;
+    let resp: Observable<boolean | undefined>;
 
-    resp = this.http.post<any>(`${this.url}/login?email=${email}&pswd=${password}`,{})
+    resp = this.http
+      .post<any>(`${this.url}/login?email=${email}&pswd=${password}`, {})
       .pipe(
         map((user) => {
-
           this._token = user.token;
           if (this._token) {
-
             localStorage.setItem('token', this._token);
             return true;
           }
 
           return;
-        })
+        }),
       );
-    return resp
-
+    return resp;
   }
 
   getUserByToken(_token: string): Observable<string | boolean> {
-    let resp: Observable< string | boolean>;
-    let cabecera = new HttpHeaders()
-        .append('authorization', `Basic ${_token}`);
+    let resp: Observable<string | boolean>;
+    let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
 
-    resp = this.http.post<any>(`${this.url}/auth`,null,{headers: cabecera})
+    resp = this.http
+      .post<any>(`${this.url}/auth`, null, { headers: cabecera })
       .pipe(
         map((resp) => {
-
           if (resp) {
-            let { user} = resp;
+            let { user } = resp;
             return user;
           }
           return false;
-        })
+        }),
       );
-    return resp
-
+    return resp;
   }
 
   getUserByEmail(email: string): Observable<string | undefined> {
-    let resp: Observable< string | undefined>;
+    let resp: Observable<string | undefined>;
 
-    resp = this.http.get<any>(`${this.url}/${email}`)
-      .pipe(
-        map((user) => {
-
-          if (user) {
-            let { username} = user;
-            return username;
-          }
+    resp = this.http.get<any>(`${this.url}/${email}`).pipe(
+      map((user) => {
+        if (user) {
+          let { username } = user;
+          return username;
+        }
 
         return;
       }),
@@ -124,10 +132,8 @@ export class AuthService implements AsyncValidator {
 
     resp = await this.http.get<any>(`${this.url}/${email}`).pipe(
       map((user) => {
-
-
         if (user) {
-          return user
+          return user;
         }
 
         return;

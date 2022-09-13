@@ -8,7 +8,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 
-
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
@@ -24,15 +23,14 @@ export class EventDetailsComponent implements OnInit {
   sizeWidth: string = '930';
   position = {
     lat: 28.12462338053807,
-    lng: -15.437557770012095
-  }
-  label ={
+    lng: -15.437557770012095,
+  };
+  label = {
     color: 'blue',
     text: 'Ubicación',
-    opacity: 0.8
-  }
-  zoom=12
-
+    opacity: 0.8,
+  };
+  zoom = 12;
 
   constructor(
     private eventServices: GetEventsService,
@@ -40,7 +38,7 @@ export class EventDetailsComponent implements OnInit {
     private responsive: BreakpointObserver,
     private router: Router,
     private authServices: AuthService,
-  ) { }
+  ) {}
 
   async ngOnInit(): Promise<void> {
     const idEvent = this.activateRoute.snapshot.paramMap.get('id') as string;
@@ -53,13 +51,14 @@ export class EventDetailsComponent implements OnInit {
         async (email) => {
           if (email !== undefined) {
             this.email = email;
-            (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
-              if(user){
-                this.user = user
-                this.fav = this.user.favorites.includes(idEvent);
-              }
-            });
-
+            (await this.authServices.loginIdAndFavorites(this.email)).subscribe(
+              (user) => {
+                if (user) {
+                  this.user = user;
+                  this.fav = this.user.favorites.includes(idEvent);
+                }
+              },
+            );
           }
           return;
         },
@@ -67,53 +66,49 @@ export class EventDetailsComponent implements OnInit {
     }
   }
 
-
-
   sizeMap(): void {
-    this.responsive.observe([
-      Breakpoints.Medium,
-      Breakpoints.Small,
-      Breakpoints.XSmall
-    ])
-    .subscribe(result => {
+    this.responsive
+      .observe([Breakpoints.Medium, Breakpoints.Small, Breakpoints.XSmall])
+      .subscribe((result) => {
+        let breakpoints = result.breakpoints;
 
-      let breakpoints = result.breakpoints
-
-      if (breakpoints[Breakpoints.Large] || breakpoints[Breakpoints.Medium] ) {
-        this.sizeWidth = '930'
-      }else if (breakpoints[Breakpoints.Small] || breakpoints[Breakpoints.Small]){
-        this.sizeWidth = '430'
-      }
-    });
+        if (breakpoints[Breakpoints.Large] || breakpoints[Breakpoints.Medium]) {
+          this.sizeWidth = '930';
+        } else if (
+          breakpoints[Breakpoints.Small] ||
+          breakpoints[Breakpoints.Small]
+        ) {
+          this.sizeWidth = '430';
+        }
+      });
   }
 
-  eventPostion(){
+  eventPostion() {
     let urlMap = this.event?.map_link;
 
-    if(urlMap){
-      let position = urlMap?.substr(urlMap.search('@')+1, 22);
+    if (urlMap) {
+      let position = urlMap?.substr(urlMap.search('@') + 1, 22);
 
       let lat = position?.substr(0, position.search(','));
-      let lng = position?.substr(position.search(',')+1, position.length);
+      let lng = position?.substr(position.search(',') + 1, position.length);
 
-      if(lat && lng){
-        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
-      }else{
-        position = urlMap?.substr(urlMap.search('=')+1, 22);
+      if (lat && lng) {
+        this.position = { lat: parseFloat(lat), lng: parseFloat(lng) };
+      } else {
+        position = urlMap?.substr(urlMap.search('=') + 1, 22);
 
         lat = position?.substr(0, position.search(','));
-        lng = position?.substr(position.search(',')+1, position.length);
+        lng = position?.substr(position.search(',') + 1, position.length);
 
-        this.position = {lat: parseFloat(lat), lng:parseFloat(lng)}
+        this.position = { lat: parseFloat(lat), lng: parseFloat(lng) };
       }
-
     }
-  };
+  }
 
   async getEvent(id: string) {
     (await this.eventServices.getEventDetails(id)).subscribe((resp) => {
       this.event = resp;
-      this.eventPostion()
+      this.eventPostion();
     });
   }
   async getUser(id: string) {
@@ -122,14 +117,16 @@ export class EventDetailsComponent implements OnInit {
       this.getEvent(id);
     });
   }
-  addFavorite() {
+  async addFavorite() {
     this.user!.favorites.push(this.event!._id);
+    await this.authServices.updateUser(this.user!);
     this.fav = this.user!.favorites.includes(this.event!._id);
   }
-  delFavorite() {
+  async delFavorite() {
     this.user!.favorites = this.user!.favorites.filter(
       (ev) => ev !== this.event!._id,
     );
+    await this.authServices.updateUser(this.user!);
     this.fav = this.user!.favorites.includes(this.event!._id);
   }
 }
