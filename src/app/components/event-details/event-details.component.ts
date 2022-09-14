@@ -24,10 +24,10 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
   email: any;
   fav: boolean = false;
 
-  position = {
-    lat: 28.12462338053807,
-    lng: -15.437557770012095,
-  };
+  position: [number,number] =[
+    -15.437557770012095,
+    28.12462338053807
+  ];
 
 
 
@@ -45,15 +45,15 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       const map  = new mapboxgl.Map({
         container: this.mapDivElement!.nativeElement,
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [
-          -15.437557770012095,
-           28.12462338053807
-          ],
-        zoom: 14,
+        center: this.position,
+        zoom: 16,
       });
       map.on('style.load', () => {
         map.setFog({});
         });
+      const marker1 = new mapboxgl.Marker()
+      .setLngLat(this.position)
+      .addTo(map);
 
     }, 1500);
 
@@ -82,27 +82,20 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
         },
       );
     }
+
   }
 
-
   eventPostion() {
-    let urlMap = this.event?.map_link;
 
-    if (urlMap) {
-      let position = urlMap?.substr(urlMap.search('@') + 1, 22);
+    if (this.event?.map_link) {
+      let urlMap = this.event?.map_link.split('@' || '=');
 
-      let lat = position?.substr(0, position.search(','));
-      let lng = position?.substr(position.search(',') + 1, position.length);
+      let lat = urlMap[1].substr(0, urlMap[1].search(','));
+      let lng = urlMap[1].substr(lat.length +1, urlMap[1].search(',') );
 
       if (lat && lng) {
-        this.position = { lat: parseFloat(lat), lng: parseFloat(lng) };
-      } else {
-        position = urlMap?.substr(urlMap.search('=') + 1, 22);
-
-        lat = position?.substr(0, position.search(','));
-        lng = position?.substr(position.search(',') + 1, position.length);
-
-        this.position = { lat: parseFloat(lat), lng: parseFloat(lng) };
+        this.position[0] = parseFloat(lng);
+        this.position[1] = parseFloat(lat);
       }
     }
   }
