@@ -1,50 +1,68 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { EventsResult } from '../../interface/event';
 import { Users } from '../../interface/users';
 import { ActivatedRoute } from '@angular/router';
-import { fromEvent } from 'rxjs';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import mapboxgl from 'mapbox-gl';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-event-details',
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css'],
 })
-export class EventDetailsComponent implements OnInit {
+export class EventDetailsComponent implements OnInit, AfterContentInit {
+
+  @ViewChild('mapDiv') mapDivElement!: ElementRef;
   event: EventsResult | undefined;
   id: string | null = '';
   username: string | undefined;
   user?: Users;
   email: any;
   fav: boolean = false;
-  sizeWidth: string = '930';
+
   position = {
     lat: 28.12462338053807,
     lng: -15.437557770012095,
   };
-  label = {
-    color: 'blue',
-    text: 'Ubicación',
-    opacity: 0.8,
-  };
-  zoom = 12;
+
+
 
   constructor(
     private eventServices: GetEventsService,
     private activateRoute: ActivatedRoute,
-    private responsive: BreakpointObserver,
     private router: Router,
     private authServices: AuthService,
   ) {}
 
+  ngAfterContentInit() {
+    mapboxgl.accessToken = environment.MAP_BOX_TOKEN;
+
+    setTimeout(() => {
+      const map  = new mapboxgl.Map({
+        container: this.mapDivElement!.nativeElement,
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [
+          -15.437557770012095,
+           28.12462338053807
+          ],
+        zoom: 14,
+      });
+      map.on('style.load', () => {
+        map.setFog({});
+        });
+
+    }, 1500);
+
+  }
+
   async ngOnInit(): Promise<void> {
     const idEvent = this.activateRoute.snapshot.paramMap.get('id') as string;
     this.getEvent(idEvent);
-    this.sizeMap();
-    //jose luis
+
     this.id = localStorage.getItem('token');
     if (this.id) {
       (await this.authServices.getUserByToken(this.id)).subscribe(
@@ -66,22 +84,6 @@ export class EventDetailsComponent implements OnInit {
     }
   }
 
-  sizeMap(): void {
-    this.responsive
-      .observe([Breakpoints.Medium, Breakpoints.Small, Breakpoints.XSmall])
-      .subscribe((result) => {
-        let breakpoints = result.breakpoints;
-
-        if (breakpoints[Breakpoints.Large] || breakpoints[Breakpoints.Medium]) {
-          this.sizeWidth = '930';
-        } else if (
-          breakpoints[Breakpoints.Small] ||
-          breakpoints[Breakpoints.Small]
-        ) {
-          this.sizeWidth = '430';
-        }
-      });
-  }
 
   eventPostion() {
     let urlMap = this.event?.map_link;
