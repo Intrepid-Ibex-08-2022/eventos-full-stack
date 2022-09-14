@@ -148,7 +148,7 @@ export class AuthService implements AsyncValidator {
     resp = await this.http.get<any>(`${this.url}/${email}`).pipe(
       map((user) => {
         if (user) {
-          return user;
+          return user;;
         }
 
         return;
