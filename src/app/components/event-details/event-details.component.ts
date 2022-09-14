@@ -85,17 +85,18 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
   }
 
   eventPostion() {
+    let urlMap = this.event?.map_link.split('@' || '=')
+      .filter(resp => resp.startsWith("[0-9]"))
+      console.log(urlMap)
+    if (false) {
+      //res.substring(0, res.indexOf(',', res.search(',')))
+      // let lat = urlMap[1].substr(0, urlMap[1].search(','));
+      // let lng = urlMap[1].substr(lat.length +1, urlMap[1].search(',') );
 
-    if (this.event?.map_link) {
-      let urlMap = this.event?.map_link.split('@' || '=');
-
-      let lat = urlMap[1].substr(0, urlMap[1].search(','));
-      let lng = urlMap[1].substr(lat.length +1, urlMap[1].search(',') );
-
-      if (lat && lng) {
-        this.position[0] = parseFloat(lng);
-        this.position[1] = parseFloat(lat);
-      }
+      // if (lat && lng) {
+      //   this.position[0] = parseFloat(lng);
+      //   this.position[1] = parseFloat(lat);
+      // }
     }
   }
 

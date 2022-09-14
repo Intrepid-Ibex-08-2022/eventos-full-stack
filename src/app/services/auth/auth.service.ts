@@ -12,10 +12,10 @@ import { Users } from '../../interface/users';
   providedIn: 'root',
 })
 export class AuthService implements AsyncValidator {
-  // url = 'https://intrepit-ibex.herokuapp.com/api/users';
-  // urlEvents = 'https://intrepit-ibex.herokuapp.com/api/events';
-  url = 'http://localhost:4000/api/users';
-  urlEvents = 'http://localhost:4000/api/events';
+  url = 'https://intrepit-ibex.herokuapp.com/api/users';
+  urlEvents = 'https://intrepit-ibex.herokuapp.com/api/events';
+  // url = 'http://localhost:4000/api/users';
+  // urlEvents = 'http://localhost:4000/api/events';
   // urlPrueba = 'http://localhost:4000/api/users';
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
   private _token: string | undefined;
