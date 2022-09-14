@@ -5,6 +5,8 @@ import { Users } from '../../interface/users';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { environment } from '../../../environments/environment'
+import mapboxgl from 'mapbox-gl'
 
 @Component({
   selector: 'app-event-details',
