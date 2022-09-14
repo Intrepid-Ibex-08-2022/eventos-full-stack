@@ -8,7 +8,7 @@ import axios from 'axios';
 export class FiltersService {
   eventosCanarios: EventsResult[] = [];
   urlEventos = 'https://intrepit-ibex.herokuapp.com/api/events';
-
+  // urlEventos = 'http://localhost:4000/api/events';
   constructor() {}
 
   async getEvents(): Promise<EventsResult[]> {
