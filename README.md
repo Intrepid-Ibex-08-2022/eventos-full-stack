@@ -42,11 +42,13 @@ El programa esta basado y elaborado en Angular, para obtener la flexibilidad nec
 
 ## Herramientas:
 
-Gracias a los profesores hemos aprendido a utilizar herramientas como el Trello y el Figma, así como a preparar nuestros Sprint Goal con las Daily Price y las Retrospectivas.
+Gracias a los profesores hemos aprendido a utilizar herramientas de trabajo como el Trello, el Figma y el github, así como a preparar nuestros Sprint Goal con las Daily Price y las Retrospectivas.
 
 ![Design preview](./Bocetos/trello.png)
 
 ![Design preview](./Bocetos/figma.png)
+
+![Design preview](./Bocetos/github.png)
 
 ## Acceso al proyecto:
 
