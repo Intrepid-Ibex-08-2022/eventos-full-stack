@@ -10,10 +10,6 @@ Una vez desarrollando el proyectos decidimos que era necesario permitir que los 
 
 Y aun nos quedan un par de ideas para ir incrementando la base de datos y eventos disponible, así como utilidades a añadir a los usuarios.
 
-## Metodologia
-
-El programa esta basado y elaborado en Angular, para obtener la flexibilidad necesaria y ser lo más responsiva y versátil posible para adaptarse a los datos e imágenes que pueda aportar el cliente.
-
 ## Bocetos de inicio del proyeco
 
 Esta era la idea inicial.
@@ -39,6 +35,18 @@ Este apartado se ha consiguido en gran parte a un 90%, aunque todavia se encuent
 La mayor dificultad del programa fué el ir incrementando los procesos de coneccion a la Api a medida que ibamos aprendiendo en el curso, pero nos ha servido de gran aprendizaje, así como el trabajar en equipo, ya que para alguno era una experiencia nueva.
 
 Pero sin embargo puedo decir que !!!!! Reto superado !!!!!
+
+## Metodologia
+
+El programa esta basado y elaborado en Angular, para obtener la flexibilidad necesaria y ser lo más responsiva y versátil posible para adaptarse a los datos e imágenes que pueda aportar el cliente.
+
+## Herramientas:
+
+Gracias a los profesores hemos aprendido a utilizar herramientas como el Trello y el Figma, así como a preparar nuestros Sprint Goal con las Daily Price y las Retrospectivas.
+
+![Design preview](./Bocetos/trello.png)
+
+![Design preview](./Bocetos/figma.png)
 
 ## Acceso al proyecto:
 
