@@ -52,8 +52,9 @@ Gracias a los profesores hemos aprendido a utilizar herramientas de trabajo como
 
 ## Acceso al proyecto:
 
-https://github.com/picigui/ProyectoJLGS02
-https://moonlit-travesseiro-3513cc.netlify.app/
+https://github.com/Intrepid-Ibex-08-2022/eventos-full-stack
+
+https://eventos-canarios-09-2022.netlify.app/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
 
