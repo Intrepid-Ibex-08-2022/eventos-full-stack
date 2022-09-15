@@ -110,7 +110,10 @@ export class EventComponent implements OnInit {
     this.fav = false;
     this.tipoEvento = 'Todos';
     this.place = 'Todos';
+    this.hideen = false;
   }
+
+  hideen = false;
 
   async getFavouritesFromAPI() {
     if(this.id)
@@ -119,6 +122,7 @@ export class EventComponent implements OnInit {
         if(resp){
           this.eventsToRender = resp.favorites;
           this.fav = true;
+          this.hideen = true;
         }
 
     })
@@ -150,6 +154,7 @@ export class EventComponent implements OnInit {
     this.pageNum = this.pageNum + 1;
     this.get10Events();
   }
+
 
   get10Events(){
     this.service.getEventsByPageNum(this.pageNum).then(eventos => {
