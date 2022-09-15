@@ -67,7 +67,10 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       (await this.authServices.getUserByToken(this.id)).subscribe(
         async (resp) => {
           if (resp) {
+
+            console.log(resp.user)
             this.user = resp.user;
+
           }
           return;
         },
@@ -77,18 +80,19 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
   }
 
   eventPostion() {
-    let urlMap = this.event?.map_link.split('@' || '=')
-      .filter(resp => resp.startsWith("[0-9]"))
-      console.log(urlMap)
-    if (false) {
-      //res.substring(0, res.indexOf(',', res.search(',')))
-      // let lat = urlMap[1].substr(0, urlMap[1].search(','));
-      // let lng = urlMap[1].substr(lat.length +1, urlMap[1].search(',') );
+     let urlMap = this.event?.map_link.split('@' || '=')
+       . filter(resp => (/[0-9]/).test(resp.substring(0,1)))
 
-      // if (lat && lng) {
-      //   this.position[0] = parseFloat(lng);
-      //   this.position[1] = parseFloat(lat);
-      // }
+    if (urlMap) {
+
+      let lat = urlMap[0].substr(0, urlMap[0].search(','));
+      let lng = urlMap[0].substr(lat.length +1, urlMap[0].search(',') );
+
+      if (lat && lng) {
+       this.position[0] = parseFloat(lng);
+       this.position[1] = parseFloat(lat);
+       console.log(this.position)
+     }
     }
   }
 
@@ -105,12 +109,13 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       this.getEvent(id);
     });
   }
+
   async addFavorite() {
     // this.user!.favorites.push(this.event!._id);
-    await this.authServices.updateUserFavorites(
+    (await this.authServices.updateUserFavorites(
       this.event!._id,
       this.id as string,
-    );
+    )).subscribe((resp: any) => console.log(resp))
     this.fav = true;
   }
   async delFavorite() {
@@ -120,7 +125,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
     await this.authServices.deleteUserFavorites(
       this.event!._id,
       this.id as string,
-    );
+    ).subscribe((resp: any) => console.log(resp));
     this.fav = false;
   }
 }

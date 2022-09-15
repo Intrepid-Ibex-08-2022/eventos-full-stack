@@ -95,14 +95,16 @@ export class EventComponent implements OnInit {
     });
   }
 
-  seeFavorites() {
-    if (this.user && this.user.fav) {
-      this.eventsToRender = this.events!.filter((ev) =>
-        (this.user as User).fav.includes(ev._id),
-      );
-    }
-  }
+  // seeFavorites() {
+  //   if (this.user && this.user.favorites) {
+  //     this.eventsToRender = this.events!.filter((ev) =>
+  //       (this.user as User).favorites.includes(ev._id),
+  //     );
+  //   }
+  // }
+
   removeSeeFavorites() {
+    console.log(this.events)
     this.eventsToRender = this.events as EventsResult[];
     this.fav = false;
     this.tipoEvento = 'Todos';
@@ -110,16 +112,28 @@ export class EventComponent implements OnInit {
   }
 
   async getFavouritesFromAPI() {
-    const events = [];
-    for (let i = 0; i < this.user!.fav.length; i++) {
-      const event = await (
-        await this.eventServices.getEventDetails(this.user!.fav[i])
-      ).toPromise();
-      events.push(event);
-      this.fav = true;
-      // console.log({ eventsToRender: this.eventsToRender });
-    }
-    this.eventsToRender = events as EventsResult[];
+    if(this.id)
+    (await this.authServices.loginIdAndFavorites(this.id))
+      .subscribe( resp => {
+        if(resp){
+          this.eventsToRender = resp.favorites;
+          this.fav = true;
+        }
+
+    })
+
+
+    // const events = [];
+    // for (let i = 0; i < this.user!.fav.length; i++) {
+    //   const event = await (
+    //     await this.eventServices.getEventDetails(this.user!.fav[i])
+    //   ).toPromise();
+    //   events.push(event);
+
+    //   this.fav = true;
+
+    // }
+    // this.eventsToRender = events as EventsResult[];
   }
 
   // const a = [  { _id: "1234" } , { _id : "12" } , { _id : "34"} ]
