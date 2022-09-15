@@ -6,6 +6,7 @@ export interface UsersResponse {
 }
 
 export interface User {
+  fav?: string[];
   ok?: boolean;
   _id?: string;
   usr: string;

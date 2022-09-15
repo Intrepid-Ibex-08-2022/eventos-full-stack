@@ -104,7 +104,6 @@ export class EventComponent implements OnInit {
   // }
 
   removeSeeFavorites() {
-    console.log(this.events)
     this.eventsToRender = this.events as EventsResult[];
     this.fav = false;
     this.tipoEvento = 'Todos';
