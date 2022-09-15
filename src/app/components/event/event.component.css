@@ -199,3 +199,11 @@ label {
     margin-left: 0px;
   }
 }
+
+.buttons__pages{
+  display: flex;
+  justify-content: space-between;
+}
+.buttons__pages button{
+  padding: 10px;
+}

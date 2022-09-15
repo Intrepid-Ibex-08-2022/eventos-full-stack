@@ -67,10 +67,10 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       (await this.authServices.getUserByToken(this.id)).subscribe(
         async (resp) => {
           if (resp) {
-
-            console.log(resp.user)
             this.user = resp.user;
-
+            if(this.user.fav?.includes(idEvent)){
+              this.fav = true;
+            }
           }
           return;
         },
@@ -91,7 +91,6 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       if (lat && lng) {
        this.position[0] = parseFloat(lng);
        this.position[1] = parseFloat(lat);
-       console.log(this.position)
      }
     }
   }
@@ -115,7 +114,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
     (await this.authServices.updateUserFavorites(
       this.event!._id,
       this.id as string,
-    )).subscribe((resp: any) => console.log(resp))
+    )).subscribe((resp: any) => console.log(resp));
     this.fav = true;
   }
   async delFavorite() {

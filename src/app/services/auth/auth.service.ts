@@ -54,8 +54,6 @@ export class AuthService implements AsyncValidator {
   updateUserFavorites(idEvent: string, _token: string): any {
 
     let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
-    console.log(idEvent)
-    console.log(_token)
     return this.http
       .post(`${this.urlEvents}/event/${idEvent}/preferred`, null, {
         headers: cabecera,
