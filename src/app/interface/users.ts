@@ -1,5 +1,6 @@
 export interface UsersResponse {
-  ok: boolean;
+  ok?: boolean;
+  token?: string;
   user: User;
 
 }

@@ -98,6 +98,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       this.eventPostion();
     });
   }
+
   async getUser(id: string) {
     (await this.eventServices.getEventDetails(id)).subscribe((resp) => {
       this.event = resp;
