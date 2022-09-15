@@ -32,6 +32,8 @@ Esta era la idea inicial.
 
 Este apartado se ha consiguido en gran parte a un 90%, aunque todavia se encuentra en fase de prueba y seguro que se puede mejorar
 
+![Design preview](./Bocetos/Responsive.png)
+
 ## Dificultades:
 
 La mayor dificultad del programa fué el ir incrementando los procesos de coneccion a la Api a medida que ibamos aprendiendo en el curso, pero nos ha servido de gran aprendizaje, así como el trabajar en equipo, ya que para alguno era una experiencia nueva.
