@@ -43,7 +43,7 @@ export class EventComponent implements OnInit {
         async (resp) => {
           if (resp) {
             this.user = resp.user;
-          }
+          } 
           return;
         },
       );
@@ -153,10 +153,12 @@ export class EventComponent implements OnInit {
 
   get10Events(){
     this.service.getEventsByPageNum(this.pageNum).then(eventos => {
-      console.log(eventos);
-      
-      this.events = eventos;
-      this.eventsToRender = eventos;
+      if(eventos === 'no se encuentran mas eventos'){
+        alert('Esta usted en la última página.');
+      }else{
+        this.events = eventos;
+        this.eventsToRender = eventos;
+      }
     })
   }
 
