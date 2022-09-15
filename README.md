@@ -2,13 +2,13 @@
 
 # EventosFullStack:
 
-Es el nombre del proyecto y surgió de una de las propuestas mas votadas en el grupo de las CABRAS formados por los 5 integrantes iniciales.
+Es el nombre del proyecto y surgió de una de las propuestas mas votadas en el grupo de las CABRAS INTREPIDAS formados por los 5 integrantes iniciales.
 
-La idea inicial era "la creación de una pagina que publicara todos los eventos proximos a realizar en Gran Canaria", de ese modo todo el que buscara algo que hacer podría abrir la pagina y ver las propuestas a elegir.
+La idea inicial era "la creación de una pagina que publicara todos los eventos proximos a realizar en Gran Canaria", es por eso que adoptamos el nombre de EVENTOS CANARIOS, con este proyecto queremos lograr que todo el que busque algo que hacer, fuera de casa, podrá abrir la pagina y ver las propuestas a elegir.
 
-Una vez desarrollando el proyectos decidimos que era necesario permitir que los usuarios registrados pudieran introducir los eventos una vez verificados por los gestores de la web.
+A medida que fuimos desarrollando el proyecto decidimos que era necesario permitir que los usuarios registrados pudieran introducir los eventos, una vez verificados por los gestores de la web, y eso hicimos.
 
-Y aun nos quedan un par de ideas para ir incrementando la base de datos y eventos disponible, así como utilidades a añadir a los usuarios.
+Y aun nos quedan un par de ideas para ir incrementando la base de datos y eventos disponible, así como utilidades a añadir a los usuarios, pero eso vendrá mas adelante.
 
 ## Bocetos de inicio del proyeco
 
