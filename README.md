@@ -64,3 +64,9 @@ https://www.linkedin.com/in/pici-gui-78b57293
 https://github.com/jvarc
 
 https://www.linkedin.com/in/juan-carlos-vargas-chavez-407705128/
+
+# Jonay Brito
+
+https://github.com/jvarc
+
+https://www.linkedin.com/in/juan-carlos-vargas-chavez-407705128/
