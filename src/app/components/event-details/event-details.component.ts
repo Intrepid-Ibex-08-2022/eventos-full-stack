@@ -67,12 +67,10 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       (await this.authServices.getUserByToken(this.id)).subscribe(
         async (resp) => {
           if (resp) {
-
             this.user = resp.user;
             if(this.user.fav?.includes(idEvent)){
-              this.fav = true
+              this.fav = true;
             }
-            this.fav = false
           }
           return;
         },
@@ -116,7 +114,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
     (await this.authServices.updateUserFavorites(
       this.event!._id,
       this.id as string,
-    ));
+    )).subscribe((resp: any) => console.log(resp));
     this.fav = true;
   }
   async delFavorite() {
@@ -126,7 +124,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
     await this.authServices.deleteUserFavorites(
       this.event!._id,
       this.id as string,
-    );
+    ).subscribe((resp: any) => console.log(resp));
     this.fav = false;
   }
 }
