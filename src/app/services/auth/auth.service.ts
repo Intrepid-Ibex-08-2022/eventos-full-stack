@@ -54,11 +54,14 @@ export class AuthService implements AsyncValidator {
   updateUserFavorites(idEvent: string, _token: string): any {
 
     let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
+    console.log(idEvent)
+    console.log(_token)
     return this.http
       .post(`${this.urlEvents}/event/${idEvent}/preferred`, null, {
         headers: cabecera,
       });
   }
+
   deleteUserFavorites(idEvent: string, _token: string): any {
     let cabecera = new HttpHeaders().append('authorization', `Basic ${_token}`);
     return this.http
@@ -116,17 +119,16 @@ export class AuthService implements AsyncValidator {
     return resp;
   }
 
-  async loginIdAndFavorites(
-    email: string,
-  ): Promise<Observable<UsersResponse | undefined>> {
-    let resp: Observable<UsersResponse | undefined>;
+  loginIdAndFavorites(token: string): Observable<any | undefined> {
 
-    resp = await this.http.get<any>(`${this.url}/${email}`).pipe(
+    let resp: Observable<any| undefined>;
+
+    let cabecera = new HttpHeaders().append('authorization', `Basic ${token}`);
+    resp = this.http.get<any>(`${this.urlEvents}/view/preferred`, {headers: cabecera}).pipe(
       map((user) => {
         if (user) {
           return user;;
         }
-
         return;
       }),
     );

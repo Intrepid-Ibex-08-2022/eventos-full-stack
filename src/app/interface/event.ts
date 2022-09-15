@@ -11,9 +11,11 @@ export interface EventsResult {
   description: string;
   date: EventDate;
   address: string[];
+  adress?: string[];
   ticket_info: string;
   venue?: Venue;
   map_link: string;
+  id?: number
 }
 
 export interface EventDate {
@@ -22,6 +24,6 @@ export interface EventDate {
 }
 
 export interface Venue {
-  rating: string;
-  reviews: string;
+  rating?: string;
+  reviews?: string;
 }

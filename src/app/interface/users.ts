@@ -13,7 +13,7 @@ export interface User {
   token?: string;
   email?: string;
   errors?: Errors;
-  fav: string[];
+  favorites: string[];
   iat: number;
 }
 export interface Errors {
