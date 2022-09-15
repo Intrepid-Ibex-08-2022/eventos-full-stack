@@ -108,14 +108,9 @@
       </div>
     </div>
 
-    <google-map
-      [width]="sizeWidth"
-      height="300"
-      [center]="position"
-      [zoom]="zoom"
-    >
-      <map-marker [position]="position" [label]="label"></map-marker>
-    </google-map>
+    <div class="map">
+      <div #mapDiv class="map-container"></div>
+    </div>
   </div>
 </div>
 

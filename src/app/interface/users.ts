@@ -1,16 +1,21 @@
-export interface Users {
-  // find(): unknown;
-  // forEach(arg0: (element: any) => void): unknown;
-  ok: boolean;
+export interface UsersResponse {
+  ok?: boolean;
+  token?: string;
+  user: User;
+
+}
+
+export interface User {
+  ok?: boolean;
   _id?: string;
-  username?: string;
+  usr: string;
   pswd?: string;
   token?: string;
   email?: string;
   errors?: Errors;
-  favorites: string[];
+  fav: string[];
+  iat: number;
 }
-
 export interface Errors {
   errors: Error[];
 }

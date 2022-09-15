@@ -1,4 +1,12 @@
-@import 'css/variables.css';
+:root {
+  --text-color: black;
+  --color-yellow: #ffe143;
+  --color-blue: #0c0434;
+  --fondo-white: #ffffff;
+  --min-with: 325px;
+  --min-with-element: 320px;
+}
+
 
 * {
   margin: 0px;
@@ -7,12 +15,15 @@
 }
 
 html {
-  /* height: 100%; */
   font-family: Poppins-Regular, sans-serif;
 }
+
+body {
+  min-width: var(--min-with, 325px);
+}
+
 .container {
   width: 100%;
-  /* margin: 0 auto; */
   display: grid;
   grid-template-areas:
     'header header'
@@ -22,8 +33,5 @@ html {
   grid-column: 1fr 1fr;
   grid-template-rows: repeat(1fr);
 }
-/* ***************** formato mobile responsive ********************* */
-/* ****************************************************************** */
-body {
-  min-width: var(--min-with, 325px);
-}
+
+
