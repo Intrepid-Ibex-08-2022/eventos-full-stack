@@ -65,8 +65,8 @@ https://github.com/jvarc
 
 https://www.linkedin.com/in/juan-carlos-vargas-chavez-407705128/
 
-# Jonay Brito
+# Jonay Brito Hernández
 
-https://github.com/jvarc
+https://github.com/Jormais
 
-https://www.linkedin.com/in/juan-carlos-vargas-chavez-407705128/
+https://www.linkedin.com/in/jonaybrito
