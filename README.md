@@ -70,3 +70,11 @@ https://www.linkedin.com/in/juan-carlos-vargas-chavez-407705128/
 https://github.com/Jormais
 
 https://www.linkedin.com/in/jonaybrito
+
+## Equipo de profesores del curso de FullStack
+
+Nuestro agradecimiento al equipo de profesores del curso de FullStack, que nos han aportado una gran cantidad de conocimiento en tan poco tiempo,
+
+# !!!! GRACIAS MIL ¡¡¡¡¡
+
+![Design preview](./Bocetos/Equipo-de-profesores.png)
