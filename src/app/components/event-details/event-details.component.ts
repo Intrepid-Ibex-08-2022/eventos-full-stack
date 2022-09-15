@@ -1,7 +1,7 @@
 import { AfterContentInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { EventsResult } from '../../interface/event';
-import { Users } from '../../interface/users';
+import { UsersResponse, User } from '../../interface/users';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
@@ -19,7 +19,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
   event: EventsResult | undefined;
   id: string | null = '';
   username: string | undefined;
-  user?: Users;
+  user?: User;
   email: any;
   fav: boolean = false;
 
@@ -65,17 +65,9 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
     this.id = localStorage.getItem('token');
     if (this.id) {
       (await this.authServices.getUserByToken(this.id)).subscribe(
-        async (email) => {
-          if (email !== undefined) {
-            this.email = email;
-            (await this.authServices.loginIdAndFavorites(this.email)).subscribe(
-              (user) => {
-                if (user) {
-                  this.user = user;
-                  this.fav = this.user.favorites.includes(idEvent);
-                }
-              },
-            );
+        async (resp) => {
+          if (resp) {
+            this.user = resp.user;
           }
           return;
         },

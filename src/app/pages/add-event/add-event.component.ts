@@ -91,12 +91,12 @@ export class AddEventComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.token = localStorage.getItem('token')
     if(this.token){
-      this.authService.getUserByToken(this.token)
-          .subscribe(resp =>{
-            if(!resp){
+      (await this.authService.getUserByToken(this.token))
+          .subscribe(user =>{
+            if(!user){
               this.router.navigateByUrl('/login')
             }
           })

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { UsersResponse } from '../../interface/users';
 
 
 @Component({
@@ -11,8 +12,8 @@ import { AuthService } from '../../services/auth/auth.service';
 export class HeaderComponent implements OnInit {
   @Input() position = 'position: fixed;'
   token: string | null = '';
-  email: any;
-  username: string | undefined;
+  user?: UsersResponse;
+  username?: string;
 
   constructor(
     private route: Router,
@@ -24,21 +25,13 @@ export class HeaderComponent implements OnInit {
     this.token = localStorage.getItem('token');
 
     if(this.token){
-      this.authServices.getUserByToken(this.token).subscribe( email =>{
-        if(email !== undefined){
-          this.email = email
-          this.authServices.getUserByEmail(this.email).subscribe( username =>{
-            if(username){
-              this.username = username
-            }
-          })
-
+      (await this.authServices.getUserByToken(this.token)).subscribe( resp =>{
+        if(resp){
+          this.username = resp.user.usr
+          this.loginValido()
         }
-        return;
       })
     }
-
-
   }
 
   loginValido(){

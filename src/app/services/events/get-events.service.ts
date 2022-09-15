@@ -3,7 +3,7 @@ import axios from 'axios';
 import { EventsResult } from '../../interface/event';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
-import { Users } from '../../interface/users';
+import { UsersResponse } from '../../interface/users';
 
 @Injectable({
   providedIn: 'root',

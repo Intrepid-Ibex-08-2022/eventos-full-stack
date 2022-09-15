@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth/auth.service';
+import { UsersResponse } from '../../interface/users';
 
 @Component({
   selector: 'app-login',
@@ -47,9 +48,6 @@ export class LoginComponent implements OnInit {
     else if (emailError?.['pattern']){
       return `${emailValue} No es un formato de correo valido`
     }
-    else if (emailError?.['emailTomado']){
-      return 'Este email no se encuentra registrado'
-    }
     return ''
   }
 
@@ -61,8 +59,8 @@ export class LoginComponent implements OnInit {
   async submitFormulario(){
     const {correo,password} = this.miFormulario.value;
 
-    (await this.authServices.login(correo, password)).subscribe(resp =>{
-      if(resp !== undefined){
+    this.authServices.login(correo, password).subscribe(user =>{
+      if(user !== undefined){
         this.authError = false;
         this.router.navigateByUrl('');
       }

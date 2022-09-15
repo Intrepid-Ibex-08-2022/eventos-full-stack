@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { EventsResult } from '../../interface/event';
-import { Users } from '../../interface/users';
+import { UsersResponse, User } from '../../interface/users';
 import { FiltersService } from 'src/app/services/events/filters.service';
 import { GetEventsService } from '../../services/events/get-events.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-event',
@@ -21,7 +20,7 @@ export class EventComponent implements OnInit {
   tipoEvento = 'Todos';
   id: string | null = '';
   username: string | undefined;
-  user?: Users;
+  user?: User;
   fav: boolean = false;
   email: any;
 
@@ -39,13 +38,9 @@ export class EventComponent implements OnInit {
     this.id = localStorage.getItem('token');
     if (this.id) {
       (await this.authServices.getUserByToken(this.id)).subscribe(
-        async (email) => {
-          if (email !== undefined) {
-            this.email = email;
-            (await this.authServices.loginIdAndFavorites(this.email)).subscribe( user =>{
-              this.user = user;
-            });
-
+        async (resp) => {
+          if (resp) {
+            this.user = resp.user;
           }
           return;
         },
@@ -101,9 +96,9 @@ export class EventComponent implements OnInit {
   }
 
   seeFavorites() {
-    if (this.user && this.user.favorites) {
+    if (this.user && this.user.fav) {
       this.eventsToRender = this.events!.filter((ev) =>
-        (this.user as Users).favorites.includes(ev._id),
+        (this.user as User).fav.includes(ev._id),
       );
     }
   }
@@ -116,9 +111,9 @@ export class EventComponent implements OnInit {
 
   async getFavouritesFromAPI() {
     const events = [];
-    for (let i = 0; i < this.user!.favorites.length; i++) {
+    for (let i = 0; i < this.user!.fav.length; i++) {
       const event = await (
-        await this.eventServices.getEventDetails(this.user!.favorites[i])
+        await this.eventServices.getEventDetails(this.user!.fav[i])
       ).toPromise();
       events.push(event);
       this.fav = true;
