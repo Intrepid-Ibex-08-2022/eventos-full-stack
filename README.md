@@ -6,13 +6,16 @@ Es el nombre del proyecto y surgió de una de las propuestas mas votadas en el g
 
 La idea inicial era "la creación de una pagina que publicara todos los eventos proximos a realizar en Gran Canaria", de ese modo todo el que buscara algo que hacer podría abrir la pagina y ver las propuestas a elegir.
 
-Una vez desarrollando el proyectos decidimos que era necesario permitir que los usuarios registrados pudieran introducir los eventos una vez verificados por los gestores de la web.
+## Inicios
+![Design preview](./src/assets/img/scrum.jpg)
+
+Una vez iniciado el proyectos decidimos que era necesario permitir que los usuarios registrados pudieran introducir los eventos una vez verificados por los gestores de la web.
 
 Y aun nos quedan un par de ideas para ir incrementando la base de datos y eventos disponible, así como utilidades a añadir a los usuarios.
 
-## Metodologia
-
-El programa esta basado y elaborado en Angular, para obtener la flexibilidad necesaria y ser lo más responsiva y versátil posible para adaptarse a los datos e imágenes que pueda aportar el cliente.
+## Tecnologías
+![Design preview](./src/assets/img/tecnologias.jpg)
+El appWeb esta basada en Angular en la parte del Frontend, Node JS en el Backend y las bases de datos utilizadas fueron MongoDB y Cloudinary
 
 ## Bocetos de inicio del proyeco
 
