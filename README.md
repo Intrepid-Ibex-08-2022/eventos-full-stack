@@ -7,6 +7,7 @@ Es el nombre del proyecto y surgió de una de las propuestas mas votadas en el g
 La idea inicial era "la creación de una pagina que publicara todos los eventos proximos a realizar en Gran Canaria", es por eso que adoptamos el nombre de EVENTOS CANARIOS, con este proyecto queremos lograr que todo el que busque algo que hacer, fuera de casa, podrá abrir la pagina y ver las propuestas a elegir.
 
 ## Inicios
+
 ![Design preview](./src/assets/img/scrum.jpg)
 
 Una vez iniciado el proyectos decidimos que era necesario permitir que los usuarios registrados pudieran introducir los eventos una vez verificados por los gestores de la web.
@@ -14,8 +15,19 @@ Una vez iniciado el proyectos decidimos que era necesario permitir que los usuar
 Y aun nos quedan un par de ideas para ir incrementando la base de datos y eventos disponible, así como utilidades a añadir a los usuarios.
 
 ## Tecnologías
+
 ![Design preview](./src/assets/img/tecnologias.jpg)
 El appWeb esta basada en Angular en la parte del Frontend, Node JS en el Backend y las bases de datos utilizadas fueron MongoDB y Cloudinary
+
+## Herramientas:
+
+Gracias a los profesores hemos aprendido a utilizar herramientas de trabajo como el Trello, el Figma y el github, así como a preparar nuestros Sprint Goal con las Daily Price y las Retrospectivas.
+
+![Design preview](./Bocetos/trello.png)
+
+![Design preview](./Bocetos/figma.png)
+
+![Design preview](./Bocetos/github.png)
 
 ## Bocetos de inicio del proyeco
 
@@ -42,17 +54,6 @@ Este apartado se ha consiguido en gran parte a un 90%, aunque todavia se encuent
 La mayor dificultad del programa fué el ir incrementando los procesos de coneccion a la Api a medida que ibamos aprendiendo en el curso, pero nos ha servido de gran aprendizaje, así como el trabajar en equipo, ya que para alguno era una experiencia nueva.
 
 Pero sin embargo puedo decir que !!!!! Reto superado !!!!!
-
-
-## Herramientas:
-
-Gracias a los profesores hemos aprendido a utilizar herramientas de trabajo como el Trello, el Figma y el github, así como a preparar nuestros Sprint Goal con las Daily Price y las Retrospectivas.
-
-![Design preview](./Bocetos/trello.png)
-
-![Design preview](./Bocetos/figma.png)
-
-![Design preview](./Bocetos/github.png)
 
 ## Acceso al proyecto:
 
