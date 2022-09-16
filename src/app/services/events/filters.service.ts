@@ -22,6 +22,10 @@ export class FiltersService {
     return response.data;
   }
 
+  getEventsByPageNum(pageNum : number){
+    return axios.get(this.urlEventos + '?page=' + pageNum).then(resp => resp.data);
+  }
+
   async getFilteredEvents(
     place: string,
     tipoEvent: string,

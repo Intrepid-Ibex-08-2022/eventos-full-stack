@@ -23,6 +23,7 @@ export class EventComponent implements OnInit {
   user?: User;
   fav: boolean = false;
   email: any;
+  pageNum : number = 1;
 
   constructor(
     private eventServices: GetEventsService,
@@ -31,17 +32,18 @@ export class EventComponent implements OnInit {
     private authServices: AuthService,
   ) {}
   async ngOnInit(): Promise<void> {
-    this.service.getEvents().then((eventos) => {
+    this.get10Events();
+    /* this.service.getEvents().then((eventos) => {
       this.events = eventos;
       this.eventsToRender = eventos;
-    });
+    }); */
     this.id = localStorage.getItem('token');
     if (this.id) {
       (await this.authServices.getUserByToken(this.id)).subscribe(
         async (resp) => {
           if (resp) {
             this.user = resp.user;
-          }
+          } 
           return;
         },
       );
@@ -108,7 +110,10 @@ export class EventComponent implements OnInit {
     this.fav = false;
     this.tipoEvento = 'Todos';
     this.place = 'Todos';
+    this.hideen = false;
   }
+
+  hideen = false;
 
   async getFavouritesFromAPI() {
     if(this.id)
@@ -117,6 +122,7 @@ export class EventComponent implements OnInit {
         if(resp){
           this.eventsToRender = resp.favorites;
           this.fav = true;
+          this.hideen = true;
         }
 
     })
@@ -133,6 +139,32 @@ export class EventComponent implements OnInit {
 
     // }
     // this.eventsToRender = events as EventsResult[];
+  }
+
+  backPage(){
+    if(this.pageNum === 1){
+      return alert('Esta usted en la primera página');
+    } else {
+      this.pageNum = this.pageNum - 1;
+      this.get10Events();
+    }
+  }
+
+  nextPage(){
+    this.pageNum = this.pageNum + 1;
+    this.get10Events();
+  }
+
+
+  get10Events(){
+    this.service.getEventsByPageNum(this.pageNum).then(eventos => {
+      if(eventos === 'no se encuentran mas eventos'){
+        alert('Esta usted en la última página.');
+      }else{
+        this.events = eventos;
+        this.eventsToRender = eventos;
+      }
+    })
   }
 
   // const a = [  { _id: "1234" } , { _id : "12" } , { _id : "34"} ]
