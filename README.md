@@ -55,6 +55,17 @@ La mayor dificultad del programa fué el ir incrementando los procesos de conecc
 
 Pero sin embargo puedo decir que !!!!! Reto superado !!!!!
 
+## Backend:
+
+Github
+![Design preview](./Bocetos/Backend.jpg)
+
+Hemos intentado seguir un gitflow
+
+Hemos intentado hacer la API lo mas eficiente posible
+
+Hemos creado autentificacion con JWT
+
 ## Acceso al proyecto:
 
 https://github.com/Intrepid-Ibex-08-2022/eventos-full-stack
