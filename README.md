@@ -84,7 +84,7 @@ Con sus respectivos link de contacto:
 
 https://github.com/picigui
 
-https://www.linkedin.com/in/pici-gui-78b57293
+https://www.linkedin.com/in/jos%C3%A9-luis-gonz%C3%A1lez-s%C3%A1nchez-78b57293/
 
 # Juan Carlos Vargas Chávez
 

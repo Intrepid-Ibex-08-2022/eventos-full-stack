@@ -1,3 +1,4 @@
 {
-  "peacock.color": "red"
+  "peacock.color": "red",
+  "liveServer.settings.port": 5501
 }
