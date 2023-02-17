@@ -12,8 +12,8 @@ import { UsersResponse } from '../../interface/users';
   providedIn: 'root',
 })
 export class AuthService implements AsyncValidator {
-  url = 'https://intrepit-ibex.herokuapp.com/api/users';
-  urlEvents = 'https://intrepit-ibex.herokuapp.com/api/events';
+  url = 'https://api-canary-events.netlify.app/users';
+  urlEvents = 'https://api-canary-events.netlify.app/events';
 
   emailPattern: string = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
   private _token: string | undefined;

@@ -9,7 +9,7 @@ import { UsersResponse } from '../../interface/users';
   providedIn: 'root',
 })
 export class GetEventsService {
-  url = 'https://intrepit-ibex.herokuapp.com/api/events/event';
+  url = 'https://api-canary-events.netlify.app/events';
   //url = 'http://localhost:4000/api/events/event';
 
   constructor(private http: HttpClient) {}
