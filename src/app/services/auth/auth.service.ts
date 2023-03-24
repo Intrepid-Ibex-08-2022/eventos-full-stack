@@ -24,19 +24,15 @@ export class AuthService implements AsyncValidator {
     return this._token!;
   }
 
-  register(
-    username: string,
-    email: string,
-    pswd: string,
-  ): Observable<boolean | undefined> {
-    let resp: Observable<boolean | undefined>;
+  register(username: string, email: string, pswd: string): Observable<UsersResponse | undefined> {
+    let resp: Observable<UsersResponse | undefined>;
     let favorites: string[] = [];
 
     resp = this.http
       .post<UsersResponse>(this.url, { username, email, pswd, favorites })
       .pipe(
         map((resp) => {
-          let { token} = resp.user;
+          let { token } = resp;
           if (token) {
             localStorage.setItem('token', token);
             this._token = token;
@@ -45,11 +41,36 @@ export class AuthService implements AsyncValidator {
           return;
         }),
         map((valid) => valid),
-        catchError((error) => of(error.error.msg)),
+        catchError((error) => of(error.error.msg))
       );
-
-    return resp;
+      return resp;
   }
+
+  // async register(username: string,email: string,pswd: string): Observable<UsersResponse | undefined> {
+  //   let resp: Observable<UsersResponse | undefined>;
+  //   let favorites: string[] = [];
+
+  //    resp = this.http
+  //      .post<UsersResponse>(this.url, { username, email, pswd, favorites })
+  //      .pipe(
+  //        map((resp) => {
+  //          console.log(resp);
+  //          let { token } = resp.user;
+  //          if (token) {
+  //            console.log(resp);
+  //            localStorage.setItem('token', token);
+  //            this._token = token;
+  //            return true;
+  //          }
+  //          return;
+  //        }),
+  //        map((valid) => valid),
+  //        catchError((error) => of(error.error.msg))
+  //      );
+  //      return resp;
+
+
+  // }
 
   updateUserFavorites(idEvent: string, _token: string): any {
 
@@ -70,7 +91,7 @@ export class AuthService implements AsyncValidator {
 
   validate(control: AbstractControl): Observable<ValidationErrors | null> {
     const email = control.value;
-    return this.http.get<any[]>(`${this.url}?q=${email}`).pipe(
+    return this.http.get<any[]>(`${this.url}?email=${email}`).pipe(
       //delay(3000),
       map((resp) => {
         let respDB = resp.find((correo) => correo.email == email);
@@ -86,13 +107,11 @@ export class AuthService implements AsyncValidator {
     resp = this.http
       .post<UsersResponse>(`${this.url}/login`, body)
       .pipe(
-        map((resp) => {
-          console.log(resp)
-          this._token = resp.token;
-          console.log(resp)
+        map((response) => {
+          this._token = response.token;
           if (this._token) {
             localStorage.setItem('token', this._token);
-            return resp;
+            return response;
           }
           return;
         }),
@@ -132,4 +151,5 @@ export class AuthService implements AsyncValidator {
     );
     return resp;
   }
+
 }

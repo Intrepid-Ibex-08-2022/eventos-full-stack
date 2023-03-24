@@ -9,12 +9,14 @@ export interface User {
   fav?: string[];
   ok?: boolean;
   _id?: string;
-  usr: string;
+  username: string;
   pswd?: string;
   token?: string;
   email?: string;
   errors?: Errors;
   favorites: string[];
+  rol: String;
+
   iat: number;
 }
 export interface Errors {

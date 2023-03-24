@@ -82,20 +82,16 @@ export class PageRegisterComponent {
     }
   }
 
-  async submitFormulario(){
+   submitFormulario(){
 
     const {nombre,correo,password} = this.miFormulario.value;
-    (await this.authServices.register(nombre, correo, password))
-      .subscribe( resp => {
-        if(resp === true){
-          this.router.navigateByUrl('');
-        }else{
-          // Swal.fire({
-          //   icon: 'error',
-          //   title: 'Oops...',
-          //   text: resp,
-          // })
-        }
-      });
+    this.authServices.register(nombre, correo, password)
+    .subscribe((resp) => {
+      if(resp){
+        Swal.fire('Exito', 'Usuario creado correctamente', 'success');
+        this.router.navigateByUrl('/');
+      }
+    })
+
   }
 }

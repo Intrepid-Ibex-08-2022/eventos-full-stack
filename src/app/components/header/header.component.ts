@@ -14,6 +14,8 @@ export class HeaderComponent implements OnInit {
   token: string | null = '';
   user?: UsersResponse;
   username?: string;
+  isAdmin: Boolean = false;
+  isUser: Boolean = false;
 
   constructor(
     private route: Router,
@@ -27,7 +29,8 @@ export class HeaderComponent implements OnInit {
     if(this.token){
       (await this.authServices.getUserByToken(this.token)).subscribe( resp =>{
         if(resp){
-          this.username = resp.user.usr
+          this.username = resp.user.username
+          this.checkRol(resp.user.rol);
           this.loginValido()
         }
       })
@@ -53,5 +56,18 @@ export class HeaderComponent implements OnInit {
     }
     this.username = undefined;
 
+  }
+
+  checkRol(rol: String ){
+    if(rol == 'sa' || rol=='admin'){
+      this.isAdmin = true;
+      this.isUser = false;
+    }else if(rol == 'user'){
+      this.isUser = true;
+      this.isAdmin = false;
+    }else{
+      this.isUser = false;
+      this.isAdmin = false;
+    }
   }
 }
