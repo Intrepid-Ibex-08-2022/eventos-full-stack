@@ -17,7 +17,7 @@
 
       <ul class="dropdown-menu dropdown-menu-dark user__log-out">
         <li *ngIf="isAdmin || isUser"><a class="dropdown-item " type="button" href="#" (click)="navigate('event/add')">Agregar Evento</a></li>
-        <li *ngIf="isAdmin"><a class="dropdown-item " type="button" href="#" (click)="navigate('')">Administrar Usuarios</a></li>
+        <li *ngIf="isAdmin"><a class="dropdown-item " type="button" href="#" (click)="navigate('adminUsers')">Administrar Usuarios</a></li>
         <li><a class="dropdown-item " type="button" href="#" (click)="logOut()">Desconectar</a></li>
       </ul>
     </div>

@@ -54,7 +54,7 @@ export class EventDetailsComponent implements OnInit, AfterContentInit {
       .setLngLat(this.position)
       .addTo(map);
 
-    }, 1500);
+    }, 2000);
 
   }
 

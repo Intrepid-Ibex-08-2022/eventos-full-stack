@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { AuthGuard } from './guards/auth.guard';
 import { AddEventComponent } from './pages/add-event/add-event.component';
 import { PageEventComponent } from './pages/page-event/page-event.component';
+import { AdminUserComponent } from './pages/admin-user/admin-user.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'adminUsers',
+    component: AdminUserComponent,
   },
   {
     path: '**',

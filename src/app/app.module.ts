@@ -22,6 +22,7 @@ import { LoginComponent } from './pages/login/login.component';
 
 import { DatePipe } from '@angular/common';
 import { AddEventComponent } from './pages/add-event/add-event.component';
+import { AdminUserComponent } from './pages/admin-user/admin-user.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AddEventComponent } from './pages/add-event/add-event.component';
     PageRegisterComponent,
     LoginComponent,
     AddEventComponent,
+    AdminUserComponent,
   ],
   imports: [
     BrowserModule,
