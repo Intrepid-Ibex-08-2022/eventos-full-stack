@@ -19,7 +19,7 @@ export interface EventsResult {
 }
 
 export interface EventDate {
-  start_date: string;
+  start_date?: string;
   when: string;
 }
 

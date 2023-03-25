@@ -14,11 +14,10 @@ export class GetEventsService {
 
   constructor(private http: HttpClient) {}
 
-  async getEventDetails(
-    id: string,
-  ): Promise<Observable<EventsResult | undefined>> {
+  getEventDetails(id: string): Observable<EventsResult | undefined> {
     let event: Observable<EventsResult | undefined>;
-    event = await this.http.get<EventsResult>(`${this.url}/${id}`).pipe(
+    event = this.http.get<EventsResult>(`${this.url}/event?event=${id}`)
+    .pipe(
       map((resp) => {
         return resp;
       }),

@@ -18,7 +18,7 @@ export class EventComponent implements OnInit {
   eventsToRender: EventsResult[] = [];
   place = 'Todos';
   tipoEvento = 'Todos';
-  id: string | null = '';
+  token: string | null= '';
   username: string | undefined;
   user?: User;
   fav: boolean = false;
@@ -37,13 +37,13 @@ export class EventComponent implements OnInit {
       this.events = eventos;
       this.eventsToRender = eventos;
     }); */
-    this.id = localStorage.getItem('token');
-    if (this.id) {
-      (await this.authServices.getUserByToken(this.id)).subscribe(
+    this.token = localStorage.getItem('token');
+    if (this.token) {
+      (await this.authServices.getUserByToken(this.token)).subscribe(
         async (resp) => {
           if (resp) {
             this.user = resp.user;
-          } 
+          }
           return;
         },
       );
@@ -116,8 +116,8 @@ export class EventComponent implements OnInit {
   hideen = false;
 
   async getFavouritesFromAPI() {
-    if(this.id)
-    (await this.authServices.loginIdAndFavorites(this.id))
+    if(this.token)
+    (await this.authServices.loginIdAndFavorites(this.token))
       .subscribe( resp => {
         if(resp){
           this.eventsToRender = resp.favorites;
