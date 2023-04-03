@@ -1,5 +1,91 @@
 <app-header [position]="position"></app-header>
-<div>
-  <h1>Helllouuu</h1>
+<div class="limiter">
+  <div class="container-login100">
+      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+          <form
+          [formGroup]="miFormulario"
+          (submit)="submitFormulario()"
+          class="login100-form"
+          autocomplete="off">
+
+              <span class="login100-form-title p-b-49">
+                Administrar Usuarios
+              </span>
+
+              <div class="combos">
+
+                <div class="combo">
+                  <!--Validacion-->
+                  <span
+                  *ngIf="campoValido('username')"
+                  class="text-danger">
+                    Debe elegir un Usuario
+                  </span>
+                  <!--Seleccione al Usuario-->
+                  <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Seleccione al Usuario</label>
+                  </div>
+                    <select [(ngModel)]="email" (change)="capturar('user')" formControlName="username" class="custom-select" id="inputGroupSelect01" style="width: inherit;">
+                      <option *ngFor="let user of users" [value]="user.email">{{user.username}}</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="combo">
+                  <!--Validacion-->
+                  <span
+                  *ngIf="campoValido('rol')"
+                  class="text-danger">
+                    Debe elegir un Rol
+                  </span>
+                  <!--Seleccione un Rol-->
+                  <div class="input-group mb-3">
+                  <div class="input-group-prepend" >
+                    <label class="input-group-text" for="inputGroupSelect01">Seleccione un Rol</label>
+                  </div>
+                    <select [(ngModel)]="rol" (change)="capturar('rol')" formControlName="rol" class="custom-select" id="inputGroupSelect02" style="width: inherit" >
+                      <option *ngFor="let rol of roles" [value]="rol._id" >{{rol.rol}}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!-- Nombre Column -->
+                <ng-container matColumnDef="item">
+                  <th mat-header-cell *matHeaderCellDef> Item </th>
+                  <td mat-cell *matCellDef="let element"> {{element.item}} </td>
+                </ng-container>
+
+                <!-- Valor Column -->
+                <ng-container matColumnDef="value">
+                  <th mat-header-cell *matHeaderCellDef> Valor </th>
+                  <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+
+
+              <div class="text-right p-t-8 p-b-31"></div>
+
+              <!--Boton-->
+              <div class="container-login100-form-btn">
+                  <div class="wrap-login100-form-btn">
+                      <div class="login100-form-bgbtn"></div>
+                      <button  type="submit"
+                      [disabled]="miFormulario.invalid"
+                      class="login100-form-btn">
+                          Enviar
+                      </button>
+                  </div>
+              </div>
+
+          </form>
+      </div>
+  </div>
 </div>
 <app-footer></app-footer>

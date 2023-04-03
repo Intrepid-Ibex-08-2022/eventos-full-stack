@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { LoginComponent } from './pages/login/login.component';
+import {MatTableModule} from '@angular/material/table';
 
 import { DatePipe } from '@angular/common';
 import { AddEventComponent } from './pages/add-event/add-event.component';
@@ -48,6 +49,7 @@ import { AdminUserComponent } from './pages/admin-user/admin-user.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatTableModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent],

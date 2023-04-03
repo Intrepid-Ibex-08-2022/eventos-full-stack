@@ -12,7 +12,7 @@ export interface User {
   username: string;
   pswd?: string;
   token?: string;
-  email?: string;
+  email: string;
   errors?: Errors;
   favorites: string[];
   rol: String;

@@ -55,6 +55,7 @@ export class HeaderComponent implements OnInit {
       this.route.navigateByUrl('/');
     }
     this.username = undefined;
+    this.route.navigateByUrl('/')
 
   }
 

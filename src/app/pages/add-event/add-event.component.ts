@@ -148,9 +148,6 @@ export class AddEventComponent implements OnInit {
     body.append('rating', '0');
     body.append('views', '0');
 
-
-    console.log(body)
-
     if(this.token){
       this.setEventService.eventAddForUser(body, this.token)
         .subscribe(resp => {

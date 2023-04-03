@@ -1,0 +1,22 @@
+@import url('../page-register/page-register.component.css');
+
+.custom-select {
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.combos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.combo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+table {
+  width: 100%;
+}
